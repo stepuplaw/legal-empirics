@@ -163,8 +163,17 @@ than approximately. The cost of providing it is a budgeting decision, and it is
 small relative to the social cost of the litigation the resulting knowledge
 could prevent.
 
-That is not a novel position. It is the position of the Free Law Project and of
-successive legislative efforts to eliminate access fees. The contribution this
+That is not a novel position. In *National Veterans Legal Services Program v.
+United States*, 968 F.3d 1340, 1357 (Fed. Cir. 2020), the court read the statute
+to limit PACER fees to what is needed to cover the cost of providing public
+access; the case settled for $125,000,000 and the Federal Circuit affirmed final
+approval on 2026-03-20.
+
+**Legislatively, however, the door is currently shut.** The Open Courts Act died
+three times, twice in the 117th Congress and once after passing the House in the
+116th, and **no successor has been introduced in the 118th or 119th Congress.**
+Fees remain ten cents a page. Anyone writing that reform legislation is pending
+is wrong, and the absence of a live bill is itself part of the argument. The contribution this
 work can make is to demonstrate concretely what becomes answerable when data is
 open, and what stays unanswerable while it is not. A limitations section that
 says "this could not be determined because the records are behind a paywall" is

@@ -44,11 +44,21 @@ else: different objects, different corpora, different claims.
 Justice Lee was educated at BYU Law and Harvard. The centre of gravity of the
 field is constitutional and statutory interpretation.
 
-**The critics are worth reading before the advocates.** Anya Bernstein, *Legal
-Corpus Linguistics and the Half-Empirical Attitude*, 106 Cornell L. Rev. 1397
-(2021), and Evan C. Zoldan, *Corpus Linguistics and the Dream of Objectivity*,
-50 Seton Hall L. Rev. 401 (2019). Both citations verified against repository
-sources.
+**The critics, with a warning about their citations.** Two verification passes
+DISAGREED here and the conflict is unresolved, so neither citation should be
+used until someone has the printed article in hand.
+
+- **Anya Bernstein.** An SSRN preprint titled *Legal **Interpretation** and the
+  Half-Empirical Attitude* (2019) is confirmed to exist. A published version
+  titled *Legal **Corpus Linguistics** and the Half-Empirical Attitude* at 106
+  Cornell L. Rev. 1397 (2021) was asserted by one pass and **could not be
+  confirmed** by a second, which found zero hits for "half-empirical" in
+  Cornell's repository. Do not put a volume and page on this.
+- **Evan Zoldan.** A corpus-linguistics critique attributed to him **could not be
+  confirmed to exist at all.** Treat as unsupported.
+- **What is solid:** Lee and Mouritsen answered their critics in *The Corpus and
+  the Critics*, 88 U. Chi. L. Rev. 275 (2021), verified. Start there and follow
+  its citations to the actual critics.
 
 ## 3. The actual techniques
 
@@ -125,16 +135,30 @@ policies (*Fulkerson*, *Wesco*, *Oltmanns*, *Snell*) and benefit plans
 (*Safelite*). Anyone claiming to have thought of applying corpus methods to
 private instruments is about six years late.
 
-**What survives, and it is narrow and exact: wills, trusts and deeds.** A search
-across three databases found no corpus-linguistic scholarship on testamentary or
-donative instruments at all. Contracts are done. Insurance policies are done.
-Estate planning documents are untouched.
+**What survives is narrow, and the ground next to it is occupied by people
+working right now.** No corpus-linguistic scholarship on wills, trusts or deeds
+was found. But corpus linguistics is not the only way to ask this question, and
+the empirical wills literature is active:
 
-That is a better position than the broad claim, for three reasons. It is
-defensible, because the gap is specific enough to demonstrate. It is where the
-author actually practises. And the prospective framing still holds within it:
-the existing work asks what a contract term *meant* in a dispute, and nobody is
-asking which testamentary language *ends up in dispute in the first place*.
+- **Reid Kress Weisbord & David Horton, *Boilerplate and Default Rules in Wills
+  Law: An Empirical Analysis*, 103 Iowa L. Rev. 663 (2018)** hand-collected 230
+  probated wills and measured opt-outs from majoritarian defaults on exactly the
+  topics this project cares about: lapse, multi-generational class gifts, and
+  apportionment.
+- **Horton, Weisbord, Ryan and Cahn are running a live empirical
+  trusts-and-estates litigation program**, with *Trust Litigation* (104 Wash. U.
+  L. Rev., forthcoming 2026), *Secrecy in Trust Litigation* (61 Wake Forest L.
+  Rev., forthcoming 2026) and others. This is a competitor working now, not a
+  historical gap.
+- **Daniel Schwarcz, *The Role of Courts in the Evolution of Standard Form
+  Contracts*, 46 BYU L. Rev. 471 (2021)** is the nearest true prior art on
+  method: he hand-collected caselaw construing one standard homeowners policy
+  and linked judicial interpretation to fifty years of revisions in the form.
+
+**So the honest claim is a scaling claim, not a first-of-its-kind claim.** This
+has been done for a single standard form, by hand, in one industry. It has not
+been done systematically across clause types at corpus scale. Framed that way it
+survives a referee who knows Schwarcz. Framed as virgin territory it does not.
 
 **Why it is answerable.** When a court construes a will or a trust, it **quotes
 the disputed language**. Those quotations are a naturally occurring corpus of

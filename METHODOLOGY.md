@@ -10,8 +10,9 @@ before starting one.
 **Empirical legal studies**, and within it the sub-method called **systematic
 content analysis of judicial opinions**: taking a defined population of cases,
 coding them against a written protocol, and reporting distributions rather than
-impressions. The canonical statement of the method is Hall & Wright, *Systematic
-Content Analysis of Judicial Opinions*, 96 Cal. L. Rev. 63 (2008). Read it before
+impressions. The canonical statement of the method is **Mark A. Hall & Ronald F.
+Wright, *Systematic Content Analysis of Judicial Opinions*, 96 Calif. L. Rev. 63
+(2008)** (verified, article PDF). Read it before
 designing a study; the conventions below are largely theirs.
 
 Where a study turns on what a **word or phrase means**, the relevant method is
@@ -20,8 +21,14 @@ used to establish ordinary meaning. That is the correct frame for anything
 shaped like "is this term ambiguous," and it is a different design from content
 analysis, not a variation of it.
 
-> Citations here are given from knowledge and have not been verified against the
-> published source. Check them before any of this is published.
+> **Citation status.** Verified against primary or repository sources: Hall &
+> Wright (96 Calif. L. Rev. 63); Priest & Klein (13 J. Legal Stud. 1, 1984);
+> Lee & Mouritsen (127 Yale L.J. 788); Mouritsen, *Dictionary Is Not a Fortress*
+> (2010 BYU L. Rev. 1915); Loevinger, *Jurimetrics — The Next Step Forward* (33
+> Minn. L. Rev. 455, 1949); **Louis M. Brown, *Manual of Preventive Law*
+> (Prentice-Hall 1950)**; Stolle, Wexler, Winick & Dauer (34 Cal. W. L. Rev. 15,
+> 1997); CRISP-DM 1.0 guide; Wilkinson et al., FAIR (3 Sci. Data 160018, 2016).
+> Disputed or unconfirmed citations are flagged where they appear.
 
 **We are applying existing methods, not inventing one.** That matters: it means
 a reader can criticise the work on known grounds, and it means the weaknesses
@@ -303,3 +310,31 @@ fake. Fall back to the journal's institutional repository, whose OAI-PMH feed
 (`/do/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=publication:<journal>`) is
 the reliable enumeration path. The bepress `/do/search/` endpoint returns
 HTTP 500 and should not be used.
+
+### Proximity operators under-capture doctrinal contamination
+*2026-09-01.* A tempting fix for constitutional contamination was `ambig! /4
+constitution!`. Tested: **27 decisions** at a four-word window, **86** at ten,
+against **1,425** co-occurring at document level and a coded sample showing 35%
+of extracted spans were constitutional. The window misses almost everything,
+because a court quotes a constitutional provision and calls it ambiguous
+paragraphs later.
+
+The lesson generalises. **Contamination is a property of the extracted span, not
+of the distance between two words in the opinion.** Filter where the object of
+study is, which here means at span level, not at opinion level.
+
+### When two verification passes disagree, assert nothing
+*2026-09-01.* One pass reported Bernstein and Zoldan critiques as verified
+against repository sources. A second, more thorough pass found the Bernstein
+title probably wrong, no confirmable Cornell citation, and **no evidence the
+Zoldan piece exists at all**. Both had been committed as verified.
+
+A citation that two passes dispute is **less** trustworthy than one never
+checked, because the first check creates false confidence. Record the conflict,
+name both readings, and cite neither until someone has the printed article.
+
+### Preventive law is dormant, and must be cited historically
+Brown's work is *Manual of Preventive Law* (Prentice-Hall 1950). The National
+Center for Preventive Law's domain is dead, last archived 2022. Its living
+descendant is the merger with therapeutic jurisprudence. Use the term with a
+historical gloss, never as a live term of art.

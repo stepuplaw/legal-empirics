@@ -1,0 +1,312 @@
+{
+ "purpose": "TRAINING set for rule induction. Held-out test set is sample40_coded.json, which was coded before any rule existed and must not be used to fit.",
+ "coder": "Claude Fable 5 (claude-fable-5)",
+ "coding_date": "2026-09-01",
+ "scheme": "binary: testamentary (will or trust instrument language) vs other",
+ "counts": {
+  "other": 46,
+  "testamentary": 14
+ },
+ "items": [
+  {
+   "n": 1,
+   "label": "other",
+   "span": "THE SELLER covenants and agrees that it will in its development of SAID LAND, without expense to the PURCHASER:"
+  },
+  {
+   "n": 2,
+   "label": "other",
+   "span": "Provided, however, $2,613,142 appropriated in item 382 in each fiscal year of the biennium is for the purpose of the teaching hospital program."
+  },
+  {
+   "n": 3,
+   "label": "other",
+   "span": "Congress shall have the power ... [t]o regulate Commerce with foreign Nations, and among the several States, and with the Indian Tribes."
+  },
+  {
+   "n": 4,
+   "label": "testamentary",
+   "span": "all his property, real, personal and mixed,"
+  },
+  {
+   "n": 5,
+   "label": "testamentary",
+   "span": "It is further my will and desire that all my property be kept together, for the use and benefit of my said wife and children, unless my wife should marry, or my children become of age, in which event, or events, I wish the property divided as above,"
+  },
+  {
+   "n": 6,
+   "label": "other",
+   "span": "* * * that should the Seller be unable to deliver title to Buyer, Raymond C. Way within the time limit specified above, then this contract shall be void and the Agent shall return the deposit made hereunder to the Buyer."
+  },
+  {
+   "n": 7,
+   "label": "other",
+   "span": "subject to a (Verizon Wireless) Easement as described in Instrument #200814009062, DeSoto County, Florida."
+  },
+  {
+   "n": 8,
+   "label": "other",
+   "span": "Every law shall embrace but one subject and matter properly connected therewith, and the subject shall be briefly expressed in the title... ."
+  },
+  {
+   "n": 9,
+   "label": "other",
+   "span": "The Legislature shall provide for a uniform system of public free schools and shall provide for the liberal maintenance of the same."
+  },
+  {
+   "n": 10,
+   "label": "testamentary",
+   "span": "the rest, residue and remainder [of the estate] shall pass by the laws of intestate succession"
+  },
+  {
+   "n": 11,
+   "label": "other",
+   "span": "no law shall be amended or revised by inference to its title only; but in such case the act as revised or section as amended shall be re-enacted and published at length."
+  },
+  {
+   "n": 12,
+   "label": "other",
+   "span": "subject to any inalienable trust under which the State holds said lands."
+  },
+  {
+   "n": 13,
+   "label": "other",
+   "span": "THIS AGREEMENT, made and entered into this 28 day of Oct, 1980, by and between the Public Health Trust of Dade County, Florida, (sometimes hereinafter referred to as the"
+  },
+  {
+   "n": 14,
+   "label": "other",
+   "span": "the exemptions provided for in section one shall inure to the widow and heirs of the party entitled to such exemp *204 tion."
+  },
+  {
+   "n": 15,
+   "label": "testamentary",
+   "span": "`SECOND: I instruct my hereinafter named Executrix and Executor to pay all of my just debts as soon after my death as shall be practicable.'"
+  },
+  {
+   "n": 16,
+   "label": "other",
+   "span": "the power to assign justices or judges, including consenting retired justices or judges, to temporary duty in any court for which the judge is qualified."
+  },
+  {
+   "n": 17,
+   "label": "other",
+   "span": "arising out of the ownership, maintenance or use of a motor vehicle."
+  },
+  {
+   "n": 18,
+   "label": "other",
+   "span": "All laws or parts of laws in conflict herewith which are not currently in litigation are repealed."
+  },
+  {
+   "n": 19,
+   "label": "other",
+   "span": "sale is itself a fraud, unless possession accompanies and \u201c follows the deed."
+  },
+  {
+   "n": 20,
+   "label": "other",
+   "span": "Plaintiff * * * has at all times stood ready, willing and able to pay his proportionate share in said venture and is now ready, able and willing to do so."
+  },
+  {
+   "n": 21,
+   "label": "testamentary",
+   "span": "... sell or otherwise dispose of any such stock unless such action is required to provide funds to meet a medical emergency of Alfred Frum-kin."
+  },
+  {
+   "n": 22,
+   "label": "other",
+   "span": "The Governor may at any time require the opinion of the justices of the Supreme Court as to the interpretation of any portion of this Constitution or upon any point of law, and the Supreme Court shall render such opinion in writing."
+  },
+  {
+   "n": 23,
+   "label": "testamentary",
+   "span": "Tracking the language of section 736.0602(1), the terms of the Trust instrument unambiguously state that the Former Husband, as settlor,"
+  },
+  {
+   "n": 24,
+   "label": "other",
+   "span": "that there will be no sales, leases or other transfers of ownership or right to possession or use, except to entities owned, controlled by, or affiliated with the Owner American Telephone and Telegraph Company... ."
+  },
+  {
+   "n": 25,
+   "label": "testamentary",
+   "span": "[i]n the event Eastpoint ... is no longer in existence at the time of Grantor's death, then such bequest shall lapse and the entire residue of this Trust shall be paid to Hamilton County Children's Home of Cincinnati, Ohio... ."
+  },
+  {
+   "n": 26,
+   "label": "other",
+   "span": "No justice or judge shall serve after attaining the age of seventy years except upon temporary assignment or to complete a term, one-half of which has been served."
+  },
+  {
+   "n": 27,
+   "label": "testamentary",
+   "span": "distribute all of the remaining trust estate to the FELLOWSHIP HOUSE"
+  },
+  {
+   "n": 28,
+   "label": "other",
+   "span": "To have and to hold the same, together with the tenements, hereditaments and appurtenances thereto belonging, and the rents, issues and profits thereof, unto the mortgagee, in fee simple."
+  },
+  {
+   "n": 29,
+   "label": "other",
+   "span": "subject to easements, covenants, limitations, reservations and restrictions of record."
+  },
+  {
+   "n": 30,
+   "label": "other",
+   "span": "no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States."
+  },
+  {
+   "n": 31,
+   "label": "testamentary",
+   "span": "my home place or residence at Brickell Point . . . with all the furniture and furnishings therein contained, together with the land attached thereto, I desire and direct that the same be retained as a homestead . . ."
+  },
+  {
+   "n": 32,
+   "label": "other",
+   "span": "upon which the water is not more than three feet deep at high tide"
+  },
+  {
+   "n": 33,
+   "label": "other",
+   "span": "but the provisions of this law shall not apply to the refunding of bonds issued exclusively for the purpose of refunding of the bonds or the interest thereon of such counties, districts or municipalities."
+  },
+  {
+   "n": 34,
+   "label": "other",
+   "span": "Id. In reaching *1269 that result, we rejected the State's contention that"
+  },
+  {
+   "n": 35,
+   "label": "other",
+   "span": "Essentials. The assignments or cross assignments of error shall designate identified judicial acts which should be stated as they occurred; grounds for error need not be stated in the assignment."
+  },
+  {
+   "n": 36,
+   "label": "other",
+   "span": "Nor shall private property be taken without just compensation."
+  },
+  {
+   "n": 37,
+   "label": "other",
+   "span": "discriminates against some or all religious beliefs."
+  },
+  {
+   "n": 38,
+   "label": "other",
+   "span": "exercise of extraterritorial powers by municipalities shall be as provided by general or special law."
+  },
+  {
+   "n": 39,
+   "label": "testamentary",
+   "span": "VI. Should my probate estate contain \u0097 and otherwise such gift shall lapse \u0097 any of the following, I hereby give and bequeath, subject to the accompanying stipulations: * * *"
+  },
+  {
+   "n": 40,
+   "label": "testamentary",
+   "span": "24. The term \u2018Trustee\u2019 as' employed in this instrument, shall be taken to mean the Trustee hereunder for the time being, to-wit: C.~L. Miller Bond &amp; Mortgage Company, or its successor or successors in trust."
+  },
+  {
+   "n": 41,
+   "label": "other",
+   "span": "The powers of the state government shall be divided into legislative, executive and judicial branches. No person belonging to one branch shall exercise any powers appertaining to either of the other branches expressly provided herein."
+  },
+  {
+   "n": 42,
+   "label": "testamentary",
+   "span": "The trustee can properly incur expenses for costs in maintaining or defending an action in the proper administration of the trust even though he is unsuccessful in the action."
+  },
+  {
+   "n": 43,
+   "label": "other",
+   "span": "When interrogated as to standards governing the inspectors, the Commission Director replied:"
+  },
+  {
+   "n": 44,
+   "label": "other",
+   "span": "may exercise any power for municipal purposes except as provided by law,"
+  },
+  {
+   "n": 45,
+   "label": "other",
+   "span": "[b]y general law and subject to conditions specified therein, the exemption shall be increased... ."
+  },
+  {
+   "n": 46,
+   "label": "other",
+   "span": "that no duty not judicial shall be imposed by law upon the *469 Justices of the Supreme Court, Chancellor or Judges of the Circuit Courts of this State."
+  },
+  {
+   "n": 47,
+   "label": "testamentary",
+   "span": "The remainder of my real estate is to be liquidated on a favorable market so that funds may be available to pay the various bequests named above. * * *"
+  },
+  {
+   "n": 48,
+   "label": "other",
+   "span": "Any forbearance by Lender in exercising any right or remedy ... shall not be a waiver of or preclude the exercise of any right or remedy."
+  },
+  {
+   "n": 49,
+   "label": "other",
+   "span": "no money shall be drawn from the Treasury except in pursuance of an appropriation made by law."
+  },
+  {
+   "n": 50,
+   "label": "other",
+   "span": "Right Rev. John Moore, Bishop of St. Augustine,"
+  },
+  {
+   "n": 51,
+   "label": "other",
+   "span": "[t]here shall be no special law or general law of local application pertaining to . . . private incorporation or grant of privilege to a private corporation."
+  },
+  {
+   "n": 52,
+   "label": "other",
+   "span": "[a]ll laws that are in effect on July 1, 1993 that limit public access to records or meetings shall remain in force, and such laws apply to records of the legislative and judicial branches, until they are repealed."
+  },
+  {
+   "n": 53,
+   "label": "other",
+   "span": "The amended bill was filed July 25, 1928. It is further alleged that complainant, on October 17, 1927,"
+  },
+  {
+   "n": 54,
+   "label": "other",
+   "span": "This resolution to be written on the official plats or maps and signed by the Trustees, where such official plat is furnished by or under1 the direction of the Trustees."
+  },
+  {
+   "n": 55,
+   "label": "other",
+   "span": "give, lend, or use its taxing power or credit to aid any corporation, association, partnership or person."
+  },
+  {
+   "n": 56,
+   "label": "other",
+   "span": "This challenge by the children is exactly what [the husband] expected."
+  },
+  {
+   "n": 57,
+   "label": "other",
+   "span": "All records kept by [Greenacre] shall be kept at the office of [Greenacre] and shall be available for inspection during [Greenacre's] office hours by association members."
+  },
+  {
+   "n": 58,
+   "label": "testamentary",
+   "span": ", and also indicated no intent to empower the Executrix"
+  },
+  {
+   "n": 59,
+   "label": "other",
+   "span": "... shall apportion the state in accordance with the constitution of the state and of the United States... ."
+  },
+  {
+   "n": 60,
+   "label": "other",
+   "span": "This license conveys to the licensee the exclusive right to solicit and transport from the park fish mounts, but is not to be construed in any way as to limit the rights of park patrons in transporting their fish to a taxidermist of their own choice."
+  }
+ ]
+}
