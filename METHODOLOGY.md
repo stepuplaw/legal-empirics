@@ -339,33 +339,35 @@ Center for Preventive Law's domain is dead, last archived 2022. Its living
 descendant is the merger with therapeutic jurisprudence. Use the term with a
 historical gloss, never as a live term of art.
 
-### Most ambiguity language is the rule being recited, not applied
-*Sentence coding, 2026-09-01.* Fifty ambiguity sentences coded on two axes,
-domain and posture. Only **7 of 50 (14%) were an actual finding that the text
-before the court was ambiguous.** Forty per cent were black-letter recitation of
-the rule with no finding on those facts, and **24% were the court REJECTING
-ambiguity**, holding the language clear.
+### The outcome variable is LITIGATION, not a finding of ambiguity
+*Sentence coding, 2026-09-01, corrected the same day.* Fifty ambiguity sentences
+coded on two axes, domain and posture. My first inclusion rule admitted only
+cases where the court **found** ambiguity, 7 of 50, and excluded the 12 where
+the court **rejected** it.
 
-This is the most consequential screening failure found so far, and it inverts
-results if missed. A case where ambiguity was **rejected** still contains quoted
-instrument language, and that language was held **clear**. Harvesting it into a
-catalogue of "provisions that failed" would put well-drafted clauses in a list of
-badly drafted ones and get the sign backwards.
+**That was wrong, and it mistook the research question.** A clause the court held
+clear still drew a lawsuit. Somebody paid a lawyer to argue it was ambiguous, an
+opponent paid to argue it was not, and a court spent time resolving it. Under
+[evidence-based drafting](EVIDENCE-BASED-DRAFTING.md) the harm to be prevented is
+the **dispute**, not the adverse ruling. A provision that wins after three years
+of litigation has still failed the family that paid for it.
 
-**Posture must be coded before any span is admitted.** The codebook:
+If anything, `rejected` is the more instructive class: the drafter thought the
+language was clear, the court agreed it was clear, and it was fought over
+anyway.
 
-| Posture | Meaning |
-|---|---|
-| `rule_stated` | black-letter recitation, no finding on these facts |
-| `found` | the court held THIS text ambiguous |
-| `rejected` | the court held this text CLEAR |
-| `alleged` | a party contended it; outcome not in this sentence |
-| `uncertain` | cannot tell from the sentence alone |
+**Corrected inclusion rule.** Admit `found`, `rejected` and `alleged`, because
+all three evidence that the language was litigated. Exclude only `rule_stated`,
+where the sentence recites black-letter law and says nothing about the text in
+front of the court, and `uncertain`, which goes to a second round.
 
-Only `found` supports the inference the study wants. `alleged` and `uncertain`
-go to a second round rather than being forced into a bucket, because a sentence
-is often not enough context and the honest answer is to read more of the
-opinion.
+That takes the usable pool from 14% to **50% of sentences**, and the testamentary
+subset from 4 to 8.
+
+**Posture stays in the codebook**, but as a severity stratum rather than a
+gate: `found` means the language actually failed, `rejected` means it survived a
+challenge it should never have attracted. Report them separately and never pool
+them into a single "failed" count.
 
 ### Sentence-level coding is cheap enough to do properly
 Fifty sentences is a short read. Where a corpus-scale mechanical filter is
