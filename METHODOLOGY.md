@@ -364,10 +364,28 @@ front of the court, and `uncertain`, which goes to a second round.
 That takes the usable pool from 14% to **50% of sentences**, and the testamentary
 subset from 4 to 8.
 
-**Posture stays in the codebook**, but as a severity stratum rather than a
-gate: `found` means the language actually failed, `rejected` means it survived a
-challenge it should never have attracted. Report them separately and never pool
-them into a single "failed" count.
+**Posture stays in the codebook, and the two classes point in OPPOSITE
+directions.** This is the subtle part and it must not be flattened.
+
+| Posture | What it evidences | Drafting implication |
+|---|---|---|
+| `found` | the language failed; a court could not determine its meaning | **anti-pattern.** Avoid the formulation |
+| `rejected` | the language drew a challenge **and survived it** | **safe harbour.** The formulation now has precedent that it is clear |
+
+A `rejected` case carries a cost and a benefit at once. The cost is that the
+language attracted a fight. The benefit is that a court has now held it clear,
+so the next drafter using that formulation has authority behind it. Language
+that has been litigated and upheld has **known meaning**, which is precisely why
+tested boilerplate persists in practice rather than being improved: its
+interpretive risk has already been paid down by somebody else's lawsuit.
+
+So the two classes support opposite advice from the same corpus. Pooling them
+into a single "litigated, therefore bad" count would recommend abandoning the
+formulations that are best established.
+
+**Report three numbers, never one:** how often a formulation is litigated, how
+often it fails when litigated, and how often it is upheld. The first is exposure,
+the second is risk, the third is the argument for keeping it.
 
 ### Sentence-level coding is cheap enough to do properly
 Fifty sentences is a short read. Where a corpus-scale mechanical filter is
