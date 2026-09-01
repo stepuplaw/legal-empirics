@@ -1,6 +1,6 @@
 # Where this project stands
 
-_Last updated 2026-09-01. Read this first after a context reset._
+_Last updated 2026-09-02. Read this first after a context reset._
 
 Everything below is committed. Nothing here is a plan; it is what exists.
 
@@ -10,159 +10,156 @@ Everything below is committed. Nothing here is a plan; it is what exists.
 
 We are building **empirical preventive law**: measuring which drafting language
 gets litigated, so drafters can avoid the formulations that fail and prefer the
-ones that survive. The corpus is 10.8M US judicial opinions held locally. A full
-Florida run is done and produced its first real finding. The methodology is
-written down and has been corrected six times by evidence, which is the point.
+ones that survive. The corpus is 10.8M US judicial opinions held locally, now
+joined to the Florida Statutes edition by edition. Three studies are built and
+exported as citable datasets. The methodology has been corrected by evidence
+nine times, which is the point.
 
 ## Read in this order
 
 | File | What it is |
 |---|---|
 | `EVIDENCE-BASED-DRAFTING.md` | The thesis, the moral argument, the PACER policy position, and the honest limits |
-| `METHODOLOGY.md` | How studies are designed and reported, plus **the lessons log** — read that section, it is where the hard-won corrections live |
+| `METHODOLOGY.md` | How studies are designed and reported, plus **the lessons log** — read that section |
 | `CORPUS-LINGUISTICS.md` | What the method is, its techniques, its critics, and where the open ground is |
-| `studies/ambiguity-pools/REPORT.md` | The completed feasibility study |
+| `PUBLISHING.md` | Where the datasets live and how the records reference one another |
 
-## The headline result
+## What changed on 2026-09-01
 
-Full Florida state appellate run, 6,523 decisions containing ambiguity language,
-13,218 ambiguity sentences classified. Of those, **4,497 (34%) concern language
-that was actually litigated**.
+**The question moved from domain to term.** The earlier headline — testamentary
+language upheld half the time against contract language failing two thirds —
+was a fact about *categories of case*. A drafter cannot act on it. The unit of
+analysis is now the **(term, decision) pair**: which specific words get fought
+over, how often the challenge succeeds, and in how many states.
 
-Reported as three numbers per domain, never one:
+**And from one state to fifty-one.** Florida alone gave confidence intervals so
+wide they were useless: `degree` risk 70%, interval 40–89%.
 
-| Domain | Exposure | Found ambiguous | Upheld | Risk |
-|---|---|---|---|---|
-| Contract | 1,612 | 869 | 496 | **64%** |
-| Statutory | 630 | 359 | 209 | **63%** |
-| **Testamentary** | **303** | **139** | **139** | **50%** |
-| Deed | 49 | 17 | 26 | **40%** |
-| Constitutional | 34 | 21 | 7 | 75% (tiny N) |
+## The three studies
 
-**The finding: testamentary language that gets challenged is upheld half the
-time, where contract language fails nearly two thirds of the time.** Wills and
-trusts are challenged more often than they fail.
+### disputed-terms — 286,846 (term, decision) pairs, all 51 jurisdictions
 
-Three hypotheses, none tested: wills lean on boilerplate that has already been
-judicially tested, so challenges fail more; will contests are brought on weaker
-grounds because the emotional stakes support marginal suits; or the classifier
-behaves differently across domains. The third must be excluded before the first
-two are interesting.
+Terms are extracted by **cue-anchored quotation** (`the term "X"`, `"X" as used
+in`) over the **whole opinion**, with the ambiguity holding selecting the *case*
+rather than the *sentence*. That is the fix `studies/ambiguity-pools/REPORT.md`
+identified after its own extraction returned null.
 
-242 distinct Florida decisions carry litigated testamentary instrument language.
-That is the working corpus for the next study.
+Raw quoted spans do not work: the top hits are `and`, `yes` and `i'd rather not
+talk about it`. Cue anchoring returns `accident`, `occurrence`, `arising out
+of`, `all-risk`.
 
-## The six corrections that shaped the method
+Risk by functional category, linked rows only, Wilson 95%:
 
-Each cost a wrong result and is now a rule in `METHODOLOGY.md`.
+| Category | Exposure | Risk |
+|---|---:|---|
+| temporal | 2,458 | 42% (39–44) |
+| scope | 8,865 | 41% (40–42) |
+| mental | 1,465 | 40% (36–43) |
+| conduct | 3,673 | 39% (37–41) |
+| role | 7,395 | 38% (37–40) |
+| condition | 1,425 | 38% (35–41) |
+| degree | 2,247 | 37% (35–40) |
+| property | 4,679 | 35% (33–37) |
+| event | 5,775 | 35% (33–36) |
+| nexus | 774 | 31% (27–35) |
+| modal | 2,075 | 30% (28–33) |
+| **succession** | 1,391 | **27% (24–30)** |
 
-1. **Sentence scoping, not document scoping.** Subtracting a contaminating pool
-   at document level discarded half of a small pool. A will case cites statutes
-   without its ambiguity analysis being statutory.
-2. **Recall lives in the query.** A narrow query gave 216 decisions; widening the
-   vocabulary gave 5,573 from the same corpus. Retrieve broadly, filter hard.
-3. **Constitutional text is a third contaminant**, and was the largest at 35% of
-   an early sample. Proximity operators do not catch it: `ambig! /4 constitution!`
-   returns 27 decisions where document co-occurrence returns 1,425.
-4. **The outcome variable is litigation, not a finding of ambiguity.** A clause
-   held clear still drew a lawsuit and still cost the family.
-5. **`found` and `rejected` point in opposite directions.** Found is an
-   anti-pattern. Rejected is a **safe harbour**: the language drew a challenge and
-   survived, so it now carries precedent that it is clear. Never pool them.
-6. **Judicial opinions do not define their vocabulary.** Hearst-pattern alias
-   mining failed. Statutory definitions sections are the authoritative source;
-   221 defined Florida terms are in `data/florida-statutory-definitions.json`.
+Succession language is the *safest* class, which independently corroborates the
+old domain-level finding by a different route.
 
-## What runs, and how
+**Link tiers are never pooled.** `direct` (81,131) means an ambiguity sentence
+names the term; `proximate` (28,074) means it is quoted within three sentences
+of one; `inferred` (177,641) carries only the decision's posture and is excluded
+from every headline. Inferring everywhere is what produced the earlier null.
 
-Everything goes through `~/caselaw/` (`clcorpus`), never by opening the corpus
-directly. Its `fl` scope resolves to an SSD slice; queries return in under a
-second where the platter takes minutes.
+### reformation-fl — 932 Florida decisions, 1853–2026
 
-    python3 studies/ambiguity-pools/run_methods.py    # keyness, n-grams, collocation
-    lib/pools.py                                      # Pool, keyness, collocates, dispersion
-    lib/posture.py                                    # domain + posture classifiers
+Reformation is the sharpest available measure of drafting failure: a petition
+says the drafter got it wrong and somebody paid to fix it.
 
-**`lib/posture.py` is validated**, not assumed: against 50 model-coded sentences
-it scores **precision 92%, recall 92%, F1 0.92** on the litigated screen, with
-posture agreement 70% and domain agreement 78%. Its dominant error is labelling
-`rule_stated` as `uncertain`, which excludes rather than contaminates.
+Three regimes coexist in one state with dated statutory breaks — deeds and
+contracts in equity throughout, trusts from **2007** (s. 736.0415), wills from
+**2011** (s. 732.615), before which Florida held that a will could not be
+reformed at all.
 
-## Coded data, and the reliability debt
+| Instrument | n | Granted | Denied |
+|---|---:|---:|---:|
+| contract | 376 | 5 | 5 |
+| deed | 242 | 13 | 7 |
+| insurance | 202 | 8 | 1 |
+| trust | 66 | 4 | 1 |
+| will | 42 | 4 | 1 |
 
-| File | N | Status |
-|---|---|---|
-| `sample40_coded.json` | 40 | held-out test set, coded before any rule existed |
-| `train60_coded.json` | 60 | training set for rule induction |
-| `amb_sentences50_coded.json` | 50 | domain + posture, the two-axis codebook |
+**Wills: 36 decisions before 2011, six after.** Eight litigated decisions in the
+whole corpus cite the reformation statutes.
 
-**All three are single-coded by model (Claude Fable 5) and carry
-`reliability: NOT ESTABLISHED`.** Under our own rules that makes every study
-resting on them **exploratory**. The fix is small and specific: Kevin re-codes
-one of the 50-item sets and we compute Cohen's kappa. That single step converts
-this from exploratory to measurement.
+**Grant rates are not publishable.** Only 51 decisions carry a machine-readable
+holding, because most opinions state their disposition in a sentence that never
+repeats the word. Volume, composition, error taxonomy and the statutory break
+are solid; the rates are not.
 
-## Where the claim stands against prior art
+### statutory-staleness — 19,085 (decision, section) pairs
 
-The broad novelty claim died and the surviving one is better.
+**77.0%** construe a section amended since the decision; median gap 20 years.
+That number is identical on the full corpus and on an independent 2,500-decision
+sample.
 
-- **Corpus linguistics on private instruments is occupied.** Mouritsen,
-  *Contract Interpretation with Corpus Linguistics*, 94 Wash. L. Rev. 1337
-  (2019), plus six appellate courts on contracts, policies and benefit plans.
-- **Empirical wills work is active.** Weisbord & Horton, *Boilerplate and Default
-  Rules in Wills Law*, 103 Iowa L. Rev. 663 (2018), hand-coded 230 probated wills
-  on lapse, class gifts and apportionment. Horton, Weisbord, Ryan and Cahn have
-  several 2026 forthcoming pieces. **This is a live competitor, not a gap.**
-- **The nearest prior art on method** is Schwarcz, 46 BYU L. Rev. 471 (2021),
-  who hand-collected caselaw construing one homeowners policy and linked it to
-  fifty years of revisions in the form.
+Where two editions are held, **69.5%** of those flagged had a real change to the
+operative text — so the combined estimate is that **53.6%** of Florida
+construction holdings rest on statutory text that has actually changed.
 
-**The defensible claim is a scaling claim:** done by hand, for a single form, in
-one industry; never systematically across clause types at corpus scale, and never
-separating exposure from risk from vindication. That three-way split is the
-contribution, and it came out of Kevin's correction rather than the literature.
+Exposure is **not** abrogation, and the notebook says so. A text change anywhere
+in a long section is not proof the construed subsection changed. Subsection-level
+alignment is the next step and is not done.
 
-## Citations: what is verified and what is not
+## The corpus grew a second half
 
-**Verified** against primary or repository sources: Hall & Wright, 96 Calif. L.
-Rev. 63 (2008); Priest & Klein, 13 J. Legal Stud. 1 (1984); Lee & Mouritsen, 127
-Yale L.J. 788 (2018); Mouritsen, 2010 BYU L. Rev. 1915; Loevinger, 33 Minn. L.
-Rev. 455 (1949); **Louis M. Brown, *Manual of Preventive Law* (Prentice-Hall
-1950)**; Stolle, Wexler, Winick & Dauer, 34 Cal. W. L. Rev. 15 (1997); Lee &
-Mouritsen, *The Corpus and the Critics*, 88 U. Chi. L. Rev. 275 (2021); CRISP-DM
-1.0; Wilkinson et al., FAIR, 3 Sci. Data 160018 (2016).
+`us-law.db` now holds the Florida Statutes **edition by edition**, which is what
+makes the text-diff tier possible at all.
 
-**Disputed, do not cite:** the Anya Bernstein critique (two passes disagree on
-title and venue; no confirmable Cornell citation) and any Evan Zoldan corpus
-critique (**could not be confirmed to exist**).
+- **2010–2026** via the chapter view. `build-flstat.py` was parsing only the
+  2013+ markup; the 2010–2012 editions use divs where later ones use spans, and
+  every pre-2013 section was silently dropped with an empty number.
+- **1997–2009** via per-section URLs. The chapter view is empty for those years,
+  which produced a wrong conclusion that the site did not hold them. It holds
+  them. `build-flstat-sections.py` is targeted rather than wholesale — 25,000
+  requests per edition is not a crawl anyone should run.
+- **USC** had 0 of 14,052 sections with a history trail. The amendment notes
+  were being kept in the body and never filed; GovInfo delimits them with HTML
+  comments, so extraction is exact. Fixed, reload queued.
 
-**Corrected:** *Rasabout*'s majority **rejected** corpus linguistics under a
-heading saying so; only Lee's separate opinion applies it. The *Oltmanns* corpus
-passage is Durham's. Corpus linguistics has never appeared in a Supreme Court
-majority, only Alito concurring in *Duguid* and Breyer dissenting in *Bruen*.
+## Publishing
 
-**PACER:** *NVLSP v. United States*, 968 F.3d 1340, 1357 (Fed. Cir. 2020);
-settled $125M; Federal Circuit affirmed 2026-03-20. **No reform legislation is
-pending** — the Open Courts Act died three times and nothing has been introduced
-in the 118th or 119th Congress. Do not write that reform is pending.
+`scripts/export_dataset.py` emits CSV, Frictionless datapackage, schema.org
+JSON-LD and MLCommons Croissant, with SHA-256 and row counts throughout. It
+refuses to ship a column with no description. Every row carries a `statement`
+field — the row as one English sentence — because a row of codes can be
+downloaded but not retrieved or quoted.
+
+**FL-Stale** is a 1,500-item benchmark on statutory currency. Ground truth is
+mechanical rather than interpretive, and the binary tasks are balanced so a
+constant answer scores 0.50, with the baseline shipped alongside.
+
+## The reliability debt, unchanged
+
+All three coded sets are single-coded by model and carry
+`reliability: NOT ESTABLISHED`. Under our own rules that makes every study
+resting on them **exploratory**. Kevin re-codes one 50-item set, we compute
+Cohen's kappa, and the work becomes measurement. This is still the cheapest step
+with the largest effect, and nothing built since has substituted for it.
 
 ## Next, in order
 
-1. **Kevin re-codes 50 sentences.** Kappa. This is the cheapest step with the
-   largest effect on what the work can claim.
-2. **Extract instrument spans from the 242 litigated testamentary decisions**,
-   anchored on reporting verbs (`the will provides`, `the clause reads`) rather
-   than on the ambiguity sentence, which was the window error that produced a
-   null result the first time.
-3. **Report the three numbers per clause type**, not per domain: exposure, risk,
-   vindication for survivorship clauses, residuary clauses, class gifts.
-4. **Scale to more states.** `clcorpus` has scopes for all 50. Florida alone
-   gives 303 litigated testamentary sentences; ten states would give a few
-   thousand.
-5. **Website mapping, not yet started.** Notebooks belong here, not in the estate
-   tax repo. The site needs a research index with `Dataset` and
-   `ScholarlyArticle` schema, nbviewer links, and cross-links so the site,
-   GitHub, Hugging Face and Zenodo name each other.
+1. **Kevin re-codes 50 sentences.** Kappa. Still first.
+2. **Re-run statutory-staleness** when the edition backfill finishes. The
+   text-diff tier goes from 5.3% of pairs to roughly 58%, and the 69.5% discount
+   gets measured across three decades instead of four years.
+3. **Subsection-level alignment**, to turn exposure into abrogation.
+4. **The research pages on stepuplaw.com**, which do not exist yet — every
+   metadata file names `/research/` and it currently 404s.
+5. **Zenodo release and DOIs**, then fill `identifier` in the metadata.
+6. **Report disputed terms per clause type**, not only per category.
 
 ## Standing rules
 
@@ -174,3 +171,7 @@ in the 118th or 119th Congress. Do not write that reform is pending.
 - Deterministic code for retrieval and extraction; a model for classification;
   never describe model-coded results as mechanical.
 - When two verification passes disagree, assert nothing.
+- Never pool measures that point in opposite directions.
+- Read the output before trusting the pattern. Bush v. Gore reached a
+  testamentary dataset because `will` is also an auxiliary verb, and reversal
+  direction was scored backwards until the sentences were read.
