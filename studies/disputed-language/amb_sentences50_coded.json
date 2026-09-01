@@ -1,0 +1,379 @@
+{
+ "coder": "Claude Fable 5 (claude-fable-5)",
+ "coding_date": "2026-09-01",
+ "reliability": "NOT ESTABLISHED. Single-coded by model; human second coder and Cohen kappa required.",
+ "codebook": {
+  "domain": "what kind of text the court was construing",
+  "posture": "rule_stated = black-letter recitation, no finding on these facts; found = court held THIS text ambiguous; rejected = court held it CLEAR; alleged = a party contended it, outcome not in this sentence; uncertain = cannot tell"
+ },
+ "domain_counts": {
+  "testamentary": 12,
+  "other": 2,
+  "contract": 18,
+  "uncertain": 8,
+  "statutory": 6,
+  "deed": 2,
+  "constitutional": 1,
+  "noise": 1
+ },
+ "posture_counts": {
+  "rule_stated": 20,
+  "alleged": 6,
+  "rejected": 12,
+  "found": 7,
+  "uncertain": 4,
+  "noise": 1
+ },
+ "items": [
+  {
+   "n": 1,
+   "domain": "testamentary",
+   "posture": "rule_stated",
+   "cluster": 1092999,
+   "sentence": "A latent ambiguity in a will does not arise from the words themselves, but from extrinsic circumstances to which the words refer and which may be explained by development of extraneous facts without altering or adding to the written language."
+  },
+  {
+   "n": 2,
+   "domain": "other",
+   "posture": "rule_stated",
+   "cluster": 7668960,
+   "sentence": "Paragraph Subdivision (a)(1) recognizes that if the testimony will be uncontested, the ambiguities in the dual role are purely theoretical."
+  },
+  {
+   "n": 3,
+   "domain": "contract",
+   "posture": "alleged",
+   "cluster": 1735133,
+   "sentence": "B Lease to explain the parties' intent in drafting the allegedly ambiguous language of article 2B."
+  },
+  {
+   "n": 4,
+   "domain": "testamentary",
+   "posture": "rejected",
+   "cluster": 4986799,
+   "sentence": "We find that the trust documents are clearly not ambiguous and that the trial court erred in concluding that MCHF was not the intended beneficiary of the pourover trust."
+  },
+  {
+   "n": 5,
+   "domain": "testamentary",
+   "posture": "rule_stated",
+   "cluster": 1766293,
+   "sentence": "In other words, latent ambiguities are either cases of equivocation or misnomer and misdescription."
+  },
+  {
+   "n": 6,
+   "domain": "testamentary",
+   "posture": "found",
+   "cluster": 1150920,
+   "sentence": "Where a testator's intent is obscured by ambiguous and uncertain language, as here, it is proper to invoke common law canons of testamentary construction in order to determine the signification of the wording."
+  },
+  {
+   "n": 7,
+   "domain": "testamentary",
+   "posture": "found",
+   "cluster": 1766293,
+   "sentence": "However, the face of the will and the affidavit filed in opposition to Olean's motion for summary judgment reflect a classic latent ambiguity."
+  },
+  {
+   "n": 8,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 1914533,
+   "sentence": "Application of the ambiguous terminology to \"the facts of the case creates a necessity for an interpretation or choice between two or more possible meanings."
+  },
+  {
+   "n": 9,
+   "domain": "statutory",
+   "posture": "rule_stated",
+   "cluster": 1768952,
+   "sentence": "Rather, if the statute is silent or ambiguous with respect to the specific issue, the question for the court is whether the agency's answer is based on a permissible construction of the statute."
+  },
+  {
+   "n": 10,
+   "domain": "testamentary",
+   "posture": "alleged",
+   "cluster": 1113657,
+   "sentence": "In that vein, she contends that the existence of the durable family power of attorney renders ambiguous the language in Article V of the amended trust agreement which prohibits an attorney-in-fact from exercising any of the rights reserved to the grantor."
+  },
+  {
+   "n": 11,
+   "domain": "statutory",
+   "posture": "uncertain",
+   "cluster": 1645295,
+   "sentence": "Ambiguity On appeal, the Samples first argue that section 766.31(l)(b)l."
+  },
+  {
+   "n": 12,
+   "domain": "testamentary",
+   "posture": "rule_stated",
+   "cluster": 1766293,
+   "sentence": "Determining whether a will is ambiguous is a question of law."
+  },
+  {
+   "n": 13,
+   "domain": "contract",
+   "posture": "found",
+   "cluster": 1914533,
+   "sentence": "[3] It is readily apparent that the term \"disease,\" as used in New England Life's standard policy, is highly ambiguous, especially when considered against the facts of this case."
+  },
+  {
+   "n": 14,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 7484120,
+   "sentence": "But where there is some ambiguity or doubt arising from other sources then interpretation has its proper office."
+  },
+  {
+   "n": 15,
+   "domain": "contract",
+   "posture": "found",
+   "cluster": 5004881,
+   "sentence": "Here, the trial court found paragraph 6 of Note \u201cC\u201d ambiguous, stating: 1."
+  },
+  {
+   "n": 16,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 1864402,
+   "sentence": "The last clause *736 of Paragraph 6 where \"purchaser agrees to accept the premises `as is' as of the date hereof can logically be read in conjunction with Paragraph 1A without ambiguity."
+  },
+  {
+   "n": 17,
+   "domain": "uncertain",
+   "posture": "uncertain",
+   "cluster": 1674283,
+   "sentence": "In this sense, the terms are \"ambiguous,\" hence the need for construction or interpretation."
+  },
+  {
+   "n": 18,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 1735133,
+   "sentence": "at 1003 (\"In this case, we can discern no uncertainty of meaning in the phrase `five (5) square miles' used by the parties on the face of their agreement such that this phrase is latently ambiguous.\")."
+  },
+  {
+   "n": 19,
+   "domain": "deed",
+   "posture": "rejected",
+   "cluster": 1101637,
+   "sentence": "The court rejected Thrasher's argument that the ingress and egress language rendered the deed ambiguous on its face and ruled that the Schomburg *1175 deed conveyed fee simple titles to both parcels."
+  },
+  {
+   "n": 20,
+   "domain": "statutory",
+   "posture": "rule_stated",
+   "cluster": 4990202,
+   "sentence": "It is well-established law in Florida that courts must \u201cconstrue tax statutes in favor of taxpayers where an ambiguity may exist.\u201d Harbor Ventures, 366 So.2d at 1174."
+  },
+  {
+   "n": 21,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 4332408,
+   "sentence": "- 10 - Here, the Amended Memorandum of Lease Agreement contains no ambiguities concerning Verizon's easement and no indications that Mr."
+  },
+  {
+   "n": 22,
+   "domain": "contract",
+   "posture": "alleged",
+   "cluster": 1864402,
+   "sentence": "Appellee's primary case in the trial court consisted of attempting to show an ambiguity in the sale and purchase agreement and utilizing various parol testimony and prior correspondence in an attempt to support his position for denial for specific performance."
+  },
+  {
+   "n": 23,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 1864402,
+   "sentence": "There is no ambiguity in that portion of Paragraph 1A or of Paragraph 6 sufficient to justify the admission of parol evidence."
+  },
+  {
+   "n": 24,
+   "domain": "deed",
+   "posture": "alleged",
+   "cluster": 4332408,
+   "sentence": "Harkless contended that the \u201csubject to\u201d language in the deeds rendered them ambiguous-and that in order to resolve that ambiguity, the trial court was required to *910 consider the language of the Harkless-Lolly contract and the intent of the parties\u2014extrinsic evidence."
+  },
+  {
+   "n": 25,
+   "domain": "testamentary",
+   "posture": "found",
+   "cluster": 4986799,
+   "sentence": "At issue in this case is whether the trial court erred in concluding that there was an ambiguity in the trust document in order to conclude that Miami Care should be the beneficiary of the pourover trust."
+  },
+  {
+   "n": 26,
+   "domain": "contract",
+   "posture": "alleged",
+   "cluster": 4599070,
+   "sentence": "Snyder argues that even if this Court does not accept her interpretation of the contract, it should reverse summary judgment upon the finding that the 03/04 MC is, at least, ambiguous."
+  },
+  {
+   "n": 27,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 2534138,
+   "sentence": "But the very effort to expose plain meaning should not be deemed by itself to confirm ambiguity."
+  },
+  {
+   "n": 28,
+   "domain": "other",
+   "posture": "uncertain",
+   "cluster": 1865745,
+   "sentence": "As Judge Nesbitt quite properly points out, such a test is by nature vague and ambiguous, does not require intra-district conflict of decisions as a prerequisite to en banc review, and invites, if not supports, second appeals from a panel decision which is thought erroneous on the merits by the full court."
+  },
+  {
+   "n": 29,
+   "domain": "testamentary",
+   "posture": "rejected",
+   "cluster": 1899408,
+   "sentence": "Aronson's intent, especially where there is no ambiguity, we are persuaded by the legal reasoning and holding in Bongaards ."
+  },
+  {
+   "n": 30,
+   "domain": "constitutional",
+   "posture": "rejected",
+   "cluster": 5010483,
+   "sentence": "This informs the voter that such a provider will not be subject to at least some of the regulations that currently apply to a public \u201cutility.\u201d 2 Again, without considering the merits of such changes in the law governing utilities, we must conclude the ballot title and summary are not ambiguous or misleading, and do inform the voter of the changes that would be implemented under the amendment."
+  },
+  {
+   "n": 31,
+   "domain": "statutory",
+   "posture": "alleged",
+   "cluster": 1645295,
+   "sentence": "which award shall not exceed $100,000.\u201d They argue that this provision is ambiguous and should be construed to authorize an award of up to $100,000 to each parent rather than a single award of $100,000 to both parents."
+  },
+  {
+   "n": 32,
+   "domain": "noise",
+   "posture": "noise",
+   "cluster": 1591664,
+   "sentence": "Terri LeClercq, Doctrine of the Last Antecedent: The Mystifying Morass of Ambiguous Modifiers, 2 Legal Writing 81 , 86-87 (1996) (footnote omitted;"
+  },
+  {
+   "n": 33,
+   "domain": "statutory",
+   "posture": "rule_stated",
+   "cluster": 1819622,
+   "sentence": "further, the High Court stated that \"[t]he simple existence of some statutory ambiguity ..."
+  },
+  {
+   "n": 34,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 4500418,
+   "sentence": "Although we always begin the interpretation of a legal text by looking to the plain meaning of its terms, if the text is ambiguous, it is appropriate to look to extrinsic evidence to resolve the ambiguity."
+  },
+  {
+   "n": 35,
+   "domain": "testamentary",
+   "posture": "found",
+   "cluster": 1766293,
+   "sentence": "Because the facts present a latent ambiguity as to the intended beneficiary, we reverse."
+  },
+  {
+   "n": 36,
+   "domain": "contract",
+   "posture": "rule_stated",
+   "cluster": 1864402,
+   "sentence": "The above stated cases taken together adhere to the principle that the courts are allowed to consider extrinsic evidence only when confronting an ambiguous contract provision, and they are barred from using evidence to create an ambiguity to rewrite a contractual provision, or to vary a party's obligation under a contract."
+  },
+  {
+   "n": 37,
+   "domain": "contract",
+   "posture": "rule_stated",
+   "cluster": 1787277,
+   "sentence": "3d DCA 1981) (because terms of contract were ambiguous, it was proper to subject issue to jury for resolution of factual matter)."
+  },
+  {
+   "n": 38,
+   "domain": "contract",
+   "posture": "rule_stated",
+   "cluster": 4867154,
+   "sentence": "3d at 976 (\u201cTo find in favor of the insured on this basis, however, the policy must actually be ambiguous.\u201d);"
+  },
+  {
+   "n": 39,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 1110135,
+   "sentence": "Longboat Key Beach Erosion Control Dist., 604 So.2d 452, 455 (Fla.1992) (\"Ambiguity suggests that reasonable persons can find different meanings in the same language.\")."
+  },
+  {
+   "n": 40,
+   "domain": "contract",
+   "posture": "rule_stated",
+   "cluster": 1652671,
+   "sentence": "We recognize that generally the existence of an ambiguity in a contract is a question of law."
+  },
+  {
+   "n": 41,
+   "domain": "testamentary",
+   "posture": "rule_stated",
+   "cluster": 5102142,
+   "sentence": "Justice Bradley (1885) in which it is stated that there is another class of latent ambiguities, namely, \u201cwhen the devisee or the property devised is imperfectly, or in some respects erroneously, described so as to leave it doubtful what person or property is' meant.\u201d In that case the property in controversy was lot three in square four hunderd and sis in the city of Washington."
+  },
+  {
+   "n": 42,
+   "domain": "contract",
+   "posture": "uncertain",
+   "cluster": 1900146,
+   "sentence": "Ward was an employee of the Trust, [2] at best the contract may be ambiguous and therefore the contract could be subject to two different interpretations."
+  },
+  {
+   "n": 43,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 1864402,
+   "sentence": "Therefore, we are of the opinion the agreement to sell and purchase under these phrases is not ambiguous, and extrinsic evidence should not have been admitted to change or alter the express provision in Paragraph 1A."
+  },
+  {
+   "n": 44,
+   "domain": "testamentary",
+   "posture": "rejected",
+   "cluster": 5102142,
+   "sentence": "Nor is the ambiguity of that character which arises when undertaking to apply the will to the thing devised it is discovered that there are two subjects or things which answer the description in the will, such would be a latent ambiguity."
+  },
+  {
+   "n": 45,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 4599070,
+   "sentence": "5th DCA 2018) (recognizing a true ambiguity only exists when it is susceptible to more than one reasonable interpretation)."
+  },
+  {
+   "n": 46,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 1851164,
+   "sentence": "3d DCA 1982), this court affirmed the exclusion of extrinsic evidence regarding an acceleration clause and a discount clause within a mortgage, finding no ambiguity."
+  },
+  {
+   "n": 47,
+   "domain": "contract",
+   "posture": "found",
+   "cluster": 1907616,
+   "sentence": "Thus, the venue provision at issue here employs contradictory *866 terms, rendering it ambiguous."
+  },
+  {
+   "n": 48,
+   "domain": "contract",
+   "posture": "rejected",
+   "cluster": 9420664,
+   "sentence": "If we were to agree with Frances\u2019 interpretation, we would be committing two sins of contract interpretation\u2014 creating an ambiguity where none exists and rendering the provision allowing Eugene to split the 50% share with future children meaningless."
+  },
+  {
+   "n": 49,
+   "domain": "uncertain",
+   "posture": "rule_stated",
+   "cluster": 1141306,
+   "sentence": "3d DCA 1959), and parol evidence could not be introduced to vary the terms of the written instrument unless an ambiguity existed."
+  },
+  {
+   "n": 50,
+   "domain": "statutory",
+   "posture": "rule_stated",
+   "cluster": 2686850,
+   "sentence": "In addition, North Carillon argues that because section 718.202 includes a criminal penalty for the violation of the statutory escrow requirements, any ambiguity must be resolved in favor of the developer under Florida\u2019s statutory rule of lenity."
+  }
+ ]
+}

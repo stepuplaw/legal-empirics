@@ -338,3 +338,38 @@ Brown's work is *Manual of Preventive Law* (Prentice-Hall 1950). The National
 Center for Preventive Law's domain is dead, last archived 2022. Its living
 descendant is the merger with therapeutic jurisprudence. Use the term with a
 historical gloss, never as a live term of art.
+
+### Most ambiguity language is the rule being recited, not applied
+*Sentence coding, 2026-09-01.* Fifty ambiguity sentences coded on two axes,
+domain and posture. Only **7 of 50 (14%) were an actual finding that the text
+before the court was ambiguous.** Forty per cent were black-letter recitation of
+the rule with no finding on those facts, and **24% were the court REJECTING
+ambiguity**, holding the language clear.
+
+This is the most consequential screening failure found so far, and it inverts
+results if missed. A case where ambiguity was **rejected** still contains quoted
+instrument language, and that language was held **clear**. Harvesting it into a
+catalogue of "provisions that failed" would put well-drafted clauses in a list of
+badly drafted ones and get the sign backwards.
+
+**Posture must be coded before any span is admitted.** The codebook:
+
+| Posture | Meaning |
+|---|---|
+| `rule_stated` | black-letter recitation, no finding on these facts |
+| `found` | the court held THIS text ambiguous |
+| `rejected` | the court held this text CLEAR |
+| `alleged` | a party contended it; outcome not in this sentence |
+| `uncertain` | cannot tell from the sentence alone |
+
+Only `found` supports the inference the study wants. `alleged` and `uncertain`
+go to a second round rather than being forced into a bucket, because a sentence
+is often not enough context and the honest answer is to read more of the
+opinion.
+
+### Sentence-level coding is cheap enough to do properly
+Fifty sentences is a short read. Where a corpus-scale mechanical filter is
+brittle and a full-opinion review is unaffordable, **the ambiguity sentence
+itself is the right unit**: short enough to code in bulk, long enough to carry
+both domain and posture. Design the unit of coding to be the smallest text that
+answers the question.
