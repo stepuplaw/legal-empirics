@@ -4,6 +4,9 @@ Empirical studies of published judicial opinions, mostly Florida, mostly estate
 and trust law. Run by [Kevin D. Klagge, Esq.](https://stepuplaw.com),
 [ORCID 0009-0002-1385-8498](https://orcid.org/0009-0002-1385-8498).
 
+**Start with [STATE.md](STATE.md)** for where the project stands, what has been
+run, and what is next.
+
 **Read [METHODOLOGY.md](METHODOLOGY.md) before starting a study**, and
 [CORPUS-LINGUISTICS.md](CORPUS-LINGUISTICS.md) if the question is about what
 words mean or which words recur. It names the

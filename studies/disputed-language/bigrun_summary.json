@@ -1,0 +1,50 @@
+{
+ "corpus": "fl-opinions.db, snapshot 2026-06-30",
+ "courts": [
+  "fladistctapp",
+  "fla"
+ ],
+ "decisions_with_ambiguity_language": 6523,
+ "ambiguity_sentences": 13218,
+ "litigated_sentences": 4497,
+ "classifier": "lib/posture.py, deterministic; validated against 50 model-coded sentences: litigated screen precision 92%, recall 92%, F1 0.92; posture agreement 70%, domain 78%",
+ "caveat": "46% of sentences are domain-uncertain and 64% posture-uncertain. The rule is conservative: its dominant error is labelling rule_stated as uncertain, which excludes rather than contaminates. Rates below are computed only on classified rows.",
+ "by_domain": {
+  "uncertain": {
+   "exposure": 1869,
+   "found": 846,
+   "rejected": 645,
+   "risk": 0.567
+  },
+  "contract": {
+   "exposure": 1612,
+   "found": 869,
+   "rejected": 496,
+   "risk": 0.637
+  },
+  "statutory": {
+   "exposure": 630,
+   "found": 359,
+   "rejected": 209,
+   "risk": 0.632
+  },
+  "testamentary": {
+   "exposure": 303,
+   "found": 139,
+   "rejected": 139,
+   "risk": 0.5
+  },
+  "deed": {
+   "exposure": 49,
+   "found": 17,
+   "rejected": 26,
+   "risk": 0.395
+  },
+  "constitutional": {
+   "exposure": 34,
+   "found": 21,
+   "rejected": 7,
+   "risk": 0.75
+  }
+ }
+}
