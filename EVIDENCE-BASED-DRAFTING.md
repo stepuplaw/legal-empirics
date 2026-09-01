@@ -250,12 +250,19 @@ the ORCID, the open licence, the machine-readable formats and the persistent
 canonical URL already satisfy most of FAIR, so it is worth claiming compliance
 explicitly rather than accidentally.
 
-**Adjacent work worth knowing.** Computational legal studies and legal analytics
-approach the same corpora with more engineering and less doctrinal framing.
-Empirical contract design scholarship studies how commercial agreements are
-structured and why. Legal design is prospective and practitioner-facing like
-this, but works from user research rather than case data. None of them is doing
-what section 1 proposes, which is the reason for doing it.
+**Adjacent work worth knowing, and the honest scope of the claim.** Corpus
+methods have already been applied to private instruments: Mouritsen's *Contract
+Interpretation with Corpus Linguistics*, 94 Wash. L. Rev. 1337 (2019), and
+courts applying it to contracts, insurance policies and benefit plans. That
+ground is taken.
+
+What a database search across three services did **not** find is any
+corpus-linguistic work on **wills, trusts and deeds**. That is the open band,
+and the claim in this paper is confined to it. Computational legal studies and
+legal analytics work the same corpora with more engineering; empirical contract
+design studies commercial agreement structure; legal design is
+practitioner-facing but works from user research rather than case data. None
+addresses testamentary instruments, which is the reason for doing this.
 
 ## 10. The programme
 

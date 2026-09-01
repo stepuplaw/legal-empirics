@@ -287,3 +287,19 @@ courts. The bottleneck was never the corpus.
 Retrieve broadly, then filter hard. A narrow query silently caps the study at
 whatever the query author happened to think of, and unlike a filter it leaves no
 funnel entry to show what was lost.
+
+### Never assert that a term is absent from an opinion without the official PDF
+*Citation checking, 2026-09-01.* A full-text search reported that *Facebook v.
+Duguid* does not discuss corpus linguistics. It does, in Alito's concurrence,
+592 U.S. 412. The search missed it because the U.S. Reports print **hyphenates
+the word across a line break**. Any claim that something is *absent* from an
+opinion must be checked against the official PDF, not a reporter database.
+Absence claims are the easiest kind to get wrong and the hardest to defend.
+
+### Crossref cannot disconfirm a US law review citation
+Crossref does not index most US student-edited law reviews; a query for an
+entire law review can return zero. A Crossref miss is not evidence a citation is
+fake. Fall back to the journal's institutional repository, whose OAI-PMH feed
+(`/do/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=publication:<journal>`) is
+the reliable enumeration path. The bepress `/do/search/` endpoint returns
+HTTP 500 and should not be used.

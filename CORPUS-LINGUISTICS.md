@@ -2,8 +2,12 @@
 
 What it is, the actual techniques, what it is for, and where the opening is.
 
-> Citations below are given from knowledge and have **not** been verified
-> against the published sources. Check every one before relying on it.
+> **Citation status.** Bernstein, Zoldan, Mouritsen's contract article, and the
+> Rasabout and Oltmanns attributions were verified against repository or
+> official sources. *Fulkerson v. Unum Life Ins. Co.*, given elsewhere as 36
+> F.4th 678 (6th Cir. 2022), is **unverified**: BYU's own list carries it with no
+> reporter cite. Everything not named here is still from knowledge and needs
+> checking before it is relied on.
 
 ---
 
@@ -30,13 +34,21 @@ else: different objects, different corpora, different claims.
   the argument that dictionaries cannot settle ordinary meaning.
 - **Thomas R. Lee & Stephen C. Mouritsen**, *Judging Ordinary Meaning*, 127 Yale
   L.J. 788 (2018) — the landmark statement of the method for lawyers.
-- **State v. Rasabout**, 356 P.3d 1258 (Utah 2015) — Justice Lee's concurrence,
-  widely treated as the first serious judicial application.
+- **State v. Rasabout**, 356 P.3d 1258 (Utah 2015) — Justice Lee's separate
+  opinion applies the method. **The majority rejected it.** Rasabout is often
+  described as the method's judicial debut, which is true only of the
+  concurrence, and describing it as the court's approach is wrong.
 - **BYU Law** built the corpora the field runs on, including COFEA, the Corpus
   of Founding Era American English, aimed at originalist questions.
 
-The centre of gravity is constitutional and statutory interpretation. That is
-important, because it is also where the opening is.
+Justice Lee was educated at BYU Law and Harvard. The centre of gravity of the
+field is constitutional and statutory interpretation.
+
+**The critics are worth reading before the advocates.** Anya Bernstein, *Legal
+Corpus Linguistics and the Half-Empirical Attitude*, 106 Cornell L. Rev. 1397
+(2021), and Evan C. Zoldan, *Corpus Linguistics and the Dream of Objectivity*,
+50 Seton Hall L. Rev. 401 (2019). Both citations verified against repository
+sources.
 
 ## 3. The actual techniques
 
@@ -105,10 +117,24 @@ A study that names these before being asked is far harder to dismiss.
 Established use is **interpretive**: what did this word mean, so what does the
 statute or constitutional clause require. Retrospective, and aimed at courts.
 
-The gap is **prospective and aimed at drafters**. Nobody much is asking: *which
-words, in instruments people actually sign, end up being fought over?* That is a
-corpus question, it is answerable, and its audience is the person drafting
-tomorrow rather than the judge construing yesterday.
+**The private-instrument ground is already occupied, and the claim has to
+narrow.** Stephen C. Mouritsen, co-author of *Judging Ordinary Meaning*, staked
+it in *Contract Interpretation with Corpus Linguistics*, 94 Wash. L. Rev. 1337
+(2019). Courts have run the method on contracts (*Brady v. Park*), insurance
+policies (*Fulkerson*, *Wesco*, *Oltmanns*, *Snell*) and benefit plans
+(*Safelite*). Anyone claiming to have thought of applying corpus methods to
+private instruments is about six years late.
+
+**What survives, and it is narrow and exact: wills, trusts and deeds.** A search
+across three databases found no corpus-linguistic scholarship on testamentary or
+donative instruments at all. Contracts are done. Insurance policies are done.
+Estate planning documents are untouched.
+
+That is a better position than the broad claim, for three reasons. It is
+defensible, because the gap is specific enough to demonstrate. It is where the
+author actually practises. And the prospective framing still holds within it:
+the existing work asks what a contract term *meant* in a dispute, and nobody is
+asking which testamentary language *ends up in dispute in the first place*.
 
 **Why it is answerable.** When a court construes a will or a trust, it **quotes
 the disputed language**. Those quotations are a naturally occurring corpus of
