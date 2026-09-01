@@ -1,0 +1,228 @@
+{
+ "coder": "Claude Fable 5 (claude-fable-5)",
+ "coding_date": "2026-09-01",
+ "method": "model read each span and assigned one label; no human second coder yet",
+ "reliability": "NOT ESTABLISHED. Single-coded by model. A human must re-code this same sample and Cohen kappa reported before any finding rests on it.",
+ "labels": [
+  "testamentary",
+  "constitutional",
+  "statutory",
+  "contract",
+  "deed",
+  "other_instrument",
+  "court_language",
+  "noise"
+ ],
+ "counts": {
+  "statutory": 6,
+  "other_instrument": 2,
+  "noise": 1,
+  "court_language": 3,
+  "contract": 3,
+  "constitutional": 14,
+  "testamentary": 10,
+  "deed": 1
+ },
+ "items": [
+  {
+   "n": 1,
+   "label": "statutory",
+   "span": "the circuit courts shall have * original jurisdiction of"
+  },
+  {
+   "n": 2,
+   "label": "other_instrument",
+   "span": "[r]eassignments will be handled in a professional manner."
+  },
+  {
+   "n": 3,
+   "label": "statutory",
+   "span": "\u00a7 843.14, Fla. Stat. links the degree of the felony that was concealed to the degree of the crime that the defendant committed."
+  },
+  {
+   "n": 4,
+   "label": "noise",
+   "span": "TRUCK ADVERTISED BEER: CARRIED MARIJUANA BALES"
+  },
+  {
+   "n": 5,
+   "label": "statutory",
+   "span": ". . . as well as to all persons convicted and sentenced to total confinement for a sexually violent offense in the future,"
+  },
+  {
+   "n": 6,
+   "label": "court_language",
+   "span": "No justiciable issue is raised by the Petition for Construction of Will before the Court which would involve a construction of the Will of Clyde Underwood Crews."
+  },
+  {
+   "n": 7,
+   "label": "contract",
+   "span": "The rights of the lessor under the foregoing shall be cumulative, and failure on the part of the lessor to exercise promptly any rights given hereunder shall not operate to forfeit any of the said rights."
+  },
+  {
+   "n": 8,
+   "label": "other_instrument",
+   "span": "Section 7. No officer or employee of the Florida Citrus Exchange or Manager of any Sub-Exchange or Association packing house, shall speculate in citrus fruit, and such conduct on his part shall justify his removal."
+  },
+  {
+   "n": 9,
+   "label": "constitutional",
+   "span": "any specific appropriation in a general appropriation bill."
+  },
+  {
+   "n": 10,
+   "label": "constitutional",
+   "span": "No State shall * * * pass any * * * law impairing the obligation of contracts."
+  },
+  {
+   "n": 11,
+   "label": "constitutional",
+   "span": "No person shall hold any office of trust or profit under the laws of this State without devoting his personal attention to the duties of the same."
+  },
+  {
+   "n": 12,
+   "label": "contract",
+   "span": "anything in said promissory note or herein to the contrary notwithstanding,"
+  },
+  {
+   "n": 13,
+   "label": "testamentary",
+   "span": "the Trustee has the powers now or hereafter provided by law,"
+  },
+  {
+   "n": 14,
+   "label": "statutory",
+   "span": "operate, regulate, control, and be fully responsible for the management of the whole university system,"
+  },
+  {
+   "n": 15,
+   "label": "testamentary",
+   "span": "I give and bequeath the sum of four thousand dollars to a Home for Boys and the sum of four thousand dollars to a Home for Crippled Children, said Homes to be selected and designated by the executors of my estate."
+  },
+  {
+   "n": 16,
+   "label": "testamentary",
+   "span": "Neither the conservator nor the guardian of the grantor, nor any person other than the grantor except as otherwise provided in this item, may exercise any of the rights reserved to the grantor by the provisions of this item."
+  },
+  {
+   "n": 17,
+   "label": "constitutional",
+   "span": "Suits against state. \u0097 Provision may be made by general law for bringing suit against the State as to all liabilities now existing or hereafter originating."
+  },
+  {
+   "n": 18,
+   "label": "testamentary",
+   "span": "Should the Grantor's husband, Joseph James Cox, survive the Grantor, then the Grantor directs the Trustee to set aside as a separate trust, to be called the Marital Trust, and to be administered under the terms of Article VII...."
+  },
+  {
+   "n": 19,
+   "label": "constitutional",
+   "span": "[e]very natural person has the right to be let alone and free from governmental intrusion into the person\u2019s private life."
+  },
+  {
+   "n": 20,
+   "label": "constitutional",
+   "span": "the exclusive power of deciding how, when, and for what purpose the public funds shall be applied in carrying on the government."
+  },
+  {
+   "n": 21,
+   "label": "constitutional",
+   "span": "no bonds, except refunding bonds, shall be issued, and no proceeds shall be expended for the cost of any capital project, unless such project has been authorized by the legislature."
+  },
+  {
+   "n": 22,
+   "label": "constitutional",
+   "span": "shall have governmental, corporate and proprietary powers to enable them to conduct municipal government, perform municipal functions and render municipal services,"
+  },
+  {
+   "n": 23,
+   "label": "testamentary",
+   "span": "at the death of Richard Scott Magruder, all undistributed income as well as the corpus or remainder thereof in such trust estate shall be divided equally between Richard Scott Magruder, Jr. and Patricia Ann Magruder"
+  },
+  {
+   "n": 24,
+   "label": "constitutional",
+   "span": "Laws making appropriations for salaries of public officers and other current expenses of the state shall contain provisions on no other subject."
+  },
+  {
+   "n": 25,
+   "label": "testamentary",
+   "span": "an amount not to exceed the current average rates payable under the Beneficiary\u2019s plan(s) to a State University or Florida College."
+  },
+  {
+   "n": 26,
+   "label": "testamentary",
+   "span": "all the rest, residue and remainder of my estate"
+  },
+  {
+   "n": 27,
+   "label": "deed",
+   "span": "It is the intention of the grantor herein to convey to the grantee herein all the interest in the above property which was formerly owned by Frank S. Roberts, same being an undivided one-fourth interest therein."
+  },
+  {
+   "n": 28,
+   "label": "constitutional",
+   "span": "[i]t shall be the policy of the state to conserve and protect its natural resources and scenic beauty."
+  },
+  {
+   "n": 29,
+   "label": "testamentary",
+   "span": "[t]he rest and the remainder of the corpus of the Trust, including any income thereof, shall be distributed equally between BECKY J. KERSEY and KENNETH J. ABRAHAM, outright free of Trust,"
+  },
+  {
+   "n": 30,
+   "label": "testamentary",
+   "span": "any and all of my property situated in the Province of Ontario"
+  },
+  {
+   "n": 31,
+   "label": "constitutional",
+   "span": "[n]o private property shall be taken except for a public purpose and with full compensation therefor paid to each owner or secured by deposit in the registry of the court and available to the owner."
+  },
+  {
+   "n": 32,
+   "label": "testamentary",
+   "span": "TWENTY-FIVE PERCENT (25%) to MIAMI CHILDREN\u2019S HOSPITAL FOUNDATION, CRANIAL/FACIAL FOUNDATION, located at 3000 S.W. 62nd Avenue, Miami, FL 33155, ATT: Dr. Anthony Wolf [sic]."
+  },
+  {
+   "n": 33,
+   "label": "contract",
+   "span": "Special first estimate of ten per cent of the total contract price will be paid within ten days after the work order is issued for payment of bond premium, prepaid insurance and move-in cost."
+  },
+  {
+   "n": 34,
+   "label": "constitutional",
+   "span": "(2) A nonrecurring tax of 2 mills on the dollar of the just valuation of all notes, bonds, and other obligations for payment of money which are secured by mortgage, deed of trust, or other lien upon real property situated in the state."
+  },
+  {
+   "n": 35,
+   "label": "constitutional",
+   "span": "No person belonging to one branch shall exercise any powers appertaining to either of the other branches unless expressly provided herein."
+  },
+  {
+   "n": 36,
+   "label": "court_language",
+   "span": "An appeal to equity may be made where the judgment of the county judge has been procured by fraud. The county judge would also have jurisdiction."
+  },
+  {
+   "n": 37,
+   "label": "statutory",
+   "span": "[t]he common law of trusts and principles of equity supplement this code, except to the extent modified by this code or another law of this state."
+  },
+  {
+   "n": 38,
+   "label": "court_language",
+   "span": "Warner v. City of Boca Raton, 267 F.3d 1223 , 1226 n. 3 (11th Cir.2001). The dissent has cited no authority supporting its assertion that Florida's Free Exercise Clause has"
+  },
+  {
+   "n": 39,
+   "label": "constitutional",
+   "span": "paramount duty of the state to make adequate provision for the education of all children residing within its borders."
+  },
+  {
+   "n": 40,
+   "label": "statutory",
+   "span": "Any adoption made before the effective date of this act shall be valid, and any proceedings pending on the effective date of this act are not affected."
+  }
+ ]
+}

@@ -254,3 +254,36 @@ Root expanders such as `ambig!` or `statut!` change recall substantially and
 silently. Test each expansion against its literal form and record the counts
 before adopting it.
 
+### Constitutional interpretation is a third ambiguity domain, and the largest
+*Disputed-language extraction, 2026-09-01.* Having separated statutory and
+contract ambiguity, a coded sample of 40 extracted spans came back **35%
+constitutional** and only **25% testamentary**. Constitutional provisions evade
+a citation-based reject filter because the quoted text itself contains no
+reporter, no "v.", and no "Fla." Courts quote constitutional text constantly and
+call it ambiguous. Any future pool must exclude it explicitly.
+
+### Model classification beats regex, and costs a reliability obligation
+Regex classification is deterministic and reproducible but brittle: it cannot
+tell that "the common law of trusts and principles of equity supplement this
+code" is the Trust Code rather than a trust instrument, though it contains
+"trust". A model reading the span gets that right.
+
+The trade is real and must be paid, not waved at. Model coding is
+**non-deterministic**, so a rerun may differ; it requires the model and date
+recorded; and under the coding rules above it requires a **human second coder on
+a random subsample with Cohen's kappa reported**. Until that exists the study is
+exploratory and must say so on its face.
+
+The practical division: use deterministic code for RETRIEVAL and mechanical
+extraction, where reproducibility matters most and judgement is not required.
+Use a model for CLASSIFICATION, where judgement is the whole task. Never
+describe a model-coded result as if it were mechanical.
+
+### Recall lives in the query, precision lives in the filter
+*2026-09-01.* A narrow retrieval query returned 216 Florida decisions; widening
+the vocabulary returned **5,573**, a 26-fold increase, from the same corpus and
+courts. The bottleneck was never the corpus.
+
+Retrieve broadly, then filter hard. A narrow query silently caps the study at
+whatever the query author happened to think of, and unlike a filter it leaves no
+funnel entry to show what was lost.
