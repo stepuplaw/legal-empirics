@@ -3,7 +3,7 @@
 Empirical studies of published judicial opinions, mostly Florida, mostly estate
 and trust law.
 
-Run by **Kevin D. Klagge, Esq.**, [Klagge Law PLLC](https://stepuplaw.com) ·
+Run by **Kevin D. Klagge, Esq.** · [stepuplaw.com](https://stepuplaw.com) ·
 [ORCID 0009-0002-1385-8498](https://orcid.org/0009-0002-1385-8498)
 
 **Start with [STATE.md](STATE.md)** for where the project stands, what has been

@@ -9,8 +9,8 @@
     }
   ],
   "homepage": "https://stepuplaw.com/research/reformation-fl/",
-  "version": "2026-09-01",
-  "created": "2026-09-01",
+  "version": "2026-09-02",
+  "created": "2026-09-02",
   "sources": [
     {
       "title": "CourtListener bulk export, topped up nightly from the courts",
@@ -105,7 +105,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "11b2564e59f75369d84655ac7762356c570b366c",
+    "commit": "c8ab1a84f02825ab55e28ba7d30d5a74eacb36ce",
     "run": {
       "query": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
       "scope": "fl state appellate (S+SA)",

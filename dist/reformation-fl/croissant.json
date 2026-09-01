@@ -35,7 +35,7 @@
   "description": "Every Florida state appellate decision litigating the reformation of a legal instrument -- will, trust, deed, contract or insurance policy -- with the instrument type, the kind of drafting error alleged, the outcome, and which statutory regime was in force. Florida authorised trust reformation in 2007 (s. 736.0415) and will reformation in 2011 (s. 732.615); before those dates the remedy rested on equity, and for wills was unavailable entirely. The dataset makes that break observable within one jurisdiction.",
   "url": "https://stepuplaw.com/research/reformation-fl/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "version": "2026-09-01",
+  "version": "2026-09-02",
   "keywords": [
     "reformation",
     "scrivener's error",

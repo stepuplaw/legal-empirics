@@ -17,23 +17,20 @@
   ],
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": true,
-  "version": "2026-09-01",
-  "dateModified": "2026-09-01",
+  "version": "2026-09-02",
+  "dateModified": "2026-09-02",
   "creator": {
     "@type": "Person",
     "name": "Kevin D. Klagge",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Klagge Law PLLC",
-      "url": "https://stepuplaw.com"
-    },
+    "url": "https://stepuplaw.com",
     "identifier": "https://orcid.org/0009-0002-1385-8498",
     "sameAs": "https://orcid.org/0009-0002-1385-8498"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Klagge Law PLLC",
-    "url": "https://stepuplaw.com"
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "url": "https://stepuplaw.com",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
   },
   "sameAs": [
     "https://github.com/stepuplaw/legal-empirics",

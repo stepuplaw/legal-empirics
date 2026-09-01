@@ -9,8 +9,8 @@
     }
   ],
   "homepage": "https://stepuplaw.com/research/disputed-terms-national/",
-  "version": "2026-09-01",
-  "created": "2026-09-01",
+  "version": "2026-09-02",
+  "created": "2026-09-02",
   "sources": [
     {
       "title": "CourtListener bulk export, topped up nightly from the courts",
@@ -90,7 +90,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "11b2564e59f75369d84655ac7762356c570b366c",
+    "commit": "c8ab1a84f02825ab55e28ba7d30d5a74eacb36ce",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities)",
       "scope": "national state appellate (S+SA)",
