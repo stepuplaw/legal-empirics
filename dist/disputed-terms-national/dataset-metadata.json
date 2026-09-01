@@ -1,0 +1,84 @@
+{
+  "title": "Disputed Contract Terms, 51 US Jurisdictions",
+  "subtitle": "Words courts were asked to call ambiguous, and whether the challenge won",
+  "id": "stepuplaw/disputed-terms-national",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "contract interpretation",
+    "ambiguity",
+    "corpus linguistics",
+    "legal drafting",
+    "empirical legal studies",
+    "state courts"
+  ],
+  "description": "One row per (term, decision) pair: a word or phrase a court quoted as the disputed language in a decision containing an ambiguity holding, across the state appellate courts of all 50 states and DC. Terms are extracted from the whole opinion by cue-anchored quotation ('the term \"X\"', '\"X\" as used in'), classified into functional drafting categories, and linked to the holding by three graded levels of evidence.\n\nCanonical record and methodology: https://github.com/stepuplaw/legal-empirics\nResearch page: https://stepuplaw.com/research/\nAuthor: Kevin D. Klagge, ORCID https://orcid.org/0009-0002-1385-8498\n\nEvery row carries a `statement` column, which is the row written as one English sentence so it can be read and quoted on its own. Column definitions are in datapackage.json; the same data is also described in MLCommons Croissant.",
+  "resources": [
+    {
+      "path": "disputed-terms-national.csv",
+      "description": "Disputed Contract and Instrument Terms in US State Appellate Courts",
+      "schema": {
+        "fields": [
+          {
+            "name": "term",
+            "description": "the disputed language, lowercased and normalised, as the court quoted it",
+            "type": "string"
+          },
+          {
+            "name": "category",
+            "description": "functional drafting class: nexus, degree, temporal, scope, modal, role, succession, property, event, conduct, condition, mental, uncategorised",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "description": "the instrument the words sit in: testamentary, deed, insurance, contract, statute, constitution, uncertain",
+            "type": "string"
+          },
+          {
+            "name": "posture",
+            "description": "found | rejected | alleged | uncertain -- whether the court held the language ambiguous",
+            "type": "string"
+          },
+          {
+            "name": "link",
+            "description": "direct | proximate | inferred -- strength of the link between this term and the holding; inferred rows must not be pooled with the other two",
+            "type": "string"
+          },
+          {
+            "name": "oid",
+            "description": "CourtListener opinion id",
+            "type": "integer"
+          },
+          {
+            "name": "cid",
+            "description": "CourtListener cluster id",
+            "type": "integer"
+          },
+          {
+            "name": "court",
+            "description": "CourtListener court id",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "description": "two-letter state postal code",
+            "type": "string"
+          },
+          {
+            "name": "year",
+            "description": "year the decision was filed",
+            "type": "integer"
+          },
+          {
+            "name": "statement",
+            "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

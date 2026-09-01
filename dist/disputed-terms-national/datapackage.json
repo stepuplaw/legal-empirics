@@ -90,7 +90,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "c8ab1a84f02825ab55e28ba7d30d5a74eacb36ce",
+    "commit": "f791cc4468f232f631a5200b2b61b1d9aa88c743",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities)",
       "scope": "national state appellate (S+SA)",

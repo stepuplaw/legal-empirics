@@ -1,0 +1,102 @@
+{
+  "title": "Florida Instrument Reformation, 1853-2026",
+  "subtitle": "Every Florida appellate decision reforming a will, trust, deed or policy",
+  "id": "stepuplaw/reformation-fl",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "reformation",
+    "scrivener's error",
+    "wills",
+    "trusts",
+    "deeds",
+    "legal drafting",
+    "empirical legal studies",
+    "Florida",
+    "preventive law"
+  ],
+  "description": "Every Florida state appellate decision litigating the reformation of a legal instrument -- will, trust, deed, contract or insurance policy -- with the instrument type, the kind of drafting error alleged, the outcome, and which statutory regime was in force. Florida authorised trust reformation in 2007 (s. 736.0415) and will reformation in 2011 (s. 732.615); before those dates the remedy rested on equity, and for wills was unavailable entirely. The dataset makes that break observable within one jurisdiction.\n\nCanonical record and methodology: https://github.com/stepuplaw/legal-empirics\nResearch page: https://stepuplaw.com/research/\nAuthor: Kevin D. Klagge, ORCID https://orcid.org/0009-0002-1385-8498\n\nEvery row carries a `statement` column, which is the row written as one English sentence so it can be read and quoted on its own. Column definitions are in datapackage.json; the same data is also described in MLCommons Croissant.",
+  "resources": [
+    {
+      "path": "reformation-fl.csv",
+      "description": "Florida Reformation of Instruments, 1853-2026",
+      "schema": {
+        "fields": [
+          {
+            "name": "oid",
+            "description": "CourtListener opinion id",
+            "type": "integer"
+          },
+          {
+            "name": "cid",
+            "description": "CourtListener cluster id; one decision may hold several opinions",
+            "type": "integer"
+          },
+          {
+            "name": "name",
+            "description": "case name as reported",
+            "type": "string"
+          },
+          {
+            "name": "court",
+            "description": "CourtListener court id (fla = Supreme Court of Florida, fladistctapp = District Courts of Appeal)",
+            "type": "string"
+          },
+          {
+            "name": "year",
+            "description": "year the decision was filed",
+            "type": "integer"
+          },
+          {
+            "name": "cites",
+            "description": "times the decision has been cited, per CourtListener",
+            "type": "integer"
+          },
+          {
+            "name": "instrument",
+            "description": "will | trust | deed | contract | insurance | uncertain",
+            "type": "string"
+          },
+          {
+            "name": "outcome",
+            "description": "granted | denied | sought | rule_stated | authority | uncertain -- see the codebook; only granted and denied are holdings",
+            "type": "string"
+          },
+          {
+            "name": "regime",
+            "description": "statutory | pre-statute | equitable | unknown -- which reformation regime governed that instrument on that date",
+            "type": "string"
+          },
+          {
+            "name": "errors",
+            "description": "comma-separated error types alleged; multi-label by design",
+            "type": "string"
+          },
+          {
+            "name": "n_reform_sents",
+            "description": "count of reformation sentences found in the opinion",
+            "type": "integer"
+          },
+          {
+            "name": "cites_statute",
+            "description": "1 where the opinion cites s. 732.615, s. 732.616 or s. 736.0415",
+            "type": "integer"
+          },
+          {
+            "name": "key_sentence",
+            "description": "the sentence the outcome label was read from, verbatim",
+            "type": "string"
+          },
+          {
+            "name": "statement",
+            "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

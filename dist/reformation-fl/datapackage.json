@@ -105,7 +105,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "c8ab1a84f02825ab55e28ba7d30d5a74eacb36ce",
+    "commit": "f791cc4468f232f631a5200b2b61b1d9aa88c743",
     "run": {
       "query": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
       "scope": "fl state appellate (S+SA)",

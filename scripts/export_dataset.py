@@ -41,6 +41,8 @@ LICENSE = {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/
 # interpret, so the exporter refuses to ship one.
 DATASETS = {
     "reformation-fl": {
+        "kaggle_title": "Florida Instrument Reformation, 1853-2026",
+        "kaggle_subtitle": "Every Florida appellate decision reforming a will, trust, deed or policy",
         "db": "studies/reformation-fl/reformation-fl.db",
         "table": "decisions",
         "title": "Florida Reformation of Instruments, 1853-2026",
@@ -73,6 +75,8 @@ DATASETS = {
         },
     },
     "statutory-staleness-fl": {
+        "kaggle_title": "Florida Case Law on Amended Statutes",
+        "kaggle_subtitle": "Which Florida holdings construe a statute that has since been changed",
         "db": "studies/statutory-staleness/statutory-staleness.db",
         "table": "holdings",
         "title": "Statutory Staleness in Florida Appellate Construction Holdings",
@@ -110,6 +114,8 @@ DATASETS = {
         },
     },
     "disputed-terms-national": {
+        "kaggle_title": "Disputed Contract Terms, 51 US Jurisdictions",
+        "kaggle_subtitle": "Words courts were asked to call ambiguous, and whether the challenge won",
         "db": "studies/disputed-terms/terms-national.db",
         "table": "term_hits",
         "title": "Disputed Contract and Instrument Terms in US State Appellate Courts",
@@ -392,6 +398,37 @@ def export(name, spec, outroot):
     }
     with open(os.path.join(outdir, "croissant.json"), "w") as fh:
         json.dump(croissant, fh, indent=2)
+
+    # Kaggle. A distribution channel, not an identity anchor, so the card points
+    # at the canonical record rather than presenting itself as one. Title is
+    # capped at 50 characters and the subtitle wants 20 to 80, which is why both
+    # are written out per dataset instead of reusing the long scholarly title.
+    kag = {
+        "title": spec.get("kaggle_title", spec["title"])[:50],
+        "subtitle": spec.get("kaggle_subtitle", "")[:80],
+        "id": f"stepuplaw/{name}",
+        "licenses": [{"name": "CC-BY-4.0"}],
+        "keywords": spec["keywords"],
+        "description": (
+            spec["description"]
+            + "\n\nCanonical record and methodology: " + REPO
+            + "\nResearch page: " + f"{SITE}/research/"
+            + "\nAuthor: Kevin D. Klagge, ORCID " + ORCID
+            + "\n\nEvery row carries a `statement` column, which is the row written "
+              "as one English sentence so it can be read and quoted on its own. "
+              "Column definitions are in datapackage.json; the same data is also "
+              "described in MLCommons Croissant."),
+        "resources": [{
+            "path": f"{name}.csv",
+            "description": spec["title"],
+            "schema": {"fields": [
+                {"name": c, "description": spec["fields"][c],
+                 "type": SQL_TO_FRICTIONLESS.get((t or "TEXT").upper(), "string")}
+                for c, t in cols]},
+        }],
+    }
+    with open(os.path.join(outdir, "dataset-metadata.json"), "w") as fh:
+        json.dump(kag, fh, indent=2)
 
     print(f"  {name}: {n:,} rows, {size/1e6:.1f} MB, sha256 {digest[:16]}…")
     return {"name": name, "rows": n, "bytes": size, "sha256": digest}

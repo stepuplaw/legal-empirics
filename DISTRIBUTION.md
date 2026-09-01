@@ -24,8 +24,8 @@ identity. Everything else is a copy that names it.
 | 5 | Hugging Face | **account ready** (`stepuplaw`, write token saved) | reaches ML and AI people; Croissant makes data loadable, not just downloadable |
 | 6 | Google Dataset Search | **automatic** | harvests the schema.org markup already on /research/ |
 | 7 | DataCite / OpenAIRE / OpenAlex | **automatic once the DOI exists** | three more independent systems, no extra work |
-| 8 | Kaggle | not started | large data-science audience, Croissant support, Google-owned so it indexes well |
-| 9 | OSF | not started | **preregistration**, which `protocols/` already assumes |
+| 8 | Kaggle | **metadata built**, needs `~/.kaggle/kaggle.json` | large data-science audience, Croissant support, Google-owned so it indexes well |
+| 9 | OSF | **protocol drafted** for the next study, needs an OSF token | **preregistration**, which `protocols/` already assumes |
 | 10 | SSRN | not started | where legal academics and practitioners actually look |
 | 11 | Wikidata | not started | knowledge-graph node. Do it for a DATASET, after the DOI |
 | 12 | Google Scholar profile | not started | links publications to the ORCID |
