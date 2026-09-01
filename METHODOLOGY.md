@@ -191,3 +191,69 @@ The honest ordering, weakest claim to strongest:
 Do not skip to 4. A risk identifier built only on litigated documents learns
 what litigated documents look like, which is not the same as what causes
 litigation, and it will be confidently wrong.
+
+---
+
+## 9. Lessons from runs, recorded as they are learned
+
+Each entry is something a run actually taught, with the run that taught it.
+Written down because the alternative is relearning it.
+
+### Sentence scoping beats document scoping, by about threefold
+*Ambiguity pools, 2026-09-01.* Subtracting a contaminating pool at the document
+level discarded 144 of 216 cases. Requiring the competing vocabulary in the
+**same sentence** as the target term retained 135. A testamentary case routinely
+cites a statute somewhere without its ambiguity analysis being statutory. In a
+sample of overlap cases, statutory vocabulary shared a sentence with the
+ambiguity term only 17% of the time against 39% for testamentary vocabulary.
+**Never subtract pools at document level on a small corpus.**
+
+### Judicial opinions do not define their own vocabulary
+*Alias mining, 2026-09-01.* Hearst-style patterns ("also called", "also known
+as", "referred to as", "or a") were run over 1,200 estate decisions. Precision
+was very low. "Also known as" in opinions overwhelmingly means a party's
+alias; "referred to as" is usually "hereinafter referred to as"; "or a" catches
+ordinary disjunction. Real doctrinal aliases exist in the output (*dependent
+relative revocation*, *pot trust*, *election*) but at perhaps one in twenty.
+
+Courts assume their readers know the vocabulary. **Legal synonymy lives in
+statutes, dictionaries and treatises, not in opinions.** Mine the right corpus.
+
+### Dispersion is the filter that separates a term from a name
+A genuine legal alias recurs across many decisions; a party's a/k/a appears in
+one. Requiring a candidate in **three or more distinct documents** removes
+nearly all name noise. Report document frequency, not raw count.
+
+### Statutory definitions are the authoritative controlled vocabulary
+*2026-09-01.* Nineteen Florida definitions sections yield **221 statutorily
+defined terms** across the probate, trust, principal-and-income, disclaimer,
+guardianship and power-of-attorney codes. These are authoritative by
+construction, freely available, and citable. Extract with a curly-quote pattern:
+statutes use `“term” means`, and a straight-quote regex silently returns zero.
+
+Prefer this to a hand-built list. Practitioner intuition is a supplement, not
+the source.
+
+### Legal synonymy is treacherous and must be checked term by term
+A *revocable trust* is also a *living trust*. A **living will** is an entirely
+different instrument, an advance directive about end-of-life care. A *revocable
+will* is not standard usage at all, since wills are revocable by nature. Any
+automated thesaurus would happily merge these. **No synonym enters a controlled
+vocabulary without a source, and a statutory definition beats every other
+source.**
+
+### State the corpus parameters, and check the extremes
+*2026-09-01.* The Florida slice reports dated decisions spanning 0019-01-31 to
+2028-04-13. Both extremes are data errors. The Florida state appellate courts
+in scope, `fladistctapp` and `fla`, hold 430,135 decisions spanning 1825-02-08
+to 2026-06-29. **Always report court scope, date range and snapshot, and always
+look at the minimum and maximum before trusting a date field.**
+
+### Wildcards need testing before use
+Root expanders such as `ambig!` or `statut!` change recall substantially and
+silently. Test each expansion against its literal form and record the counts
+before adopting it.
+
+### Cite provisions as "Section 5 (Remainder Beneficiaries)"
+Section number first, then the heading in parentheses. Applies throughout, in
+protocols, reports and prose.
