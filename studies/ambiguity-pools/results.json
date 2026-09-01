@@ -1,0 +1,844 @@
+{
+  "corpus": "/Users/user/beastmode-data/fl-opinions.db",
+  "snapshot": "2026-06-30",
+  "courts": [
+    "fladistctapp",
+    "fla"
+  ],
+  "queries": {
+    "testamentary": "(ambiguous OR ambiguity) AND (\"last will\" OR testament OR codicil OR \"trust instrument\" OR devise OR bequest OR \"residuary\")",
+    "statutory": "(ambiguous OR ambiguity) AND (statute OR statutory OR \"legislative intent\" OR \"plain meaning\" OR \"rules of statutory construction\")"
+  },
+  "n_testamentary_docs": 216,
+  "n_statutory_docs": 3491,
+  "n_kept_docs": 135,
+  "n_target_sentences": 341,
+  "n_reference_sentences": 870,
+  "keyness": [
+    {
+      "term": "testator",
+      "target": 88,
+      "reference": 0,
+      "g2": 212.0
+    },
+    {
+      "term": "trust",
+      "target": 82,
+      "reference": 2,
+      "g2": 180.1
+    },
+    {
+      "term": "estate",
+      "target": 37,
+      "reference": 2,
+      "g2": 74.8
+    },
+    {
+      "term": "codicil",
+      "target": 30,
+      "reference": 0,
+      "g2": 72.3
+    },
+    {
+      "term": "devise",
+      "target": 29,
+      "reference": 0,
+      "g2": 69.9
+    },
+    {
+      "term": "testatrix",
+      "target": 29,
+      "reference": 0,
+      "g2": 69.9
+    },
+    {
+      "term": "latent",
+      "target": 68,
+      "reference": 29,
+      "g2": 66.2
+    },
+    {
+      "term": "evidence",
+      "target": 109,
+      "reference": 78,
+      "g2": 64.2
+    },
+    {
+      "term": "intent",
+      "target": 99,
+      "reference": 68,
+      "g2": 61.3
+    },
+    {
+      "term": "testator's",
+      "target": 24,
+      "reference": 0,
+      "g2": 57.8
+    },
+    {
+      "term": "extrinsic",
+      "target": 56,
+      "reference": 27,
+      "g2": 49.5
+    },
+    {
+      "term": "intention",
+      "target": 31,
+      "reference": 5,
+      "g2": 49.2
+    },
+    {
+      "term": "decedent",
+      "target": 23,
+      "reference": 1,
+      "g2": 47.8
+    },
+    {
+      "term": "testamentary",
+      "target": 19,
+      "reference": 0,
+      "g2": 45.8
+    },
+    {
+      "term": "probate",
+      "target": 18,
+      "reference": 0,
+      "g2": 43.4
+    },
+    {
+      "term": "property",
+      "target": 37,
+      "reference": 12,
+      "g2": 43.2
+    },
+    {
+      "term": "admissible",
+      "target": 29,
+      "reference": 6,
+      "g2": 42.1
+    },
+    {
+      "term": "instrument",
+      "target": 30,
+      "reference": 7,
+      "g2": 41.4
+    },
+    {
+      "term": "testimony",
+      "target": 31,
+      "reference": 11,
+      "g2": 34.2
+    },
+    {
+      "term": "bequest",
+      "target": 13,
+      "reference": 0,
+      "g2": 31.3
+    },
+    {
+      "term": "devisee",
+      "target": 12,
+      "reference": 0,
+      "g2": 28.9
+    },
+    {
+      "term": "beneficiary",
+      "target": 12,
+      "reference": 0,
+      "g2": 28.9
+    },
+    {
+      "term": "residuary",
+      "target": 12,
+      "reference": 0,
+      "g2": 28.9
+    },
+    {
+      "term": "protector",
+      "target": 12,
+      "reference": 0,
+      "g2": 28.9
+    },
+    {
+      "term": "words",
+      "target": 37,
+      "reference": 21,
+      "g2": 28.2
+    }
+  ],
+  "2grams": [
+    {
+      "ngram": "extrinsic evidence",
+      "count": 48,
+      "docs": 35
+    },
+    {
+      "ngram": "latent ambiguity",
+      "count": 60,
+      "docs": 25
+    },
+    {
+      "ngram": "trial court",
+      "count": 31,
+      "docs": 20
+    },
+    {
+      "ngram": "parol evidence",
+      "count": 25,
+      "docs": 18
+    },
+    {
+      "ngram": "intent testator",
+      "count": 19,
+      "docs": 17
+    },
+    {
+      "ngram": "evidence admissible",
+      "count": 20,
+      "docs": 12
+    },
+    {
+      "ngram": "testator's intent",
+      "count": 14,
+      "docs": 12
+    },
+    {
+      "ngram": "language used",
+      "count": 11,
+      "docs": 11
+    },
+    {
+      "ngram": "ambiguity exists",
+      "count": 18,
+      "docs": 10
+    },
+    {
+      "ngram": "court erred",
+      "count": 15,
+      "docs": 10
+    },
+    {
+      "ngram": "testator intent",
+      "count": 11,
+      "docs": 10
+    },
+    {
+      "ngram": "trust instrument",
+      "count": 12,
+      "docs": 9
+    },
+    {
+      "ngram": "trial judge",
+      "count": 12,
+      "docs": 8
+    },
+    {
+      "ngram": "ambiguity arises",
+      "count": 10,
+      "docs": 8
+    },
+    {
+      "ngram": "intention testator",
+      "count": 9,
+      "docs": 8
+    },
+    {
+      "ngram": "trust ambiguous",
+      "count": 9,
+      "docs": 8
+    },
+    {
+      "ngram": "where ambiguity",
+      "count": 9,
+      "docs": 8
+    },
+    {
+      "ngram": "court held",
+      "count": 8,
+      "docs": 8
+    },
+    {
+      "ngram": "patent ambiguity",
+      "count": 11,
+      "docs": 7
+    },
+    {
+      "ngram": "admissible explain",
+      "count": 10,
+      "docs": 7
+    }
+  ],
+  "3grams": [
+    {
+      "ngram": "extrinsic evidence admissible",
+      "count": 14,
+      "docs": 12
+    },
+    {
+      "ngram": "ambiguity extrinsic evidence",
+      "count": 7,
+      "docs": 7
+    },
+    {
+      "ngram": "latent ambiguity arises",
+      "count": 7,
+      "docs": 7
+    },
+    {
+      "ngram": "trial court erred",
+      "count": 10,
+      "docs": 6
+    },
+    {
+      "ngram": "evidence admissible explain",
+      "count": 9,
+      "docs": 6
+    },
+    {
+      "ngram": "evidence admissible show",
+      "count": 8,
+      "docs": 6
+    },
+    {
+      "ngram": "ambiguity uncertainty arising",
+      "count": 6,
+      "docs": 6
+    },
+    {
+      "ngram": "uncertainty arising language",
+      "count": 6,
+      "docs": 6
+    },
+    {
+      "ngram": "arising language used",
+      "count": 6,
+      "docs": 6
+    },
+    {
+      "ngram": "latent ambiguity exists",
+      "count": 7,
+      "docs": 5
+    },
+    {
+      "ngram": "look beyond face",
+      "count": 5,
+      "docs": 5
+    },
+    {
+      "ngram": "lower court held",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "court held ambiguity",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "applying words subject",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "words subject matter",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "presently living grandchildren",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "existence latent ambiguity",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "court proper case",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "proper case look",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "case look beyond",
+      "count": 4,
+      "docs": 4
+    }
+  ],
+  "4grams": [
+    {
+      "ngram": "extrinsic evidence admissible explain",
+      "count": 8,
+      "docs": 6
+    },
+    {
+      "ngram": "ambiguity uncertainty arising language",
+      "count": 6,
+      "docs": 6
+    },
+    {
+      "ngram": "uncertainty arising language used",
+      "count": 6,
+      "docs": 6
+    },
+    {
+      "ngram": "lower court held ambiguity",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "applying words subject matter",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "court proper case look",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "proper case look beyond",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "case look beyond face",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "look beyond face ambiguity",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "beyond face ambiguity person",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "face ambiguity person whom",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "ambiguity person whom applicable",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "latent ambiguity identity legatee",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "ambiguity identity legatee devisee",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "identity legatee devisee mere",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "legatee devisee mere inaccuracy",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "devisee mere inaccuracy designation",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "mere inaccuracy designation description",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "inaccuracy designation description contained",
+      "count": 4,
+      "docs": 4
+    },
+    {
+      "ngram": "designation description contained extrinsic",
+      "count": 4,
+      "docs": 4
+    }
+  ],
+  "collocates": {
+    "latent": [
+      {
+        "word": "ambiguity",
+        "joint": 66,
+        "expected": 22.88,
+        "mi": 1.53,
+        "t": 5.31,
+        "g2": 73.7
+      },
+      {
+        "word": "arises",
+        "joint": 9,
+        "expected": 1.36,
+        "mi": 2.72,
+        "t": 2.55,
+        "g2": 27.1
+      },
+      {
+        "word": "circumstance",
+        "joint": 4,
+        "expected": 0.42,
+        "mi": 3.25,
+        "t": 1.79,
+        "g2": 18.8
+      },
+      {
+        "word": "patent",
+        "joint": 8,
+        "expected": 1.99,
+        "mi": 2.0,
+        "t": 2.12,
+        "g2": 14.0
+      },
+      {
+        "word": "living",
+        "joint": 4,
+        "expected": 0.52,
+        "mi": 2.93,
+        "t": 1.74,
+        "g2": 14.0
+      },
+      {
+        "word": "exists",
+        "joint": 8,
+        "expected": 2.31,
+        "mi": 1.79,
+        "t": 2.01,
+        "g2": 11.6
+      },
+      {
+        "word": "applying",
+        "joint": 4,
+        "expected": 0.63,
+        "mi": 2.67,
+        "t": 1.69,
+        "g2": 11.6
+      },
+      {
+        "word": "legatee",
+        "joint": 4,
+        "expected": 0.63,
+        "mi": 2.67,
+        "t": 1.69,
+        "g2": 11.6
+      },
+      {
+        "word": "identity",
+        "joint": 4,
+        "expected": 0.73,
+        "mi": 2.45,
+        "t": 1.63,
+        "g2": 9.9
+      },
+      {
+        "word": "mere",
+        "joint": 4,
+        "expected": 0.73,
+        "mi": 2.45,
+        "t": 1.63,
+        "g2": 9.9
+      },
+      {
+        "word": "grandchildren",
+        "joint": 5,
+        "expected": 1.15,
+        "mi": 2.11,
+        "t": 1.72,
+        "g2": 9.6
+      },
+      {
+        "word": "devisee",
+        "joint": 5,
+        "expected": 1.26,
+        "mi": 1.99,
+        "t": 1.67,
+        "g2": 8.6
+      },
+      {
+        "word": "show",
+        "joint": 5,
+        "expected": 1.36,
+        "mi": 1.87,
+        "t": 1.63,
+        "g2": 7.8
+      },
+      {
+        "word": "existence",
+        "joint": 4,
+        "expected": 0.94,
+        "mi": 2.08,
+        "t": 1.53,
+        "g2": 7.5
+      },
+      {
+        "word": "apply",
+        "joint": 4,
+        "expected": 1.36,
+        "mi": 1.55,
+        "t": 1.32,
+        "g2": 4.6
+      }
+    ],
+    "extrinsic": [
+      {
+        "word": "evidence",
+        "joint": 56,
+        "expected": 9.42,
+        "mi": 2.57,
+        "t": 6.22,
+        "g2": 141.3
+      },
+      {
+        "word": "admissible",
+        "joint": 19,
+        "expected": 2.51,
+        "mi": 2.92,
+        "t": 3.78,
+        "g2": 60.5
+      },
+      {
+        "word": "inaccuracy",
+        "joint": 8,
+        "expected": 0.69,
+        "mi": 3.53,
+        "t": 2.58,
+        "g2": 40.5
+      },
+      {
+        "word": "resolve",
+        "joint": 6,
+        "expected": 0.69,
+        "mi": 3.12,
+        "t": 2.17,
+        "g2": 21.7
+      },
+      {
+        "word": "designation",
+        "joint": 4,
+        "expected": 0.35,
+        "mi": 3.53,
+        "t": 1.83,
+        "g2": 20.3
+      },
+      {
+        "word": "explain",
+        "joint": 8,
+        "expected": 1.56,
+        "mi": 2.36,
+        "t": 2.28,
+        "g2": 17.4
+      },
+      {
+        "word": "permit",
+        "joint": 4,
+        "expected": 0.52,
+        "mi": 2.95,
+        "t": 1.74,
+        "g2": 12.9
+      },
+      {
+        "word": "mere",
+        "joint": 4,
+        "expected": 0.6,
+        "mi": 2.73,
+        "t": 1.7,
+        "g2": 11.2
+      },
+      {
+        "word": "intent",
+        "joint": 17,
+        "expected": 8.56,
+        "mi": 0.99,
+        "t": 2.05,
+        "g2": 8.9
+      },
+      {
+        "word": "parol",
+        "joint": 8,
+        "expected": 3.11,
+        "mi": 1.36,
+        "t": 1.73,
+        "g2": 7.0
+      },
+      {
+        "word": "uncertainty",
+        "joint": 4,
+        "expected": 0.95,
+        "mi": 2.07,
+        "t": 1.52,
+        "g2": 7.0
+      },
+      {
+        "word": "show",
+        "joint": 4,
+        "expected": 1.12,
+        "mi": 1.83,
+        "t": 1.44,
+        "g2": 5.7
+      },
+      {
+        "word": "patent",
+        "joint": 5,
+        "expected": 1.64,
+        "mi": 1.61,
+        "t": 1.5,
+        "g2": 5.7
+      },
+      {
+        "word": "description",
+        "joint": 4,
+        "expected": 1.21,
+        "mi": 1.73,
+        "t": 1.4,
+        "g2": 5.2
+      },
+      {
+        "word": "considered",
+        "joint": 4,
+        "expected": 1.21,
+        "mi": 1.73,
+        "t": 1.4,
+        "g2": 5.2
+      }
+    ],
+    "testator": [
+      {
+        "word": "intent",
+        "joint": 38,
+        "expected": 13.44,
+        "mi": 1.5,
+        "t": 3.98,
+        "g2": 45.1
+      },
+      {
+        "word": "surrounding",
+        "joint": 7,
+        "expected": 1.22,
+        "mi": 2.52,
+        "t": 2.18,
+        "g2": 20.7
+      },
+      {
+        "word": "circumstances",
+        "joint": 9,
+        "expected": 2.04,
+        "mi": 2.14,
+        "t": 2.32,
+        "g2": 19.6
+      },
+      {
+        "word": "intention",
+        "joint": 13,
+        "expected": 4.21,
+        "mi": 1.63,
+        "t": 2.44,
+        "g2": 17.6
+      },
+      {
+        "word": "time",
+        "joint": 7,
+        "expected": 1.49,
+        "mi": 2.23,
+        "t": 2.08,
+        "g2": 16.3
+      },
+      {
+        "word": "four",
+        "joint": 6,
+        "expected": 1.36,
+        "mi": 2.14,
+        "t": 1.9,
+        "g2": 13.0
+      },
+      {
+        "word": "effectuate",
+        "joint": 5,
+        "expected": 1.09,
+        "mi": 2.2,
+        "t": 1.75,
+        "g2": 11.4
+      },
+      {
+        "word": "gleaned",
+        "joint": 4,
+        "expected": 0.81,
+        "mi": 2.3,
+        "t": 1.59,
+        "g2": 9.9
+      },
+      {
+        "word": "witnesses",
+        "joint": 5,
+        "expected": 1.22,
+        "mi": 2.03,
+        "t": 1.69,
+        "g2": 9.9
+      },
+      {
+        "word": "expressed",
+        "joint": 5,
+        "expected": 1.49,
+        "mi": 1.74,
+        "t": 1.57,
+        "g2": 7.6
+      },
+      {
+        "word": "execution",
+        "joint": 5,
+        "expected": 1.49,
+        "mi": 1.74,
+        "t": 1.57,
+        "g2": 7.6
+      },
+      {
+        "word": "below",
+        "joint": 4,
+        "expected": 1.09,
+        "mi": 1.88,
+        "t": 1.46,
+        "g2": 6.9
+      },
+      {
+        "word": "corners",
+        "joint": 4,
+        "expected": 1.09,
+        "mi": 1.88,
+        "t": 1.46,
+        "g2": 6.9
+      },
+      {
+        "word": "ambiguous",
+        "joint": 7,
+        "expected": 17.93,
+        "mi": -1.36,
+        "t": -4.13,
+        "g2": 6.8
+      },
+      {
+        "word": "whole",
+        "joint": 5,
+        "expected": 1.63,
+        "mi": 1.62,
+        "t": 1.51,
+        "g2": 6.7
+      }
+    ]
+  },
+  "elapsed_seconds": 38.0
+}

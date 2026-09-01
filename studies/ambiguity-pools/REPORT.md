@@ -150,6 +150,94 @@ pages before the sentence that calls it ambiguous. Extraction has to run over
 the whole opinion with the ambiguity finding used to select the *case*, not the
 *sentence*. That is the fix for the next run.
 
+
+## 5a. Corpus-linguistics method suite
+
+Run 2026-09-01 over the 135 retained decisions
+(341 testamentary ambiguity sentences), reference
+870 statutory sentences. Corpus `/Users/user/beastmode-data/fl-opinions.db`,
+snapshot 2026-06-30, courts fladistctapp, fla. Runtime
+38.0s. Reproduce with
+`python3 studies/ambiguity-pools/run_methods.py`.
+
+**All n-grams are ranked by document frequency, not raw count.** A phrase
+repeated forty times in one opinion is not a pattern.
+
+### Bigrams
+
+| bigram | docs | count |
+|---|---|---|
+| extrinsic evidence | 35 | 48 |
+| latent ambiguity | 25 | 60 |
+| trial court | 20 | 31 |
+| parol evidence | 18 | 25 |
+| intent testator | 17 | 19 |
+| evidence admissible | 12 | 20 |
+| testator's intent | 12 | 14 |
+| language used | 11 | 11 |
+| ambiguity exists | 10 | 18 |
+| court erred | 10 | 15 |
+
+### Trigrams
+
+| trigram | docs | count |
+|---|---|---|
+| extrinsic evidence admissible | 12 | 14 |
+| ambiguity extrinsic evidence | 7 | 7 |
+| latent ambiguity arises | 7 | 7 |
+| trial court erred | 6 | 10 |
+| evidence admissible explain | 6 | 9 |
+| evidence admissible show | 6 | 8 |
+| ambiguity uncertainty arising | 6 | 6 |
+| uncertainty arising language | 6 | 6 |
+
+### Four-grams
+
+| four-gram | docs | count |
+|---|---|---|
+| extrinsic evidence admissible explain | 6 | 8 |
+| ambiguity uncertainty arising language | 6 | 6 |
+| uncertainty arising language used | 6 | 6 |
+| lower court held ambiguity | 4 | 4 |
+| applying words subject matter | 4 | 4 |
+| court proper case look | 4 | 4 |
+| proper case look beyond | 4 | 4 |
+| case look beyond face | 4 | 4 |
+
+**What the four-grams recover is the doctrine itself.** *ambiguity uncertainty
+arising language used* and *uncertainty arising language used* are fragments of
+the Florida definition of ambiguity. *court proper case look beyond*, *proper
+case look beyond face* and *case look beyond face* are fragments of the rule
+permitting a court to look beyond the face of the instrument.
+
+This is a validity check rather than a discovery. The method was given no
+doctrinal knowledge, and it recovered the canonical statement of the rule from
+frequency alone. A method that could not do that should not be trusted with a
+question whose answer is unknown.
+
+### Collocates of *latent*
+
+Three statistics reported together, because they disagree by design: MI rewards
+rarity, t-score rewards frequency, G² sits between. Reporting only the flattering
+one is a researcher degree of freedom.
+
+| collocate | joint | expected | MI | t | G2 |
+|---|---|---|---|---|---|
+| ambiguity | 66 | 22.88 | 1.53 | 5.31 | 73.7 |
+| arises | 9 | 1.36 | 2.72 | 2.55 | 27.1 |
+| circumstance | 4 | 0.42 | 3.25 | 1.79 | 18.8 |
+| patent | 8 | 1.99 | 2.0 | 2.12 | 14.0 |
+| living | 4 | 0.52 | 2.93 | 1.74 | 14.0 |
+| exists | 8 | 2.31 | 1.79 | 2.01 | 11.6 |
+| applying | 4 | 0.63 | 2.67 | 1.69 | 11.6 |
+| legatee | 4 | 0.63 | 2.67 | 1.69 | 11.6 |
+
+*ambiguity* dominates, as it must. The substantive collocates are *arises*,
+*circumstance*, *patent* and *legatee*: latent ambiguity **arises** when applying
+the words to the **circumstances**, is contrasted with **patent**, and most often
+concerns the identity of a **legatee**. That is a compressed statement of the
+doctrine, derived without being told it.
+
 ## 6. Limitations
 
 - **Single-coded, no reliability figure.** No second coder, no kappa. This is

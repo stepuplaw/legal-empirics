@@ -143,3 +143,71 @@ def keyness(target: Counter, reference: Counter, min_count: int = 5,
         out.append((term, a, b, log_likelihood(a, b, ct, cr)))
     out.sort(key=lambda r: -r[3])
     return out[:top]
+
+
+# ---------------------------------------------------------------------------
+# Collocation and dispersion.
+#
+# These are the remaining corpus-linguistics measures the studies use. They are
+# separated from keyness because they answer different questions: keyness asks
+# "which terms mark this corpus against another", collocation asks "which terms
+# keep company with this one", dispersion asks "is this a pattern or one loud
+# document".
+# ---------------------------------------------------------------------------
+
+def collocates(sentences, node: str, window: int = 5, min_count: int = 4,
+               top: int = 30):
+    """Words co-occurring with `node` within `window` tokens, ranked three ways.
+
+    Returns (word, joint, expected, MI, t_score, G2). All three statistics are
+    reported rather than one, because they disagree by design and the
+    disagreement is informative:
+
+      * MI over-rewards rarity, so it surfaces distinctive but infrequent pairs.
+      * t-score rewards frequency, so it surfaces reliable but dull pairs.
+      * G2 (log-likelihood) sits between and is the usual default.
+
+    Reporting only the one that flatters a finding is a researcher degree of
+    freedom; reporting all three removes it.
+    """
+    node = node.lower()
+    joint, total = Counter(), Counter()
+    n_windows = 0
+    for s in sentences:
+        toks = tokens(s)
+        total.update(toks)
+        for i, w in enumerate(toks):
+            if w != node:
+                continue
+            n_windows += 1
+            lo, hi = max(0, i - window), min(len(toks), i + window + 1)
+            joint.update(t for t in toks[lo:i] + toks[i + 1:hi])
+    n_tok = sum(total.values())
+    if not n_tok or not n_windows:
+        return []
+    span = 2 * window
+    out = []
+    for w, o in joint.items():
+        if o < min_count:
+            continue
+        # Expected co-occurrences if the collocate were spread at random.
+        e = total[w] * n_windows * span / n_tok
+        if e <= 0:
+            continue
+        mi = math.log2(o / e)
+        t = (o - e) / math.sqrt(o)
+        g2 = log_likelihood(o, total[w] - o, n_windows * span, n_tok)
+        out.append((w, o, round(e, 2), round(mi, 2), round(t, 2), round(g2, 1)))
+    out.sort(key=lambda r: -r[5])
+    return out[:top]
+
+
+def dispersion(term_docs: dict, min_docs: int = 3):
+    """Keep only terms attested in at least `min_docs` distinct documents.
+
+    The filter that separates a term from a name. A genuine legal alias recurs
+    across decisions; a party's a/k/a appears in exactly one. Always report
+    document frequency alongside raw count, because a term appearing 400 times
+    in one opinion is not a pattern.
+    """
+    return {t: len(d) for t, d in term_docs.items() if len(d) >= min_docs}

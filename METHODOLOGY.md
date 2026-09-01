@@ -254,6 +254,3 @@ Root expanders such as `ambig!` or `statut!` change recall substantially and
 silently. Test each expansion against its literal form and record the counts
 before adopting it.
 
-### Cite provisions as "Section 5 (Remainder Beneficiaries)"
-Section number first, then the heading in parentheses. Applies throughout, in
-protocols, reports and prose.
