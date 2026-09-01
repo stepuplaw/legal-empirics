@@ -61,7 +61,8 @@ SHA-256 and a row count on every file. The data itself is published separately
 as a citable dataset, which is also the form to cite.
 
 [PUBLISHING.md](PUBLISHING.md) sets out where each piece lives and how the
-records reference one another. Note that the research landing pages and the DOIs
+records reference one another, and [DISTRIBUTION.md](DISTRIBUTION.md) is the
+running checklist of which platforms are done and which are pending. Note that the research landing pages and the DOIs
 are **not live yet**; the metadata files name their intended locations, and
 `identifier` is left empty rather than filled with a placeholder DOI.
 
