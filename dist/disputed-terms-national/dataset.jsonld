@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Disputed Contract and Instrument Terms in US State Appellate Courts",
+  "description": "One row per (term, decision) pair: a word or phrase a court quoted as the disputed language in a decision containing an ambiguity holding, across the state appellate courts of all 50 states and DC. Terms are extracted from the whole opinion by cue-anchored quotation ('the term \"X\"', '\"X\" as used in'), classified into functional drafting categories, and linked to the holding by three graded levels of evidence.",
+  "url": "https://stepuplaw.com/research/disputed-terms-national/",
+  "identifier": [],
+  "keywords": [
+    "contract interpretation",
+    "ambiguity",
+    "corpus linguistics",
+    "legal drafting",
+    "empirical legal studies",
+    "state courts"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "version": "2026-09-01",
+  "dateModified": "2026-09-01",
+  "creator": {
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Klagge Law PLLC",
+      "url": "https://stepuplaw.com"
+    },
+    "identifier": "https://orcid.org/0009-0002-1385-8498",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Klagge Law PLLC",
+    "url": "https://stepuplaw.com"
+  },
+  "sameAs": [
+    "https://github.com/stepuplaw/legal-empirics",
+    "https://huggingface.co/datasets/stepuplaw/disputed-terms-national"
+  ],
+  "citation": "(ambiguous OR ambiguity OR ambiguities)",
+  "measurementTechnique": "Full-text retrieval over a local CourtListener corpus, followed by deterministic sentence-level classification. Retrieval is wide and filtering is explicit; the exclusion funnel is reported with counts.",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://stepuplaw.com/research/disputed-terms-national/disputed-terms-national.csv",
+      "contentSize": "80549261",
+      "sha256": "41794102c0d5c052b40fda0c7779415be95d43a61d08bbbe5462fb66269b11bd"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://stepuplaw.com/research/disputed-terms-national/datapackage.json"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "term",
+      "description": "the disputed language, lowercased and normalised, as the court quoted it"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "category",
+      "description": "functional drafting class: nexus, degree, temporal, scope, modal, role, succession, property, event, conduct, condition, mental, uncategorised"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "source",
+      "description": "the instrument the words sit in: testamentary, deed, insurance, contract, statute, constitution, uncertain"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "posture",
+      "description": "found | rejected | alleged | uncertain -- whether the court held the language ambiguous"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "link",
+      "description": "direct | proximate | inferred -- strength of the link between this term and the holding; inferred rows must not be pooled with the other two"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "oid",
+      "description": "CourtListener opinion id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cid",
+      "description": "CourtListener cluster id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "court",
+      "description": "CourtListener court id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "state",
+      "description": "two-letter state postal code"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "year",
+      "description": "year the decision was filed"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "statement",
+      "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+    }
+  ]
+}

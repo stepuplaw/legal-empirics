@@ -1,0 +1,7084 @@
+{
+ "db": "terms-national.db",
+ "run": {
+  "query": "(ambiguous OR ambiguity OR ambiguities)",
+  "scope": "national state appellate (S+SA)",
+  "corpus": "CourtListener bulk snapshot 2026-06-30",
+  "workers": 8,
+  "runtime_minutes": 119.7,
+  "funnel": {
+   "decisions_queued": 236561,
+   "noterm": 118750,
+   "ok": 117804,
+   "noamb": 7
+  },
+  "term_hits": 286846,
+  "distinct_terms": 100679
+ },
+ "n_term_hits": 286846,
+ "n_linked": 109205,
+ "links": {
+  "inferred": 177641,
+  "proximate": 28074,
+  "direct": 81131
+ },
+ "n_distinct_terms": 100679,
+ "categories": [
+  {
+   "category": "temporal",
+   "terms": 1110,
+   "exposure": 2458,
+   "found": 617,
+   "rejected": 858,
+   "risk": 0.4183050847457627,
+   "ci": [
+    0.3933750092819815,
+    0.443659599427971
+   ]
+  },
+  {
+   "category": "scope",
+   "terms": 2322,
+   "exposure": 8865,
+   "found": 2349,
+   "rejected": 3374,
+   "risk": 0.4104490651756072,
+   "ci": [
+    0.39776842694755493,
+    0.42324984602161536
+   ]
+  },
+  {
+   "category": "mental",
+   "terms": 365,
+   "exposure": 1465,
+   "found": 303,
+   "rejected": 459,
+   "risk": 0.39763779527559057,
+   "ci": [
+    0.36348500779261794,
+    0.43281751742930774
+   ]
+  },
+  {
+   "category": "conduct",
+   "terms": 1426,
+   "exposure": 3673,
+   "found": 827,
+   "rejected": 1285,
+   "risk": 0.3915719696969697,
+   "ci": [
+    0.37096974462465787,
+    0.41256792662634695
+   ]
+  },
+  {
+   "category": "role",
+   "terms": 1718,
+   "exposure": 7395,
+   "found": 1745,
+   "rejected": 2820,
+   "risk": 0.3822562979189485,
+   "ci": [
+    0.3682641891318133,
+    0.396446410596573
+   ]
+  },
+  {
+   "category": "condition",
+   "terms": 643,
+   "exposure": 1425,
+   "found": 320,
+   "rejected": 528,
+   "risk": 0.37735849056603776,
+   "ci": [
+    0.3453552453109883,
+    0.4104679030302057
+   ]
+  },
+  {
+   "category": "uncategorised",
+   "terms": 27158,
+   "exposure": 66983,
+   "found": 14286,
+   "rejected": 23969,
+   "risk": 0.373441380211737,
+   "ci": [
+    0.3686069685256016,
+    0.3783012075964898
+   ]
+  },
+  {
+   "category": "degree",
+   "terms": 851,
+   "exposure": 2247,
+   "found": 463,
+   "rejected": 777,
+   "risk": 0.37338709677419357,
+   "ci": [
+    0.3468938361647681,
+    0.4006624443133894
+   ]
+  },
+  {
+   "category": "property",
+   "terms": 1504,
+   "exposure": 4679,
+   "found": 993,
+   "rejected": 1841,
+   "risk": 0.3503881439661256,
+   "ci": [
+    0.3330360081418088,
+    0.36814534038729874
+   ]
+  },
+  {
+   "category": "event",
+   "terms": 1279,
+   "exposure": 5775,
+   "found": 1233,
+   "rejected": 2309,
+   "risk": 0.3481084133258046,
+   "ci": [
+    0.33259228051820844,
+    0.3639536678400035
+   ]
+  },
+  {
+   "category": "nexus",
+   "terms": 252,
+   "exposure": 774,
+   "found": 147,
+   "rejected": 329,
+   "risk": 0.3088235294117647,
+   "ci": [
+    0.26898706173595954,
+    0.35172110529249334
+   ]
+  },
+  {
+   "category": "modal",
+   "terms": 13,
+   "exposure": 2075,
+   "found": 415,
+   "rejected": 958,
+   "risk": 0.3022578295702841,
+   "ci": [
+    0.2785455464557639,
+    0.327073574872354
+   ]
+  },
+  {
+   "category": "succession",
+   "terms": 370,
+   "exposure": 1391,
+   "found": 191,
+   "rejected": 518,
+   "risk": 0.2693935119887165,
+   "ci": [
+    0.23804429450263395,
+    0.3032282687147765
+   ]
+  }
+ ],
+ "top_terms": [
+  {
+   "term": "or",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 1751,
+   "found": 704,
+   "rejected": 543,
+   "risk": 0.5645549318364074,
+   "ci": [
+    0.5368786136378716,
+    0.5918347262446524
+   ],
+   "states": 51
+  },
+  {
+   "term": "and",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 1296,
+   "found": 416,
+   "rejected": 490,
+   "risk": 0.45916114790286977,
+   "ci": [
+    0.42695216428264116,
+    0.4917149971221574
+   ],
+   "states": 51
+  },
+  {
+   "term": "shall",
+   "category": "modal",
+   "source": "statute",
+   "exposure": 904,
+   "found": 138,
+   "rejected": 532,
+   "risk": 0.20597014925373133,
+   "ci": [
+    0.17706546396181674,
+    0.23822738824558634
+   ],
+   "states": 51
+  },
+  {
+   "term": "insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 904,
+   "found": 279,
+   "rejected": 328,
+   "risk": 0.4596375617792422,
+   "ci": [
+    0.4203682971035429,
+    0.4994145074729626
+   ],
+   "states": 51
+  },
+  {
+   "term": "may",
+   "category": "modal",
+   "source": "statute",
+   "exposure": 818,
+   "found": 207,
+   "rejected": 277,
+   "risk": 0.42768595041322316,
+   "ci": [
+    0.38434849032554874,
+    0.47216231154128674
+   ],
+   "states": 51
+  },
+  {
+   "term": "any",
+   "category": "scope",
+   "source": "statute",
+   "exposure": 765,
+   "found": 214,
+   "rejected": 313,
+   "risk": 0.4060721062618596,
+   "ci": [
+    0.364968854697946,
+    0.44853483453816506
+   ],
+   "states": 51
+  },
+  {
+   "term": "occurrence",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 431,
+   "found": 113,
+   "rejected": 186,
+   "risk": 0.3779264214046823,
+   "ci": [
+    0.32484291626971,
+    0.4341069770078319
+   ],
+   "states": 47
+  },
+  {
+   "term": "use",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 428,
+   "found": 124,
+   "rejected": 151,
+   "risk": 0.4509090909090909,
+   "ci": [
+    0.3931773231121867,
+    0.509993509360443
+   ],
+   "states": 51
+  },
+  {
+   "term": "person",
+   "category": "role",
+   "source": "statute",
+   "exposure": 404,
+   "found": 96,
+   "rejected": 165,
+   "risk": 0.367816091954023,
+   "ci": [
+    0.3116253654096938,
+    0.42784154613290365
+   ],
+   "states": 48
+  },
+  {
+   "term": "accident",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 403,
+   "found": 99,
+   "rejected": 142,
+   "risk": 0.4107883817427386,
+   "ci": [
+    0.3505470511777815,
+    0.4738291986098362
+   ],
+   "states": 48
+  },
+  {
+   "term": "all",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 339,
+   "found": 72,
+   "rejected": 169,
+   "risk": 0.2987551867219917,
+   "ci": [
+    0.24449268392651127,
+    0.35933280978044047
+   ],
+   "states": 49
+  },
+  {
+   "term": "employee",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 322,
+   "found": 66,
+   "rejected": 128,
+   "risk": 0.3402061855670103,
+   "ci": [
+    0.27721657877313427,
+    0.4094014024805556
+   ],
+   "states": 48
+  },
+  {
+   "term": "claim",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 272,
+   "found": 37,
+   "rejected": 135,
+   "risk": 0.21511627906976744,
+   "ci": [
+    0.16028767638500901,
+    0.28239255400415936
+   ],
+   "states": 46
+  },
+  {
+   "term": "bodily injury",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 259,
+   "found": 61,
+   "rejected": 133,
+   "risk": 0.31443298969072164,
+   "ci": [
+    0.2532386677008003,
+    0.38283382665832344
+   ],
+   "states": 41
+  },
+  {
+   "term": "owner",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 243,
+   "found": 62,
+   "rejected": 86,
+   "risk": 0.4189189189189189,
+   "ci": [
+    0.34246617038461147,
+    0.4994743781870581
+   ],
+   "states": 46
+  },
+  {
+   "term": "arising out of",
+   "category": "nexus",
+   "source": "insurance",
+   "exposure": 238,
+   "found": 41,
+   "rejected": 107,
+   "risk": 0.27702702702702703,
+   "ci": [
+    0.2112610094634641,
+    0.35407549910862685
+   ],
+   "states": 45
+  },
+  {
+   "term": "property",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 234,
+   "found": 41,
+   "rejected": 113,
+   "risk": 0.2662337662337662,
+   "ci": [
+    0.20273550549062647,
+    0.34111098364785153
+   ],
+   "states": 45
+  },
+  {
+   "term": "damages",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 231,
+   "found": 58,
+   "rejected": 97,
+   "risk": 0.3741935483870968,
+   "ci": [
+    0.3019185376858631,
+    0.4525538423455644
+   ],
+   "states": 46
+  },
+  {
+   "term": "loss",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 213,
+   "found": 49,
+   "rejected": 106,
+   "risk": 0.3161290322580645,
+   "ci": [
+    0.24813021420255713,
+    0.39302172584337536
+   ],
+   "states": 49
+  },
+  {
+   "term": "conviction",
+   "category": "event",
+   "source": "statute",
+   "exposure": 197,
+   "found": 47,
+   "rejected": 80,
+   "risk": 0.3700787401574803,
+   "ci": [
+    0.291073457428372,
+    0.45671317923764254
+   ],
+   "states": 40
+  },
+  {
+   "term": "children",
+   "category": "role",
+   "source": "testamentary",
+   "exposure": 194,
+   "found": 44,
+   "rejected": 62,
+   "risk": 0.41509433962264153,
+   "ci": [
+    0.32586734939167683,
+    0.5102603108026393
+   ],
+   "states": 46
+  },
+  {
+   "term": "motor vehicle",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 186,
+   "found": 47,
+   "rejected": 82,
+   "risk": 0.3643410852713178,
+   "ci": [
+    0.28633215176838583,
+    0.45019616466261164
+   ],
+   "states": 45
+  },
+  {
+   "term": "resident",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 180,
+   "found": 50,
+   "rejected": 52,
+   "risk": 0.49019607843137253,
+   "ci": [
+    0.39531235331103515,
+    0.5857914848773521
+   ],
+   "states": 43
+  },
+  {
+   "term": "child",
+   "category": "role",
+   "source": "statute",
+   "exposure": 180,
+   "found": 48,
+   "rejected": 71,
+   "risk": 0.40336134453781514,
+   "ci": [
+    0.31957754750688566,
+    0.4931894630172365
+   ],
+   "states": 42
+  },
+  {
+   "term": "other",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 179,
+   "found": 48,
+   "rejected": 63,
+   "risk": 0.43243243243243246,
+   "ci": [
+    0.3440548366745577,
+    0.5253304731783179
+   ],
+   "states": 39
+  },
+  {
+   "term": "injury",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 179,
+   "found": 30,
+   "rejected": 68,
+   "risk": 0.30612244897959184,
+   "ci": [
+    0.22362525822357754,
+    0.4032462756093553
+   ],
+   "states": 39
+  },
+  {
+   "term": "heirs",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 174,
+   "found": 23,
+   "rejected": 61,
+   "risk": 0.27380952380952384,
+   "ci": [
+    0.18992693848374492,
+    0.3774762053569865
+   ],
+   "states": 41
+  },
+  {
+   "term": "only",
+   "category": "scope",
+   "source": "statute",
+   "exposure": 174,
+   "found": 35,
+   "rejected": 85,
+   "risk": 0.2916666666666667,
+   "ci": [
+    0.21781442705981954,
+    0.3784440192134845
+   ],
+   "states": 42
+  },
+  {
+   "term": "business",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 160,
+   "found": 42,
+   "rejected": 50,
+   "risk": 0.45652173913043476,
+   "ci": [
+    0.35852497382933834,
+    0.5580039655873659
+   ],
+   "states": 42
+  },
+  {
+   "term": "negligence",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 159,
+   "found": 24,
+   "rejected": 89,
+   "risk": 0.21238938053097345,
+   "ci": [
+    0.14708352590805174,
+    0.296607762126347
+   ],
+   "states": 37
+  },
+  {
+   "term": "issue",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 159,
+   "found": 35,
+   "rejected": 50,
+   "risk": 0.4117647058823529,
+   "ci": [
+    0.3131683862386879,
+    0.51799179097559
+   ],
+   "states": 39
+  },
+  {
+   "term": "employer",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 152,
+   "found": 28,
+   "rejected": 69,
+   "risk": 0.28865979381443296,
+   "ci": [
+    0.207901259917661,
+    0.385520502529583
+   ],
+   "states": 41
+  },
+  {
+   "term": "compensation",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 147,
+   "found": 38,
+   "rejected": 65,
+   "risk": 0.36893203883495146,
+   "ci": [
+    0.2820284819781343,
+    0.4652609633315579
+   ],
+   "states": 39
+  },
+  {
+   "term": "the insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 147,
+   "found": 49,
+   "rejected": 46,
+   "risk": 0.5157894736842106,
+   "ci": [
+    0.41665045171484527,
+    0.6137011411367477
+   ],
+   "states": 41
+  },
+  {
+   "term": "residence",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 146,
+   "found": 30,
+   "rejected": 48,
+   "risk": 0.38461538461538464,
+   "ci": [
+    0.28448876404744494,
+    0.49557418682350585
+   ],
+   "states": 40
+  },
+  {
+   "term": "subject to",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 145,
+   "found": 39,
+   "rejected": 60,
+   "risk": 0.3939393939393939,
+   "ci": [
+    0.30338069048726835,
+    0.49242178633145084
+   ],
+   "states": 41
+  },
+  {
+   "term": "sale",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 143,
+   "found": 26,
+   "rejected": 63,
+   "risk": 0.29213483146067415,
+   "ci": [
+    0.2078347417163135,
+    0.39363701232497833
+   ],
+   "states": 41
+  },
+  {
+   "term": "reasonable",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 141,
+   "found": 31,
+   "rejected": 47,
+   "risk": 0.3974358974358974,
+   "ci": [
+    0.29611695255788584,
+    0.5083834482162926
+   ],
+   "states": 37
+  },
+  {
+   "term": "if",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 134,
+   "found": 50,
+   "rejected": 49,
+   "risk": 0.5050505050505051,
+   "ci": [
+    0.4082299868548984,
+    0.6014937047251627
+   ],
+   "states": 37
+  },
+  {
+   "term": "including",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 132,
+   "found": 19,
+   "rejected": 55,
+   "risk": 0.25675675675675674,
+   "ci": [
+    0.17097575848977573,
+    0.36654659459649164
+   ],
+   "states": 39
+  },
+  {
+   "term": "reasonably susceptible",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 132,
+   "found": 39,
+   "rejected": 48,
+   "risk": 0.4482758620689655,
+   "ci": [
+    0.348170047270701,
+    0.552756400524142
+   ],
+   "states": 10
+  },
+  {
+   "term": "automobile",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 129,
+   "found": 27,
+   "rejected": 44,
+   "risk": 0.38028169014084506,
+   "ci": [
+    0.27627002252580524,
+    0.4965835776110171
+   ],
+   "states": 40
+  },
+  {
+   "term": "judgment",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 126,
+   "found": 21,
+   "rejected": 43,
+   "risk": 0.328125,
+   "ci": [
+    0.2257039576708776,
+    0.45001123772545737
+   ],
+   "states": 38
+  },
+  {
+   "term": "possession",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 125,
+   "found": 18,
+   "rejected": 30,
+   "risk": 0.375,
+   "ci": [
+    0.2521507240406812,
+    0.5163749387475043
+   ],
+   "states": 40
+  },
+  {
+   "term": "agreement",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 124,
+   "found": 18,
+   "rejected": 42,
+   "risk": 0.3,
+   "ci": [
+    0.19898010252726892,
+    0.42508946966390415
+   ],
+   "states": 29
+  },
+  {
+   "term": "contract",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 124,
+   "found": 28,
+   "rejected": 49,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.26505270593089814,
+    0.47518004552379856
+   ],
+   "states": 32
+  },
+  {
+   "term": "household",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 122,
+   "found": 35,
+   "rejected": 45,
+   "risk": 0.4375,
+   "ci": [
+    0.3341368457196415,
+    0.5465906213134304
+   ],
+   "states": 38
+  },
+  {
+   "term": "premises",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 122,
+   "found": 21,
+   "rejected": 45,
+   "risk": 0.3181818181818182,
+   "ci": [
+    0.21848849400185993,
+    0.43787676681690707
+   ],
+   "states": 41
+  },
+  {
+   "term": "action",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 121,
+   "found": 30,
+   "rejected": 45,
+   "risk": 0.4,
+   "ci": [
+    0.29662343078170594,
+    0.5131216783992341
+   ],
+   "states": 36
+  },
+  {
+   "term": "relative",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 120,
+   "found": 34,
+   "rejected": 46,
+   "risk": 0.425,
+   "ci": [
+    0.32256388014807325,
+    0.534309080291613
+   ],
+   "states": 33
+  },
+  {
+   "term": "sudden",
+   "category": "temporal",
+   "source": "insurance",
+   "exposure": 118,
+   "found": 68,
+   "rejected": 37,
+   "risk": 0.6476190476190476,
+   "ci": [
+    0.5525097032451355,
+    0.732307866507606
+   ],
+   "states": 38
+  },
+  {
+   "term": "and/or",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 112,
+   "found": 22,
+   "rejected": 9,
+   "risk": 0.7096774193548387,
+   "ci": [
+    0.5340734004245933,
+    0.8390437928156713
+   ],
+   "states": 28
+  },
+  {
+   "term": "must",
+   "category": "modal",
+   "source": "uncertain",
+   "exposure": 110,
+   "found": 17,
+   "rejected": 54,
+   "risk": 0.23943661971830985,
+   "ci": [
+    0.15520813325016364,
+    0.3504144082240967
+   ],
+   "states": 35
+  },
+  {
+   "term": "pollutant",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 109,
+   "found": 48,
+   "rejected": 48,
+   "risk": 0.5,
+   "ci": [
+    0.40192229167030874,
+    0.5980777083296912
+   ],
+   "states": 34
+  },
+  {
+   "term": "state",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 108,
+   "found": 25,
+   "rejected": 50,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.23708065705320355,
+    0.445827858248363
+   ],
+   "states": 35
+  },
+  {
+   "term": "defendant",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 108,
+   "found": 25,
+   "rejected": 31,
+   "risk": 0.44642857142857145,
+   "ci": [
+    0.3238651625129941,
+    0.5758701386821612
+   ],
+   "states": 32
+  },
+  {
+   "term": "interest",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 107,
+   "found": 17,
+   "rejected": 47,
+   "risk": 0.265625,
+   "ci": [
+    0.17296238569537764,
+    0.38483106257235195
+   ],
+   "states": 37
+  },
+  {
+   "term": "property damage",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 107,
+   "found": 15,
+   "rejected": 58,
+   "risk": 0.2054794520547945,
+   "ci": [
+    0.1286685959377339,
+    0.3117386834525963
+   ],
+   "states": 34
+  },
+  {
+   "term": "offense",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 106,
+   "found": 30,
+   "rejected": 40,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.31935124886212546,
+    0.5452237332617722
+   ],
+   "states": 35
+  },
+  {
+   "term": "costs",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 106,
+   "found": 32,
+   "rejected": 32,
+   "risk": 0.5,
+   "ci": [
+    0.38101888493214947,
+    0.6189811150678505
+   ],
+   "states": 38
+  },
+  {
+   "term": "named insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 105,
+   "found": 25,
+   "rejected": 44,
+   "risk": 0.36231884057971014,
+   "ci": [
+    0.25895556253460106,
+    0.48020447788186427
+   ],
+   "states": 30
+  },
+  {
+   "term": "estate",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 104,
+   "found": 24,
+   "rejected": 31,
+   "risk": 0.43636363636363634,
+   "ci": [
+    0.31373238636001305,
+    0.5673041592131869
+   ],
+   "states": 39
+  },
+  {
+   "term": "attorney",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 102,
+   "found": 20,
+   "rejected": 52,
+   "risk": 0.2777777777777778,
+   "ci": [
+    0.18760146005322942,
+    0.3904665131962801
+   ],
+   "states": 29
+  },
+  {
+   "term": "knowingly",
+   "category": "mental",
+   "source": "statute",
+   "exposure": 99,
+   "found": 19,
+   "rejected": 13,
+   "risk": 0.59375,
+   "ci": [
+    0.4225972657298823,
+    0.744805975196862
+   ],
+   "states": 31
+  },
+  {
+   "term": "vehicle",
+   "category": "property",
+   "source": "statute",
+   "exposure": 99,
+   "found": 28,
+   "rejected": 36,
+   "risk": 0.4375,
+   "ci": [
+    0.32293817065427327,
+    0.5591400822171212
+   ],
+   "states": 38
+  },
+  {
+   "term": "such",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 99,
+   "found": 20,
+   "rejected": 42,
+   "risk": 0.3225806451612903,
+   "ci": [
+    0.2195432864054263,
+    0.44632145564215464
+   ],
+   "states": 37
+  },
+  {
+   "term": "occupying",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 98,
+   "found": 26,
+   "rejected": 41,
+   "risk": 0.3880597014925373,
+   "ci": [
+    0.28048871056929325,
+    0.5077712948512505
+   ],
+   "states": 30
+  },
+  {
+   "term": "building",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 96,
+   "found": 21,
+   "rejected": 32,
+   "risk": 0.39622641509433965,
+   "ci": [
+    0.27589211919038936,
+    0.5305876421111926
+   ],
+   "states": 31
+  },
+  {
+   "term": "court",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 95,
+   "found": 36,
+   "rejected": 27,
+   "risk": 0.5714285714285714,
+   "ci": [
+    0.44861395082594024,
+    0.6860327362671276
+   ],
+   "states": 32
+  },
+  {
+   "term": "income",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 95,
+   "found": 14,
+   "rejected": 42,
+   "risk": 0.25,
+   "ci": [
+    0.15516915222973843,
+    0.37692892001431927
+   ],
+   "states": 35
+  },
+  {
+   "term": "public",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 93,
+   "found": 25,
+   "rejected": 28,
+   "risk": 0.4716981132075472,
+   "ci": [
+    0.343820276089814,
+    0.6034014769924354
+   ],
+   "states": 35
+  },
+  {
+   "term": "convicted",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 92,
+   "found": 22,
+   "rejected": 36,
+   "risk": 0.3793103448275862,
+   "ci": [
+    0.2656408890260369,
+    0.5079742826383442
+   ],
+   "states": 24
+  },
+  {
+   "term": "cause",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 92,
+   "found": 32,
+   "rejected": 28,
+   "risk": 0.5333333333333333,
+   "ci": [
+    0.40893208671135106,
+    0.65372298459012
+   ],
+   "states": 30
+  },
+  {
+   "term": "party",
+   "category": "role",
+   "source": "statute",
+   "exposure": 91,
+   "found": 20,
+   "rejected": 34,
+   "risk": 0.37037037037037035,
+   "ci": [
+    0.25423189707625504,
+    0.5037277720891898
+   ],
+   "states": 31
+  },
+  {
+   "term": "sudden and accidental",
+   "category": "temporal",
+   "source": "insurance",
+   "exposure": 90,
+   "found": 46,
+   "rejected": 23,
+   "risk": 0.6666666666666666,
+   "ci": [
+    0.5492625453552142,
+    0.7664910899301172
+   ],
+   "states": 37
+  },
+  {
+   "term": "intent",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 89,
+   "found": 19,
+   "rejected": 26,
+   "risk": 0.4222222222222222,
+   "ci": [
+    0.2896848798168781,
+    0.566994672040555
+   ],
+   "states": 32
+  },
+  {
+   "term": "act",
+   "category": "event",
+   "source": "statute",
+   "exposure": 89,
+   "found": 19,
+   "rejected": 31,
+   "risk": 0.38,
+   "ci": [
+    0.2586259584257722,
+    0.5184980497760643
+   ],
+   "states": 32
+  },
+  {
+   "term": "any person",
+   "category": "role",
+   "source": "statute",
+   "exposure": 87,
+   "found": 17,
+   "rejected": 34,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.21969755762722826,
+    0.4703187803351943
+   ],
+   "states": 36
+  },
+  {
+   "term": "family",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 87,
+   "found": 17,
+   "rejected": 28,
+   "risk": 0.37777777777777777,
+   "ci": [
+    0.25107885298349863,
+    0.5237032999353246
+   ],
+   "states": 36
+  },
+  {
+   "term": "release",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 86,
+   "found": 29,
+   "rejected": 38,
+   "risk": 0.43283582089552236,
+   "ci": [
+    0.32104123341736546,
+    0.5519147698349607
+   ],
+   "states": 31
+  },
+  {
+   "term": "imposed",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 86,
+   "found": 5,
+   "rejected": 24,
+   "risk": 0.1724137931034483,
+   "ci": [
+    0.07597745271479928,
+    0.34548800572815114
+   ],
+   "states": 10
+  },
+  {
+   "term": "upon",
+   "category": "condition",
+   "source": "insurance",
+   "exposure": 85,
+   "found": 19,
+   "rejected": 29,
+   "risk": 0.3958333333333333,
+   "ci": [
+    0.2702062649595057,
+    0.5368984540306487
+   ],
+   "states": 26
+  },
+  {
+   "term": "uninsured motor vehicle",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 84,
+   "found": 18,
+   "rejected": 39,
+   "risk": 0.3157894736842105,
+   "ci": [
+    0.2100412363168152,
+    0.44480018797182935
+   ],
+   "states": 33
+  },
+  {
+   "term": "agent",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 84,
+   "found": 23,
+   "rejected": 26,
+   "risk": 0.46938775510204084,
+   "ci": [
+    0.33703281897894777,
+    0.6061937298008014
+   ],
+   "states": 32
+  },
+  {
+   "term": "personal injury",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 82,
+   "found": 13,
+   "rejected": 35,
+   "risk": 0.2708333333333333,
+   "ci": [
+    0.16565803561632889,
+    0.40997234616201117
+   ],
+   "states": 33
+  },
+  {
+   "term": "personal property",
+   "category": "property",
+   "source": "testamentary",
+   "exposure": 82,
+   "found": 14,
+   "rejected": 32,
+   "risk": 0.30434782608695654,
+   "ci": [
+    0.19079670807448904,
+    0.4480591874023817
+   ],
+   "states": 31
+  },
+  {
+   "term": "substantial",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 82,
+   "found": 9,
+   "rejected": 22,
+   "risk": 0.2903225806451613,
+   "ci": [
+    0.1609562071843287,
+    0.4659265995754067
+   ],
+   "states": 31
+  },
+  {
+   "term": "victim",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 82,
+   "found": 19,
+   "rejected": 30,
+   "risk": 0.3877551020408163,
+   "ci": [
+    0.26428814373960496,
+    0.5275425351194757
+   ],
+   "states": 29
+  },
+  {
+   "term": "sentence",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 81,
+   "found": 32,
+   "rejected": 23,
+   "risk": 0.5818181818181818,
+   "ci": [
+    0.4503286833116465,
+    0.7026243295228107
+   ],
+   "states": 27
+  },
+  {
+   "term": "custody",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 81,
+   "found": 20,
+   "rejected": 28,
+   "risk": 0.4166666666666667,
+   "ci": [
+    0.28849459734577015,
+    0.5571891778463536
+   ],
+   "states": 32
+  },
+  {
+   "term": "construction",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 80,
+   "found": 27,
+   "rejected": 26,
+   "risk": 0.5094339622641509,
+   "ci": [
+    0.3788330425329779,
+    0.6387597064396054
+   ],
+   "states": 31
+  },
+  {
+   "term": "transfer",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 80,
+   "found": 14,
+   "rejected": 42,
+   "risk": 0.25,
+   "ci": [
+    0.15516915222973843,
+    0.37692892001431927
+   ],
+   "states": 26
+  },
+  {
+   "term": "accidental",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 80,
+   "found": 29,
+   "rejected": 26,
+   "risk": 0.5272727272727272,
+   "ci": [
+    0.39791319071629383,
+    0.6530711468951917
+   ],
+   "states": 34
+  },
+  {
+   "term": "collapse",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 79,
+   "found": 25,
+   "rejected": 36,
+   "risk": 0.4098360655737705,
+   "ci": [
+    0.2953514834927377,
+    0.5350043374617113
+   ],
+   "states": 34
+  },
+  {
+   "term": "includes",
+   "category": "scope",
+   "source": "statute",
+   "exposure": 79,
+   "found": 22,
+   "rejected": 31,
+   "risk": 0.41509433962264153,
+   "ci": [
+    0.2926070830912865,
+    0.5490581761554623
+   ],
+   "states": 27
+  },
+  {
+   "term": "employment",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 79,
+   "found": 15,
+   "rejected": 31,
+   "risk": 0.32608695652173914,
+   "ci": [
+    0.20865764564493358,
+    0.47032537255672924
+   ],
+   "states": 26
+  },
+  {
+   "term": "land",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 78,
+   "found": 17,
+   "rejected": 35,
+   "risk": 0.3269230769230769,
+   "ci": [
+    0.2152190173110406,
+    0.46244064860111084
+   ],
+   "states": 33
+  },
+  {
+   "term": "minerals",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 78,
+   "found": 20,
+   "rejected": 35,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.24930349342940838,
+    0.49577481851316285
+   ],
+   "states": 24
+  },
+  {
+   "term": "include",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 78,
+   "found": 13,
+   "rejected": 38,
+   "risk": 0.2549019607843137,
+   "ci": [
+    0.1554562324126639,
+    0.38868544106148706
+   ],
+   "states": 30
+  },
+  {
+   "term": "parent",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 78,
+   "found": 20,
+   "rejected": 28,
+   "risk": 0.4166666666666667,
+   "ci": [
+    0.28849459734577015,
+    0.5571891778463536
+   ],
+   "states": 35
+  },
+  {
+   "term": "threat",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 78,
+   "found": 26,
+   "rejected": 16,
+   "risk": 0.6190476190476191,
+   "ci": [
+    0.46813768219996377,
+    0.7500047910121407
+   ],
+   "states": 23
+  },
+  {
+   "term": "exclusive",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 77,
+   "found": 19,
+   "rejected": 39,
+   "risk": 0.3275862068965517,
+   "ci": [
+    0.22083123880342104,
+    0.4557618635742664
+   ],
+   "states": 34
+  },
+  {
+   "term": "service",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 76,
+   "found": 8,
+   "rejected": 28,
+   "risk": 0.2222222222222222,
+   "ci": [
+    0.11716192974839595,
+    0.38085019827859085
+   ],
+   "states": 26
+  },
+  {
+   "term": "material",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 75,
+   "found": 16,
+   "rejected": 23,
+   "risk": 0.41025641025641024,
+   "ci": [
+    0.27079089435400483,
+    0.5658165152665509
+   ],
+   "states": 27
+  },
+  {
+   "term": "physical",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 75,
+   "found": 19,
+   "rejected": 43,
+   "risk": 0.3064516129032258,
+   "ci": [
+    0.20581430019850633,
+    0.4296745093079456
+   ],
+   "states": 23
+  },
+  {
+   "term": "control",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 75,
+   "found": 11,
+   "rejected": 33,
+   "risk": 0.25,
+   "ci": [
+    0.14574066080685744,
+    0.39440849808414946
+   ],
+   "states": 31
+  },
+  {
+   "term": "discharge",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 75,
+   "found": 18,
+   "rejected": 32,
+   "risk": 0.36,
+   "ci": [
+    0.24138562967182875,
+    0.49859237989698046
+   ],
+   "states": 32
+  },
+  {
+   "term": "impose",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 75,
+   "found": 10,
+   "rejected": 30,
+   "risk": 0.25,
+   "ci": [
+    0.14186967895549518,
+    0.40194259066970106
+   ],
+   "states": 5
+  },
+  {
+   "term": "structure",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 74,
+   "found": 20,
+   "rejected": 24,
+   "risk": 0.45454545454545453,
+   "ci": [
+    0.3170500778685361,
+    0.599340678293465
+   ],
+   "states": 31
+  },
+  {
+   "term": "suit",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 74,
+   "found": 26,
+   "rejected": 30,
+   "risk": 0.4642857142857143,
+   "ci": [
+    0.34019643403583766,
+    0.5929604334275992
+   ],
+   "states": 29
+  },
+  {
+   "term": "wages",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 74,
+   "found": 18,
+   "rejected": 31,
+   "risk": 0.3673469387755102,
+   "ci": [
+    0.24664982524781226,
+    0.5073318861311014
+   ],
+   "states": 32
+  },
+  {
+   "term": "parties",
+   "category": "role",
+   "source": "contract",
+   "exposure": 73,
+   "found": 23,
+   "rejected": 28,
+   "risk": 0.45098039215686275,
+   "ci": [
+    0.32267305011132247,
+    0.5861552845835076
+   ],
+   "states": 27
+  },
+  {
+   "term": "work",
+   "category": "conduct",
+   "source": "contract",
+   "exposure": 73,
+   "found": 21,
+   "rejected": 31,
+   "risk": 0.40384615384615385,
+   "ci": [
+    0.28159535424282284,
+    0.5393266823750391
+   ],
+   "states": 33
+  },
+  {
+   "term": "an insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 72,
+   "found": 13,
+   "rejected": 46,
+   "risk": 0.22033898305084745,
+   "ci": [
+    0.13354072524323754,
+    0.34132942446650893
+   ],
+   "states": 31
+  },
+  {
+   "term": "family member",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 72,
+   "found": 16,
+   "rejected": 30,
+   "risk": 0.34782608695652173,
+   "ci": [
+    0.22680806269918055,
+    0.49230207822727434
+   ],
+   "states": 32
+  },
+  {
+   "term": "direct",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 72,
+   "found": 18,
+   "rejected": 37,
+   "risk": 0.32727272727272727,
+   "ci": [
+    0.21812895688825168,
+    0.45897023823900523
+   ],
+   "states": 28
+  },
+  {
+   "term": "felony",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 71,
+   "found": 14,
+   "rejected": 31,
+   "risk": 0.3111111111111111,
+   "ci": [
+    0.19528525463541907,
+    0.4566507998754897
+   ],
+   "states": 30
+  },
+  {
+   "term": "any insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 68,
+   "found": 10,
+   "rejected": 47,
+   "risk": 0.17543859649122806,
+   "ci": [
+    0.09818747133596609,
+    0.2936759905059315
+   ],
+   "states": 31
+  },
+  {
+   "term": "firearm",
+   "category": "property",
+   "source": "statute",
+   "exposure": 67,
+   "found": 10,
+   "rejected": 32,
+   "risk": 0.23809523809523808,
+   "ci": [
+    0.13480820811018188,
+    0.38527835082318873
+   ],
+   "states": 31
+  },
+  {
+   "term": "value",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 67,
+   "found": 17,
+   "rejected": 26,
+   "risk": 0.3953488372093023,
+   "ci": [
+    0.263651061984564,
+    0.5442120340668091
+   ],
+   "states": 28
+  },
+  {
+   "term": "reside",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 67,
+   "found": 21,
+   "rejected": 16,
+   "risk": 0.5675675675675675,
+   "ci": [
+    0.40913906334200717,
+    0.713285131596487
+   ],
+   "states": 26
+  },
+  {
+   "term": "underinsured motor vehicle",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 67,
+   "found": 20,
+   "rejected": 31,
+   "risk": 0.39215686274509803,
+   "ci": [
+    0.27027144858027696,
+    0.5291508877483494
+   ],
+   "states": 20
+  },
+  {
+   "term": "term",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 67,
+   "found": 20,
+   "rejected": 23,
+   "risk": 0.46511627906976744,
+   "ci": [
+    0.3251082626391856,
+    0.6108461027112723
+   ],
+   "states": 32
+  },
+  {
+   "term": "lease",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 67,
+   "found": 17,
+   "rejected": 26,
+   "risk": 0.3953488372093023,
+   "ci": [
+    0.263651061984564,
+    0.5442120340668091
+   ],
+   "states": 28
+  },
+  {
+   "term": "coverage",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 66,
+   "found": 19,
+   "rejected": 27,
+   "risk": 0.41304347826086957,
+   "ci": [
+    0.2828839329710102,
+    0.5566075761298211
+   ],
+   "states": 32
+  },
+  {
+   "term": "royalty",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 66,
+   "found": 19,
+   "rejected": 26,
+   "risk": 0.4222222222222222,
+   "ci": [
+    0.2896848798168781,
+    0.566994672040555
+   ],
+   "states": 16
+  },
+  {
+   "term": "pollutants",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 65,
+   "found": 15,
+   "rejected": 33,
+   "risk": 0.3125,
+   "ci": [
+    0.19945512167731494,
+    0.4533333725049633
+   ],
+   "states": 31
+  },
+  {
+   "term": "used",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 65,
+   "found": 13,
+   "rejected": 19,
+   "risk": 0.40625,
+   "ci": [
+    0.255194024803138,
+    0.5774027342701177
+   ],
+   "states": 29
+  },
+  {
+   "term": "solely",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 64,
+   "found": 12,
+   "rejected": 37,
+   "risk": 0.24489795918367346,
+   "ci": [
+    0.14602203389475285,
+    0.38086587260315785
+   ],
+   "states": 29
+  },
+  {
+   "term": "services",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 64,
+   "found": 18,
+   "rejected": 19,
+   "risk": 0.4864864864864865,
+   "ci": [
+    0.33446153327211037,
+    0.6410536277401908
+   ],
+   "states": 22
+  },
+  {
+   "term": "maintain",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 64,
+   "found": 7,
+   "rejected": 26,
+   "risk": 0.21212121212121213,
+   "ci": [
+    0.1067588656643618,
+    0.3775197758712936
+   ],
+   "states": 29
+  },
+  {
+   "term": "will",
+   "category": "modal",
+   "source": "testamentary",
+   "exposure": 64,
+   "found": 13,
+   "rejected": 30,
+   "risk": 0.3023255813953488,
+   "ci": [
+    0.18601827946182872,
+    0.4510564575240983
+   ],
+   "states": 29
+  },
+  {
+   "term": "proceeds",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 64,
+   "found": 16,
+   "rejected": 25,
+   "risk": 0.3902439024390244,
+   "ci": [
+    0.2565593521532712,
+    0.5427341610130745
+   ],
+   "states": 33
+  },
+  {
+   "term": "jurisdiction",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 63,
+   "found": 17,
+   "rejected": 23,
+   "risk": 0.425,
+   "ci": [
+    0.28509168524815875,
+    0.5780519956394001
+   ],
+   "states": 28
+  },
+  {
+   "term": "policy",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 63,
+   "found": 19,
+   "rejected": 26,
+   "risk": 0.4222222222222222,
+   "ci": [
+    0.2896848798168781,
+    0.566994672040555
+   ],
+   "states": 28
+  },
+  {
+   "term": "cost",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 63,
+   "found": 16,
+   "rejected": 20,
+   "risk": 0.4444444444444444,
+   "ci": [
+    0.2954102987654314,
+    0.6041921268399659
+   ],
+   "states": 27
+  },
+  {
+   "term": "mineral",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 63,
+   "found": 18,
+   "rejected": 19,
+   "risk": 0.4864864864864865,
+   "ci": [
+    0.33446153327211037,
+    0.6410536277401908
+   ],
+   "states": 23
+  },
+  {
+   "term": "lot",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 63,
+   "found": 15,
+   "rejected": 17,
+   "risk": 0.46875,
+   "ci": [
+    0.30869129901682335,
+    0.6355076206742619
+   ],
+   "states": 33
+  },
+  {
+   "term": "plaintiff",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 62,
+   "found": 15,
+   "rejected": 22,
+   "risk": 0.40540540540540543,
+   "ci": [
+    0.26346295839940137,
+    0.565143168686707
+   ],
+   "states": 25
+  },
+  {
+   "term": "damage",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 61,
+   "found": 13,
+   "rejected": 25,
+   "risk": 0.34210526315789475,
+   "ci": [
+    0.21212220026458956,
+    0.5010818837092545
+   ],
+   "states": 25
+  },
+  {
+   "term": "notice",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 61,
+   "found": 12,
+   "rejected": 27,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.1856575344598306,
+    0.464215486155646
+   ],
+   "states": 28
+  },
+  {
+   "term": "tax",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 59,
+   "found": 14,
+   "rejected": 30,
+   "risk": 0.3181818181818182,
+   "ci": [
+    0.19999129931673562,
+    0.46557172533126934
+   ],
+   "states": 25
+  },
+  {
+   "term": "payment",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 59,
+   "found": 9,
+   "rejected": 32,
+   "risk": 0.21951219512195122,
+   "ci": [
+    0.12003040155386346,
+    0.36705302098235293
+   ],
+   "states": 24
+  },
+  {
+   "term": "trust",
+   "category": "uncategorised",
+   "source": "testamentary",
+   "exposure": 59,
+   "found": 7,
+   "rejected": 30,
+   "risk": 0.1891891891891892,
+   "ci": [
+    0.09479858757337126,
+    0.342050115709556
+   ],
+   "states": 29
+  },
+  {
+   "term": "arbitration",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 58,
+   "found": 10,
+   "rejected": 30,
+   "risk": 0.25,
+   "ci": [
+    0.14186967895549518,
+    0.40194259066970106
+   ],
+   "states": 23
+  },
+  {
+   "term": "final",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 58,
+   "found": 17,
+   "rejected": 20,
+   "risk": 0.4594594594594595,
+   "ci": [
+    0.31038327828457724,
+    0.6161622047523264
+   ],
+   "states": 19
+  },
+  {
+   "term": "otherwise",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 58,
+   "found": 12,
+   "rejected": 19,
+   "risk": 0.3870967741935484,
+   "ci": [
+    0.23732875351271562,
+    0.5617619885886803
+   ],
+   "states": 24
+  },
+  {
+   "term": "theft",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 58,
+   "found": 15,
+   "rejected": 20,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.27984333081678914,
+    0.5914287074102662
+   ],
+   "states": 24
+  },
+  {
+   "term": "auto",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 58,
+   "found": 17,
+   "rejected": 26,
+   "risk": 0.3953488372093023,
+   "ci": [
+    0.263651061984564,
+    0.5442120340668091
+   ],
+   "states": 24
+  },
+  {
+   "term": "crime",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 57,
+   "found": 11,
+   "rejected": 26,
+   "risk": 0.2972972972972973,
+   "ci": [
+    0.17489302346408198,
+    0.45783439172043583
+   ],
+   "states": 26
+  },
+  {
+   "term": "individual",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 57,
+   "found": 13,
+   "rejected": 24,
+   "risk": 0.35135135135135137,
+   "ci": [
+    0.2182540663110087,
+    0.5124127048243043
+   ],
+   "states": 27
+  },
+  {
+   "term": "proceeding",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 57,
+   "found": 19,
+   "rejected": 17,
+   "risk": 0.5277777777777778,
+   "ci": [
+    0.3700567162693947,
+    0.6801420709279067
+   ],
+   "states": 25
+  },
+  {
+   "term": "agency",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 57,
+   "found": 21,
+   "rejected": 20,
+   "risk": 0.5121951219512195,
+   "ci": [
+    0.36484259315865186,
+    0.657458127600643
+   ],
+   "states": 23
+  },
+  {
+   "term": "repair",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 56,
+   "found": 17,
+   "rejected": 30,
+   "risk": 0.3617021276595745,
+   "ci": [
+    0.2396602228576844,
+    0.5046436542822955
+   ],
+   "states": 28
+  },
+  {
+   "term": "benefit",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 56,
+   "found": 21,
+   "rejected": 19,
+   "risk": 0.525,
+   "ci": [
+    0.37497106853929735,
+    0.6706477044981831
+   ],
+   "states": 26
+  },
+  {
+   "term": "liability",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 56,
+   "found": 9,
+   "rejected": 22,
+   "risk": 0.2903225806451613,
+   "ci": [
+    0.1609562071843287,
+    0.4659265995754067
+   ],
+   "states": 25
+  },
+  {
+   "term": "employees",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 56,
+   "found": 13,
+   "rejected": 26,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.20632766106915157,
+    0.4902289567975947
+   ],
+   "states": 29
+  },
+  {
+   "term": "order",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 55,
+   "found": 10,
+   "rejected": 21,
+   "risk": 0.3225806451612903,
+   "ci": [
+    0.18569230747313034,
+    0.49859314440049185
+   ],
+   "states": 28
+  },
+  {
+   "term": "rule",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 55,
+   "found": 15,
+   "rejected": 22,
+   "risk": 0.40540540540540543,
+   "ci": [
+    0.26346295839940137,
+    0.565143168686707
+   ],
+   "states": 23
+  },
+  {
+   "term": "operator",
+   "category": "role",
+   "source": "statute",
+   "exposure": 55,
+   "found": 17,
+   "rejected": 22,
+   "risk": 0.4358974358974359,
+   "ci": [
+    0.2930452416170466,
+    0.5902457652547789
+   ],
+   "states": 30
+  },
+  {
+   "term": "easement",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 54,
+   "found": 23,
+   "rejected": 17,
+   "risk": 0.575,
+   "ci": [
+    0.42194800436059987,
+    0.7149083147518411
+   ],
+   "states": 24
+  },
+  {
+   "term": "right of way",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 54,
+   "found": 6,
+   "rejected": 17,
+   "risk": 0.2608695652173913,
+   "ci": [
+    0.1254844588924897,
+    0.4647039054375056
+   ],
+   "states": 24
+  },
+  {
+   "term": "section",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 54,
+   "found": 10,
+   "rejected": 25,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.16326363398295565,
+    0.45055248069821086
+   ],
+   "states": 25
+  },
+  {
+   "term": "dwelling",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 54,
+   "found": 8,
+   "rejected": 20,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.15253815848329969,
+    0.470596357370175
+   ],
+   "states": 25
+  },
+  {
+   "term": "corporation",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 53,
+   "found": 6,
+   "rejected": 16,
+   "risk": 0.2727272727272727,
+   "ci": [
+    0.1315058201581444,
+    0.4815212369900198
+   ],
+   "states": 27
+  },
+  {
+   "term": "willful",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 53,
+   "found": 13,
+   "rejected": 10,
+   "risk": 0.5652173913043478,
+   "ci": [
+    0.3681104930501695,
+    0.7436563166780135
+   ],
+   "states": 27
+  },
+  {
+   "term": "fee",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 53,
+   "found": 19,
+   "rejected": 16,
+   "risk": 0.5428571428571428,
+   "ci": [
+    0.38189451340137515,
+    0.6953422636623914
+   ],
+   "states": 23
+  },
+  {
+   "term": "disability",
+   "category": "event",
+   "source": "statute",
+   "exposure": 53,
+   "found": 9,
+   "rejected": 14,
+   "risk": 0.391304347826087,
+   "ci": [
+    0.22157377982382145,
+    0.5921482039625402
+   ],
+   "states": 31
+  },
+  {
+   "term": "law",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 52,
+   "found": 13,
+   "rejected": 15,
+   "risk": 0.4642857142857143,
+   "ci": [
+    0.29531303739659587,
+    0.6418760485789833
+   ],
+   "states": 24
+  },
+  {
+   "term": "similar",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 52,
+   "found": 16,
+   "rejected": 15,
+   "risk": 0.5161290322580645,
+   "ci": [
+    0.34840118286973176,
+    0.6803001396872117
+   ],
+   "states": 29
+  },
+  {
+   "term": "due",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 52,
+   "found": 8,
+   "rejected": 18,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.16501120939792674,
+    0.49988611514231246
+   ],
+   "states": 22
+  },
+  {
+   "term": "termination",
+   "category": "event",
+   "source": "contract",
+   "exposure": 52,
+   "found": 14,
+   "rejected": 20,
+   "risk": 0.4117647058823529,
+   "ci": [
+    0.26365737785688864,
+    0.5777869585348072
+   ],
+   "states": 23
+  },
+  {
+   "term": "necessary",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 52,
+   "found": 16,
+   "rejected": 12,
+   "risk": 0.5714285714285714,
+   "ci": [
+    0.390704789856154,
+    0.7349170381926877
+   ],
+   "states": 22
+  },
+  {
+   "term": "operation",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 52,
+   "found": 12,
+   "rejected": 28,
+   "risk": 0.3,
+   "ci": [
+    0.18074670915695296,
+    0.454303106543204
+   ],
+   "states": 27
+  },
+  {
+   "term": "legally entitled to recover",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 52,
+   "found": 18,
+   "rejected": 15,
+   "risk": 0.5454545454545454,
+   "ci": [
+    0.3798565794374957,
+    0.701573108741085
+   ],
+   "states": 22
+  },
+  {
+   "term": "member",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 52,
+   "found": 15,
+   "rejected": 18,
+   "risk": 0.45454545454545453,
+   "ci": [
+    0.298426891258915,
+    0.6201434205625044
+   ],
+   "states": 26
+  },
+  {
+   "term": "equipment",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 51,
+   "found": 17,
+   "rejected": 16,
+   "risk": 0.5151515151515151,
+   "ci": [
+    0.3521810458621024,
+    0.6749621835307578
+   ],
+   "states": 28
+  },
+  {
+   "term": "operate",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 51,
+   "found": 15,
+   "rejected": 22,
+   "risk": 0.40540540540540543,
+   "ci": [
+    0.26346295839940137,
+    0.565143168686707
+   ],
+   "states": 24
+  },
+  {
+   "term": "intentionally",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 51,
+   "found": 7,
+   "rejected": 11,
+   "risk": 0.3888888888888889,
+   "ci": [
+    0.20304991926931162,
+    0.6138133141934384
+   ],
+   "states": 23
+  },
+  {
+   "term": "at any time",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 51,
+   "found": 19,
+   "rejected": 14,
+   "risk": 0.5757575757575758,
+   "ci": [
+    0.4080697369146003,
+    0.7276464100497011
+   ],
+   "states": 18
+  },
+  {
+   "term": "waiver",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 50,
+   "found": 8,
+   "rejected": 16,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17971978688379642,
+    0.5329404050591954
+   ],
+   "states": 22
+  },
+  {
+   "term": "should",
+   "category": "modal",
+   "source": "uncertain",
+   "exposure": 50,
+   "found": 12,
+   "rejected": 16,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.2650829618073122,
+    0.609295210143846
+   ],
+   "states": 24
+  },
+  {
+   "term": "alimony",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 50,
+   "found": 12,
+   "rejected": 16,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.2650829618073122,
+    0.609295210143846
+   ],
+   "states": 26
+  },
+  {
+   "term": "grant",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 50,
+   "found": 11,
+   "rejected": 25,
+   "risk": 0.3055555555555556,
+   "ci": [
+    0.18004270282805354,
+    0.46856578679083716
+   ],
+   "states": 16
+  },
+  {
+   "term": "s meaning",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 49,
+   "found": 19,
+   "rejected": 21,
+   "risk": 0.475,
+   "ci": [
+    0.32935229550181694,
+    0.6250289314607027
+   ],
+   "states": 16
+  },
+  {
+   "term": "trial",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 49,
+   "found": 14,
+   "rejected": 10,
+   "risk": 0.5833333333333334,
+   "ci": [
+    0.3883433764938864,
+    0.7553265275346177
+   ],
+   "states": 21
+  },
+  {
+   "term": "insurance",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 49,
+   "found": 12,
+   "rejected": 17,
+   "risk": 0.41379310344827586,
+   "ci": [
+    0.2551293527964552,
+    0.5926247152148476
+   ],
+   "states": 26
+  },
+  {
+   "term": "condition",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 49,
+   "found": 9,
+   "rejected": 18,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1864305444359335,
+    0.5217558012789452
+   ],
+   "states": 21
+  },
+  {
+   "term": "maintenance",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 49,
+   "found": 10,
+   "rejected": 18,
+   "risk": 0.35714285714285715,
+   "ci": [
+    0.20705611972458876,
+    0.5417002241777278
+   ],
+   "states": 23
+  },
+  {
+   "term": "license",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 48,
+   "found": 15,
+   "rejected": 14,
+   "risk": 0.5172413793103449,
+   "ci": [
+    0.3443073797056916,
+    0.6861418066920478
+   ],
+   "states": 26
+  },
+  {
+   "term": "salary",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 48,
+   "found": 12,
+   "rejected": 22,
+   "risk": 0.35294117647058826,
+   "ci": [
+    0.21487714895296073,
+    0.5208634116998658
+   ],
+   "states": 21
+  },
+  {
+   "term": "regular use",
+   "category": "conduct",
+   "source": "insurance",
+   "exposure": 48,
+   "found": 11,
+   "rejected": 23,
+   "risk": 0.3235294117647059,
+   "ci": [
+    0.19131451326458573,
+    0.4915741595188061
+   ],
+   "states": 21
+  },
+  {
+   "term": "deadly weapon",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 48,
+   "found": 10,
+   "rejected": 11,
+   "risk": 0.47619047619047616,
+   "ci": [
+    0.28343712296762946,
+    0.6763078209973324
+   ],
+   "states": 19
+  },
+  {
+   "term": "commercial",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 47,
+   "found": 9,
+   "rejected": 21,
+   "risk": 0.3,
+   "ci": [
+    0.16664562643958933,
+    0.4787612101166018
+   ],
+   "states": 27
+  },
+  {
+   "term": "paid",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 47,
+   "found": 12,
+   "rejected": 21,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.22186966167959873,
+    0.5338412737846591
+   ],
+   "states": 22
+  },
+  {
+   "term": "good faith",
+   "category": "degree",
+   "source": "statute",
+   "exposure": 47,
+   "found": 5,
+   "rejected": 18,
+   "risk": 0.21739130434782608,
+   "ci": [
+    0.09663835601719065,
+    0.4190388018273492
+   ],
+   "states": 18
+  },
+  {
+   "term": "within",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 47,
+   "found": 8,
+   "rejected": 26,
+   "risk": 0.23529411764705882,
+   "ci": [
+    0.12436838109244344,
+    0.3999646280826443
+   ],
+   "states": 23
+  },
+  {
+   "term": "case",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 47,
+   "found": 14,
+   "rejected": 18,
+   "risk": 0.4375,
+   "ci": [
+    0.2816508596944317,
+    0.6067469796877387
+   ],
+   "states": 17
+  },
+  {
+   "term": "minor",
+   "category": "degree",
+   "source": "statute",
+   "exposure": 47,
+   "found": 7,
+   "rejected": 26,
+   "risk": 0.21212121212121213,
+   "ci": [
+    0.1067588656643618,
+    0.3775197758712936
+   ],
+   "states": 24
+  },
+  {
+   "term": "actual",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 47,
+   "found": 12,
+   "rejected": 14,
+   "risk": 0.46153846153846156,
+   "ci": [
+    0.28755582695234905,
+    0.6454236379556988
+   ],
+   "states": 27
+  },
+  {
+   "term": "burden of proof",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 46,
+   "found": 14,
+   "rejected": 4,
+   "risk": 0.7777777777777778,
+   "ci": [
+    0.5478497354769452,
+    0.90999218086618
+   ],
+   "states": 21
+  },
+  {
+   "term": "residential",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 46,
+   "found": 13,
+   "rejected": 22,
+   "risk": 0.37142857142857144,
+   "ci": [
+    0.23165607368891059,
+    0.5366335951197893
+   ],
+   "states": 22
+  },
+  {
+   "term": "expenses",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 46,
+   "found": 7,
+   "rejected": 22,
+   "risk": 0.2413793103448276,
+   "ci": [
+    0.12218268185062131,
+    0.4210795221832869
+   ],
+   "states": 24
+  },
+  {
+   "term": "date",
+   "category": "temporal",
+   "source": "statute",
+   "exposure": 46,
+   "found": 20,
+   "rejected": 8,
+   "risk": 0.7142857142857143,
+   "ci": [
+    0.529403642629825,
+    0.8474618415167003
+   ],
+   "states": 13
+  },
+  {
+   "term": "money",
+   "category": "uncategorised",
+   "source": "testamentary",
+   "exposure": 46,
+   "found": 10,
+   "rejected": 13,
+   "risk": 0.43478260869565216,
+   "ci": [
+    0.25634368332198654,
+    0.6318895069498304
+   ],
+   "states": 21
+  },
+  {
+   "term": "either",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 46,
+   "found": 8,
+   "rejected": 19,
+   "risk": 0.2962962962962963,
+   "ci": [
+    0.15852853317647564,
+    0.4848103338083759
+   ],
+   "states": 22
+  },
+  {
+   "term": "defendants",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 45,
+   "found": 9,
+   "rejected": 12,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.24469699486521043,
+    0.6345378370296754
+   ],
+   "states": 19
+  },
+  {
+   "term": "benefits",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 45,
+   "found": 7,
+   "rejected": 21,
+   "risk": 0.25,
+   "ci": [
+    0.12676334942200781,
+    0.433560252407046
+   ],
+   "states": 21
+  },
+  {
+   "term": "available",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 45,
+   "found": 12,
+   "rejected": 16,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.2650829618073122,
+    0.609295210143846
+   ],
+   "states": 24
+  },
+  {
+   "term": "operations",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 45,
+   "found": 14,
+   "rejected": 15,
+   "risk": 0.4827586206896552,
+   "ci": [
+    0.3138581933079522,
+    0.6556926202943085
+   ],
+   "states": 22
+  },
+  {
+   "term": "contractor",
+   "category": "role",
+   "source": "contract",
+   "exposure": 45,
+   "found": 13,
+   "rejected": 10,
+   "risk": 0.5652173913043478,
+   "ci": [
+    0.3681104930501695,
+    0.7436563166780135
+   ],
+   "states": 25
+  },
+  {
+   "term": "consent",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 45,
+   "found": 10,
+   "rejected": 20,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.19230295526846194,
+    0.5122027418616973
+   ],
+   "states": 19
+  },
+  {
+   "term": "willfully",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 45,
+   "found": 7,
+   "rejected": 14,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17194536432683688,
+    0.5462692434278971
+   ],
+   "states": 23
+  },
+  {
+   "term": "rent",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 45,
+   "found": 10,
+   "rejected": 19,
+   "risk": 0.3448275862068966,
+   "ci": [
+    0.19940508749190483,
+    0.5265522349284402
+   ],
+   "states": 22
+  },
+  {
+   "term": "persons",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 12,
+   "rejected": 15,
+   "risk": 0.4444444444444444,
+   "ci": [
+    0.2758559767007283,
+    0.6268728052042312
+   ],
+   "states": 25
+  },
+  {
+   "term": "each",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 7,
+   "rejected": 23,
+   "risk": 0.23333333333333334,
+   "ci": [
+    0.11792239210501232,
+    0.40928672330324267
+   ],
+   "states": 23
+  },
+  {
+   "term": "payable",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 10,
+   "rejected": 20,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.19230295526846194,
+    0.5122027418616973
+   ],
+   "states": 20
+  },
+  {
+   "term": "more or less",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 44,
+   "found": 5,
+   "rejected": 8,
+   "risk": 0.38461538461538464,
+   "ci": [
+    0.17709446581236818,
+    0.6447751902773146
+   ],
+   "states": 25
+  },
+  {
+   "term": "related",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 44,
+   "found": 21,
+   "rejected": 14,
+   "risk": 0.6,
+   "ci": [
+    0.43572419581519467,
+    0.7444949506669274
+   ],
+   "states": 17
+  },
+  {
+   "term": "death",
+   "category": "event",
+   "source": "statute",
+   "exposure": 44,
+   "found": 5,
+   "rejected": 15,
+   "risk": 0.25,
+   "ci": [
+    0.11186005278940309,
+    0.4687050099580636
+   ],
+   "states": 27
+  },
+  {
+   "term": "affiliate",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 44,
+   "found": 12,
+   "rejected": 21,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.22186966167959873,
+    0.5338412737846591
+   ],
+   "states": 16
+  },
+  {
+   "term": "regular",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 13,
+   "rejected": 13,
+   "risk": 0.5,
+   "ci": [
+    0.32060306315002074,
+    0.6793969368499793
+   ],
+   "states": 27
+  },
+  {
+   "term": "support",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 20,
+   "rejected": 12,
+   "risk": 0.625,
+   "ci": [
+    0.45254100589525126,
+    0.7706633153404079
+   ],
+   "states": 22
+  },
+  {
+   "term": "when",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 44,
+   "found": 8,
+   "rejected": 22,
+   "risk": 0.26666666666666666,
+   "ci": [
+    0.14182495553910618,
+    0.4444830204431169
+   ],
+   "states": 20
+  },
+  {
+   "term": "heir",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 44,
+   "found": 5,
+   "rejected": 15,
+   "risk": 0.25,
+   "ci": [
+    0.11186005278940309,
+    0.4687050099580636
+   ],
+   "states": 24
+  },
+  {
+   "term": "debt",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 43,
+   "found": 7,
+   "rejected": 16,
+   "risk": 0.30434782608695654,
+   "ci": [
+    0.15603828020972454,
+    0.5086612906057261
+   ],
+   "states": 25
+  },
+  {
+   "term": "conduct",
+   "category": "conduct",
+   "source": "statute",
+   "exposure": 43,
+   "found": 9,
+   "rejected": 11,
+   "risk": 0.45,
+   "ci": [
+    0.25819502085709295,
+    0.6579179916924003
+   ],
+   "states": 21
+  },
+  {
+   "term": "lawyer",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 1,
+   "rejected": 21,
+   "risk": 0.045454545454545456,
+   "ci": [
+    0.008069219301147859,
+    0.21798489499518053
+   ],
+   "states": 19
+  },
+  {
+   "term": "statement",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 11,
+   "rejected": 11,
+   "risk": 0.5,
+   "ci": [
+    0.3072180469247956,
+    0.6927819530752044
+   ],
+   "states": 23
+  },
+  {
+   "term": "customer",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 43,
+   "found": 8,
+   "rejected": 18,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.16501120939792674,
+    0.49988611514231246
+   ],
+   "states": 21
+  },
+  {
+   "term": "school",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 10,
+   "rejected": 14,
+   "risk": 0.4166666666666667,
+   "ci": [
+    0.24467347246538232,
+    0.6116566235061137
+   ],
+   "states": 23
+  },
+  {
+   "term": "appeal",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 10,
+   "rejected": 15,
+   "risk": 0.4,
+   "ci": [
+    0.23403057664190918,
+    0.5926087221487266
+   ],
+   "states": 23
+  },
+  {
+   "term": "interrogation",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 2,
+   "rejected": 16,
+   "risk": 0.1111111111111111,
+   "ci": [
+    0.031018868453582787,
+    0.3280024486660421
+   ],
+   "states": 23
+  },
+  {
+   "term": "in connection with",
+   "category": "nexus",
+   "source": "uncertain",
+   "exposure": 43,
+   "found": 11,
+   "rejected": 17,
+   "risk": 0.39285714285714285,
+   "ci": [
+    0.23565451827580033,
+    0.575912739650937
+   ],
+   "states": 21
+  },
+  {
+   "term": "highway",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 42,
+   "found": 6,
+   "rejected": 17,
+   "risk": 0.2608695652173913,
+   "ci": [
+    0.1254844588924897,
+    0.4647039054375056
+   ],
+   "states": 27
+  },
+  {
+   "term": "project",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 42,
+   "found": 11,
+   "rejected": 14,
+   "risk": 0.44,
+   "ci": [
+    0.2666537494700256,
+    0.6293298298043557
+   ],
+   "states": 16
+  },
+  {
+   "term": "express",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 42,
+   "found": 3,
+   "rejected": 19,
+   "risk": 0.13636363636363635,
+   "ci": [
+    0.04748917264236269,
+    0.3333541187947
+   ],
+   "states": 20
+  },
+  {
+   "term": "insured person",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 42,
+   "found": 9,
+   "rejected": 17,
+   "risk": 0.34615384615384615,
+   "ci": [
+    0.19412014972852126,
+    0.5377977099036699
+   ],
+   "states": 23
+  },
+  {
+   "term": "or otherwise",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 42,
+   "found": 6,
+   "rejected": 13,
+   "risk": 0.3157894736842105,
+   "ci": [
+    0.15364171004428598,
+    0.5398998982493537
+   ],
+   "states": 24
+  },
+  {
+   "term": "required",
+   "category": "modal",
+   "source": "uncertain",
+   "exposure": 42,
+   "found": 8,
+   "rejected": 13,
+   "risk": 0.38095238095238093,
+   "ci": [
+    0.20750767797982506,
+    0.5912170418449848
+   ],
+   "states": 26
+  },
+  {
+   "term": "option",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 41,
+   "found": 8,
+   "rejected": 20,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.15253815848329969,
+    0.470596357370175
+   ],
+   "states": 26
+  },
+  {
+   "term": "treatment",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 6,
+   "rejected": 23,
+   "risk": 0.20689655172413793,
+   "ci": [
+    0.09845936515585207,
+    0.3839044660825772
+   ],
+   "states": 20
+  },
+  {
+   "term": "incurred",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 41,
+   "found": 10,
+   "rejected": 25,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.16326363398295565,
+    0.45055248069821086
+   ],
+   "states": 22
+  },
+  {
+   "term": "another",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 41,
+   "found": 14,
+   "rejected": 18,
+   "risk": 0.4375,
+   "ci": [
+    0.2816508596944317,
+    0.6067469796877387
+   ],
+   "states": 24
+  },
+  {
+   "term": "claims",
+   "category": "event",
+   "source": "contract",
+   "exposure": 41,
+   "found": 9,
+   "rejected": 18,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1864305444359335,
+    0.5217558012789452
+   ],
+   "states": 19
+  },
+  {
+   "term": "after",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 7,
+   "rejected": 19,
+   "risk": 0.2692307692307692,
+   "ci": [
+    0.13704275525067386,
+    0.46083403419761304
+   ],
+   "states": 24
+  },
+  {
+   "term": "title",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 6,
+   "rejected": 15,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.13813675745628204,
+    0.49956773822837586
+   ],
+   "states": 19
+  },
+  {
+   "term": "award",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 14,
+   "rejected": 16,
+   "risk": 0.4666666666666667,
+   "ci": [
+    0.30232127224128236,
+    0.6385798671847496
+   ],
+   "states": 24
+  },
+  {
+   "term": "tenant",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 14,
+   "rejected": 9,
+   "risk": 0.6086956521739131,
+   "ci": [
+    0.4078517960374599,
+    0.7784262201761787
+   ],
+   "states": 16
+  },
+  {
+   "term": "gross receipts",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 41,
+   "found": 9,
+   "rejected": 20,
+   "risk": 0.3103448275862069,
+   "ci": [
+    0.17275424489768068,
+    0.49230470472718546
+   ],
+   "states": 20
+  },
+  {
+   "term": "permanent",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 40,
+   "found": 5,
+   "rejected": 13,
+   "risk": 0.2777777777777778,
+   "ci": [
+    0.12499569146355474,
+    0.5087307754619452
+   ],
+   "states": 19
+  },
+  {
+   "term": "present",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 40,
+   "found": 9,
+   "rejected": 8,
+   "risk": 0.5294117647058824,
+   "ci": [
+    0.30962897311549487,
+    0.738351988039119
+   ],
+   "states": 17
+  },
+  {
+   "term": "delivery",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 40,
+   "found": 4,
+   "rejected": 13,
+   "risk": 0.23529411764705882,
+   "ci": [
+    0.0955488907167594,
+    0.47262245889171595
+   ],
+   "states": 22
+  },
+  {
+   "term": "directly",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 40,
+   "found": 8,
+   "rejected": 9,
+   "risk": 0.47058823529411764,
+   "ci": [
+    0.26164801196088106,
+    0.6903710268845051
+   ],
+   "states": 20
+  },
+  {
+   "term": "abuse",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 40,
+   "found": 11,
+   "rejected": 14,
+   "risk": 0.44,
+   "ci": [
+    0.2666537494700256,
+    0.6293298298043557
+   ],
+   "states": 22
+  },
+  {
+   "term": "irritant",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 40,
+   "found": 11,
+   "rejected": 14,
+   "risk": 0.44,
+   "ci": [
+    0.2666537494700256,
+    0.6293298298043557
+   ],
+   "states": 21
+  },
+  {
+   "term": "right",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 10,
+   "rejected": 16,
+   "risk": 0.38461538461538464,
+   "ci": [
+    0.22428359511834428,
+    0.5746547996057992
+   ],
+   "states": 23
+  },
+  {
+   "term": "prevailing party",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 5,
+   "rejected": 21,
+   "risk": 0.19230769230769232,
+   "ci": [
+    0.08506935771788268,
+    0.3787663615465
+   ],
+   "states": 15
+  },
+  {
+   "term": "fraud",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 8,
+   "rejected": 11,
+   "risk": 0.42105263157894735,
+   "ci": [
+    0.2314162039203038,
+    0.6372444853483988
+   ],
+   "states": 18
+  },
+  {
+   "term": "indebtedness",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 39,
+   "found": 7,
+   "rejected": 18,
+   "risk": 0.28,
+   "ci": [
+    0.1428367383738157,
+    0.47576971896558296
+   ],
+   "states": 17
+  },
+  {
+   "term": "clear",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 5,
+   "rejected": 26,
+   "risk": 0.16129032258064516,
+   "ci": [
+    0.07092519905439934,
+    0.3263470272497887
+   ],
+   "states": 16
+  },
+  {
+   "term": "assault",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 14,
+   "rejected": 10,
+   "risk": 0.5833333333333334,
+   "ci": [
+    0.3883433764938864,
+    0.7553265275346177
+   ],
+   "states": 19
+  },
+  {
+   "term": "net",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 39,
+   "found": 12,
+   "rejected": 12,
+   "risk": 0.5,
+   "ci": [
+    0.31427131627763083,
+    0.6857286837223692
+   ],
+   "states": 19
+  },
+  {
+   "term": "hospital",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 39,
+   "found": 8,
+   "rejected": 16,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17971978688379642,
+    0.5329404050591954
+   ],
+   "states": 21
+  },
+  {
+   "term": "residence premises",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 39,
+   "found": 9,
+   "rejected": 18,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1864305444359335,
+    0.5217558012789452
+   ],
+   "states": 12
+  },
+  {
+   "term": "unless",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 38,
+   "found": 6,
+   "rejected": 21,
+   "risk": 0.2222222222222222,
+   "ci": [
+    0.10607095489408958,
+    0.4075729546307081
+   ],
+   "states": 19
+  },
+  {
+   "term": "right-of-way",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 38,
+   "found": 5,
+   "rejected": 11,
+   "risk": 0.3125,
+   "ci": [
+    0.14164435051961052,
+    0.5559606813326594
+   ],
+   "states": 19
+  },
+  {
+   "term": "uninsured",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 38,
+   "found": 7,
+   "rejected": 14,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17194536432683688,
+    0.5462692434278971
+   ],
+   "states": 22
+  },
+  {
+   "term": "purchase",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 38,
+   "found": 14,
+   "rejected": 15,
+   "risk": 0.4827586206896552,
+   "ci": [
+    0.3138581933079522,
+    0.6556926202943085
+   ],
+   "states": 24
+  },
+  {
+   "term": "hearing",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 38,
+   "found": 13,
+   "rejected": 7,
+   "risk": 0.65,
+   "ci": [
+    0.43285051021946463,
+    0.8188104521320554
+   ],
+   "states": 15
+  },
+  {
+   "term": "exclusively",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 38,
+   "found": 7,
+   "rejected": 17,
+   "risk": 0.2916666666666667,
+   "ci": [
+    0.14914460334164278,
+    0.49168063658709704
+   ],
+   "states": 23
+  },
+  {
+   "term": "entitled",
+   "category": "modal",
+   "source": "insurance",
+   "exposure": 37,
+   "found": 10,
+   "rejected": 10,
+   "risk": 0.5,
+   "ci": [
+    0.2992949144298199,
+    0.7007050855701801
+   ],
+   "states": 21
+  },
+  {
+   "term": "owned",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 37,
+   "found": 7,
+   "rejected": 16,
+   "risk": 0.30434782608695654,
+   "ci": [
+    0.15603828020972454,
+    0.5086612906057261
+   ],
+   "states": 14
+  },
+  {
+   "term": "immediately",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 37,
+   "found": 6,
+   "rejected": 13,
+   "risk": 0.3157894736842105,
+   "ci": [
+    0.15364171004428598,
+    0.5398998982493537
+   ],
+   "states": 24
+  },
+  {
+   "term": "seller",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 37,
+   "found": 10,
+   "rejected": 16,
+   "risk": 0.38461538461538464,
+   "ci": [
+    0.22428359511834428,
+    0.5746547996057992
+   ],
+   "states": 19
+  },
+  {
+   "term": "spouse",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 37,
+   "found": 6,
+   "rejected": 17,
+   "risk": 0.2608695652173913,
+   "ci": [
+    0.1254844588924897,
+    0.4647039054375056
+   ],
+   "states": 18
+  },
+  {
+   "term": "improvements",
+   "category": "property",
+   "source": "contract",
+   "exposure": 37,
+   "found": 11,
+   "rejected": 13,
+   "risk": 0.4583333333333333,
+   "ci": [
+    0.2789105835168143,
+    0.6492544644689336
+   ],
+   "states": 19
+  },
+  {
+   "term": "malice",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 37,
+   "found": 3,
+   "rejected": 1,
+   "risk": 0.75,
+   "ci": [
+    0.3006360524426366,
+    0.9544139373553637
+   ],
+   "states": 18
+  },
+  {
+   "term": "access",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 37,
+   "found": 6,
+   "rejected": 17,
+   "risk": 0.2608695652173913,
+   "ci": [
+    0.1254844588924897,
+    0.4647039054375056
+   ],
+   "states": 22
+  },
+  {
+   "term": "void",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 37,
+   "found": 5,
+   "rejected": 14,
+   "risk": 0.2631578947368421,
+   "ci": [
+    0.11806238339540162,
+    0.48791968441070643
+   ],
+   "states": 21
+  },
+  {
+   "term": "evidence",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 37,
+   "found": 6,
+   "rejected": 10,
+   "risk": 0.375,
+   "ci": [
+    0.18480982554752806,
+    0.613593529020652
+   ],
+   "states": 20
+  },
+  {
+   "term": "who is an insured",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 37,
+   "found": 6,
+   "rejected": 9,
+   "risk": 0.4,
+   "ci": [
+    0.19824228082594664,
+    0.642535572434923
+   ],
+   "states": 4
+  },
+  {
+   "term": "professional services",
+   "category": "conduct",
+   "source": "insurance",
+   "exposure": 36,
+   "found": 11,
+   "rejected": 12,
+   "risk": 0.4782608695652174,
+   "ci": [
+    0.2923686953994572,
+    0.6703757013578151
+   ],
+   "states": 22
+  },
+  {
+   "term": "year",
+   "category": "temporal",
+   "source": "statute",
+   "exposure": 36,
+   "found": 8,
+   "rejected": 12,
+   "risk": 0.4,
+   "ci": [
+    0.21880396741419272,
+    0.613422057684794
+   ],
+   "states": 15
+  },
+  {
+   "term": "because",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 36,
+   "found": 12,
+   "rejected": 11,
+   "risk": 0.5217391304347826,
+   "ci": [
+    0.3296242986421849,
+    0.7076313046005427
+   ],
+   "states": 17
+  },
+  {
+   "term": "actual cash value",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 36,
+   "found": 9,
+   "rejected": 18,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1864305444359335,
+    0.5217558012789452
+   ],
+   "states": 20
+  },
+  {
+   "term": "violation",
+   "category": "event",
+   "source": "statute",
+   "exposure": 36,
+   "found": 9,
+   "rejected": 20,
+   "risk": 0.3103448275862069,
+   "ci": [
+    0.17275424489768068,
+    0.49230470472718546
+   ],
+   "states": 20
+  },
+  {
+   "term": "disease",
+   "category": "event",
+   "source": "uncertain",
+   "exposure": 36,
+   "found": 4,
+   "rejected": 16,
+   "risk": 0.2,
+   "ci": [
+    0.0806563532712,
+    0.41602172202575993
+   ],
+   "states": 20
+  },
+  {
+   "term": "while",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 36,
+   "found": 2,
+   "rejected": 23,
+   "risk": 0.08,
+   "ci": [
+    0.02221993369109193,
+    0.24966512122957818
+   ],
+   "states": 20
+  },
+  {
+   "term": "replace",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 36,
+   "found": 6,
+   "rejected": 13,
+   "risk": 0.3157894736842105,
+   "ci": [
+    0.15364171004428598,
+    0.5398998982493537
+   ],
+   "states": 23
+  },
+  {
+   "term": "consideration",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 36,
+   "found": 10,
+   "rejected": 10,
+   "risk": 0.5,
+   "ci": [
+    0.2992949144298199,
+    0.7007050855701801
+   ],
+   "states": 22
+  },
+  {
+   "term": "assessment",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 36,
+   "found": 2,
+   "rejected": 16,
+   "risk": 0.1111111111111111,
+   "ci": [
+    0.031018868453582787,
+    0.3280024486660421
+   ],
+   "states": 17
+  },
+  {
+   "term": "general",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 35,
+   "found": 3,
+   "rejected": 17,
+   "risk": 0.15,
+   "ci": [
+    0.05236779195949584,
+    0.36042329588695743
+   ],
+   "states": 19
+  },
+  {
+   "term": "pollution",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 35,
+   "found": 18,
+   "rejected": 11,
+   "risk": 0.6206896551724138,
+   "ci": [
+    0.4400222620928496,
+    0.7731220426913266
+   ],
+   "states": 24
+  },
+  {
+   "term": "specific",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 35,
+   "found": 4,
+   "rejected": 17,
+   "risk": 0.19047619047619047,
+   "ci": [
+    0.07667440615177301,
+    0.40000986539273287
+   ],
+   "states": 15
+  },
+  {
+   "term": "arrest",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 35,
+   "found": 8,
+   "rejected": 11,
+   "risk": 0.42105263157894735,
+   "ci": [
+    0.2314162039203038,
+    0.6372444853483988
+   ],
+   "states": 16
+  },
+  {
+   "term": "pending",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 35,
+   "found": 9,
+   "rejected": 11,
+   "risk": 0.45,
+   "ci": [
+    0.25819502085709295,
+    0.6579179916924003
+   ],
+   "states": 16
+  },
+  {
+   "term": "security",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 35,
+   "found": 3,
+   "rejected": 14,
+   "risk": 0.17647058823529413,
+   "ci": [
+    0.0619101371254899,
+    0.41029929017375777
+   ],
+   "states": 17
+  },
+  {
+   "term": "gross income",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 35,
+   "found": 9,
+   "rejected": 13,
+   "risk": 0.4090909090909091,
+   "ci": [
+    0.23255559668820378,
+    0.6126552261710619
+   ],
+   "states": 18
+  },
+  {
+   "term": "unit",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 35,
+   "found": 10,
+   "rejected": 13,
+   "risk": 0.43478260869565216,
+   "ci": [
+    0.25634368332198654,
+    0.6318895069498304
+   ],
+   "states": 13
+  },
+  {
+   "term": "own",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 11,
+   "rejected": 16,
+   "risk": 0.4074074074074074,
+   "ci": [
+    0.24514513372857344,
+    0.5927361694463591
+   ],
+   "states": 19
+  },
+  {
+   "term": "possess",
+   "category": "conduct",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 5,
+   "rejected": 12,
+   "risk": 0.29411764705882354,
+   "ci": [
+    0.13279793865556402,
+    0.5313353332621391
+   ],
+   "states": 22
+  },
+  {
+   "term": "temporary",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 14,
+   "rejected": 8,
+   "risk": 0.6363636363636364,
+   "ci": [
+    0.4295134934371804,
+    0.802670272273921
+   ],
+   "states": 25
+  },
+  {
+   "term": "new",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 34,
+   "found": 5,
+   "rejected": 16,
+   "risk": 0.23809523809523808,
+   "ci": [
+    0.10627856389112261,
+    0.45091581972345923
+   ],
+   "states": 17
+  },
+  {
+   "term": "emergency",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 7,
+   "rejected": 15,
+   "risk": 0.3181818181818182,
+   "ci": [
+    0.1636038735469248,
+    0.5268177721716065
+   ],
+   "states": 14
+  },
+  {
+   "term": "malpractice",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 4,
+   "rejected": 14,
+   "risk": 0.2222222222222222,
+   "ci": [
+    0.09000781913382,
+    0.4521502645230549
+   ],
+   "states": 11
+  },
+  {
+   "term": "renewal",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 34,
+   "found": 4,
+   "rejected": 16,
+   "risk": 0.2,
+   "ci": [
+    0.0806563532712,
+    0.41602172202575993
+   ],
+   "states": 20
+  },
+  {
+   "term": "minimum",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 6,
+   "rejected": 17,
+   "risk": 0.2608695652173913,
+   "ci": [
+    0.1254844588924897,
+    0.4647039054375056
+   ],
+   "states": 21
+  },
+  {
+   "term": "descendants",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 34,
+   "found": 6,
+   "rejected": 15,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.13813675745628204,
+    0.49956773822837586
+   ],
+   "states": 15
+  },
+  {
+   "term": "officer",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 8,
+   "rejected": 8,
+   "risk": 0.5,
+   "ci": [
+    0.2799923761135083,
+    0.7200076238864916
+   ],
+   "states": 18
+  },
+  {
+   "term": "private",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 5,
+   "rejected": 15,
+   "risk": 0.25,
+   "ci": [
+    0.11186005278940309,
+    0.4687050099580636
+   ],
+   "states": 21
+  },
+  {
+   "term": "borrower",
+   "category": "role",
+   "source": "contract",
+   "exposure": 34,
+   "found": 7,
+   "rejected": 18,
+   "risk": 0.28,
+   "ci": [
+    0.1428367383738157,
+    0.47576971896558296
+   ],
+   "states": 16
+  },
+  {
+   "term": "county",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 34,
+   "found": 2,
+   "rejected": 15,
+   "risk": 0.11764705882352941,
+   "ci": [
+    0.03287908001292092,
+    0.3433684249770991
+   ],
+   "states": 23
+  },
+  {
+   "term": "enhancement",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 34,
+   "found": 4,
+   "rejected": 27,
+   "risk": 0.12903225806451613,
+   "ci": [
+    0.05134201164644764,
+    0.28852756954385356
+   ],
+   "states": 2
+  },
+  {
+   "term": "attempt",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 7,
+   "rejected": 8,
+   "risk": 0.4666666666666667,
+   "ci": [
+    0.24809225259746442,
+    0.6988336984894921
+   ],
+   "states": 20
+  },
+  {
+   "term": "underinsured",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 33,
+   "found": 9,
+   "rejected": 16,
+   "risk": 0.36,
+   "ci": [
+    0.20247656431735636,
+    0.5548184539895337
+   ],
+   "states": 20
+  },
+  {
+   "term": "account",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 12,
+   "rejected": 10,
+   "risk": 0.5454545454545454,
+   "ci": [
+    0.34659473289041554,
+    0.7307998556799515
+   ],
+   "states": 18
+  },
+  {
+   "term": "first",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 9,
+   "rejected": 15,
+   "risk": 0.375,
+   "ci": [
+    0.21159133433631458,
+    0.5729038096209293
+   ],
+   "states": 20
+  },
+  {
+   "term": "mobile home",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 8,
+   "rejected": 14,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.19732972772607899,
+    0.5704865065628195
+   ],
+   "states": 21
+  },
+  {
+   "term": "teacher",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 33,
+   "found": 6,
+   "rejected": 16,
+   "risk": 0.2727272727272727,
+   "ci": [
+    0.1315058201581444,
+    0.4815212369900198
+   ],
+   "states": 18
+  },
+  {
+   "term": "sickness",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 33,
+   "found": 7,
+   "rejected": 9,
+   "risk": 0.4375,
+   "ci": [
+    0.2309836333518552,
+    0.6682180439322347
+   ],
+   "states": 18
+  },
+  {
+   "term": "terminate",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 33,
+   "found": 8,
+   "rejected": 19,
+   "risk": 0.2962962962962963,
+   "ci": [
+    0.15852853317647564,
+    0.4848103338083759
+   ],
+   "states": 19
+  },
+  {
+   "term": "provide",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 33,
+   "found": 6,
+   "rejected": 18,
+   "risk": 0.25,
+   "ci": [
+    0.1199920347934233,
+    0.4489982531210644
+   ],
+   "states": 13
+  },
+  {
+   "term": "company",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 33,
+   "found": 5,
+   "rejected": 17,
+   "risk": 0.22727272727272727,
+   "ci": [
+    0.10122890794820358,
+    0.4344035606295935
+   ],
+   "states": 19
+  },
+  {
+   "term": "settlement",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 33,
+   "found": 7,
+   "rejected": 14,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17194536432683688,
+    0.5462692434278971
+   ],
+   "states": 20
+  },
+  {
+   "term": "further",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 33,
+   "found": 6,
+   "rejected": 14,
+   "risk": 0.3,
+   "ci": [
+    0.14547527396899385,
+    0.5189767762289793
+   ],
+   "states": 17
+  },
+  {
+   "term": "murder",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 5,
+   "rejected": 13,
+   "risk": 0.2777777777777778,
+   "ci": [
+    0.12499569146355474,
+    0.5087307754619452
+   ],
+   "states": 19
+  },
+  {
+   "term": "transaction",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 33,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 20
+  },
+  {
+   "term": "survivor",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 33,
+   "found": 4,
+   "rejected": 14,
+   "risk": 0.2222222222222222,
+   "ci": [
+    0.09000781913382,
+    0.4521502645230549
+   ],
+   "states": 15
+  },
+  {
+   "term": "and that",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 33,
+   "found": 3,
+   "rejected": 12,
+   "risk": 0.2,
+   "ci": [
+    0.07047420643610414,
+    0.4518593533465045
+   ],
+   "states": 21
+  },
+  {
+   "term": "employ",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 16,
+   "rejected": 9,
+   "risk": 0.64,
+   "ci": [
+    0.44518154601046633,
+    0.7975234356826436
+   ],
+   "states": 13
+  },
+  {
+   "term": "proximate cause",
+   "category": "mental",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 3,
+   "rejected": 9,
+   "risk": 0.25,
+   "ci": [
+    0.08894003962896138,
+    0.53231033912066
+   ],
+   "states": 16
+  },
+  {
+   "term": "fault",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 14,
+   "rejected": 8,
+   "risk": 0.6363636363636364,
+   "ci": [
+    0.4295134934371804,
+    0.802670272273921
+   ],
+   "states": 19
+  },
+  {
+   "term": "except",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 5,
+   "rejected": 12,
+   "risk": 0.29411764705882354,
+   "ci": [
+    0.13279793865556402,
+    0.5313353332621391
+   ],
+   "states": 20
+  },
+  {
+   "term": "contact",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 4,
+   "rejected": 11,
+   "risk": 0.26666666666666666,
+   "ci": [
+    0.1089727610318281,
+    0.5195088965768675
+   ],
+   "states": 13
+  },
+  {
+   "term": "fair market value",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 5,
+   "rejected": 16,
+   "risk": 0.23809523809523808,
+   "ci": [
+    0.10627856389112261,
+    0.45091581972345923
+   ],
+   "states": 18
+  },
+  {
+   "term": "election",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 6,
+   "rejected": 15,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.13813675745628204,
+    0.49956773822837586
+   ],
+   "states": 18
+  },
+  {
+   "term": "lien",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 6,
+   "rejected": 9,
+   "risk": 0.4,
+   "ci": [
+    0.19824228082594664,
+    0.642535572434923
+   ],
+   "states": 20
+  },
+  {
+   "term": "place",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 12,
+   "rejected": 7,
+   "risk": 0.631578947368421,
+   "ci": [
+    0.4103915749815672,
+    0.8085072762372616
+   ],
+   "states": 16
+  },
+  {
+   "term": "mortgage",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 32,
+   "found": 5,
+   "rejected": 14,
+   "risk": 0.2631578947368421,
+   "ci": [
+    0.11806238339540162,
+    0.48791968441070643
+   ],
+   "states": 24
+  },
+  {
+   "term": "resident of the same household",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 32,
+   "found": 6,
+   "rejected": 19,
+   "risk": 0.24,
+   "ci": [
+    0.11496157730326725,
+    0.43430059955238565
+   ],
+   "states": 13
+  },
+  {
+   "term": "incident",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 8,
+   "rejected": 9,
+   "risk": 0.47058823529411764,
+   "ci": [
+    0.26164801196088106,
+    0.6903710268845051
+   ],
+   "states": 11
+  },
+  {
+   "term": "per stirpes",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 32,
+   "found": 3,
+   "rejected": 11,
+   "risk": 0.21428571428571427,
+   "ci": [
+    0.0757124833691637,
+    0.4758972377320828
+   ],
+   "states": 19
+  },
+  {
+   "term": "improvement",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 2,
+   "rejected": 19,
+   "risk": 0.09523809523809523,
+   "ci": [
+    0.026518208796947246,
+    0.2891458386074067
+   ],
+   "states": 21
+  },
+  {
+   "term": "permit",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 32,
+   "found": 11,
+   "rejected": 10,
+   "risk": 0.5238095238095238,
+   "ci": [
+    0.32369217900266756,
+    0.7165628770323705
+   ],
+   "states": 20
+  },
+  {
+   "term": "mere surplusage",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 32,
+   "found": 3,
+   "rejected": 19,
+   "risk": 0.13636363636363635,
+   "ci": [
+    0.04748917264236269,
+    0.3333541187947
+   ],
+   "states": 7
+  },
+  {
+   "term": "road",
+   "category": "uncategorised",
+   "source": "deed",
+   "exposure": 31,
+   "found": 11,
+   "rejected": 12,
+   "risk": 0.4782608695652174,
+   "ci": [
+    0.2923686953994572,
+    0.6703757013578151
+   ],
+   "states": 20
+  },
+  {
+   "term": "facility",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 7,
+   "rejected": 12,
+   "risk": 0.3684210526315789,
+   "ci": [
+    0.19149272376273843,
+    0.5896084250184328
+   ],
+   "states": 14
+  },
+  {
+   "term": "waste",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 31,
+   "found": 8,
+   "rejected": 16,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17971978688379642,
+    0.5329404050591954
+   ],
+   "states": 16
+  },
+  {
+   "term": "good cause",
+   "category": "mental",
+   "source": "statute",
+   "exposure": 31,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 17
+  },
+  {
+   "term": "recovery",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 8,
+   "rejected": 10,
+   "risk": 0.4444444444444444,
+   "ci": [
+    0.24559231101389126,
+    0.6628393057174837
+   ],
+   "states": 18
+  },
+  {
+   "term": "ownership",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 31,
+   "found": 6,
+   "rejected": 8,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.21380509930400526,
+    0.6740973309713064
+   ],
+   "states": 18
+  },
+  {
+   "term": "explicit",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 0,
+   "rejected": 22,
+   "risk": 0.0,
+   "ci": [
+    1.3877787807814457e-17,
+    0.14865952572596125
+   ],
+   "states": 16
+  },
+  {
+   "term": "imprisonment",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 31,
+   "found": 9,
+   "rejected": 7,
+   "risk": 0.5625,
+   "ci": [
+    0.33178195606776517,
+    0.7690163666481448
+   ],
+   "states": 16
+  },
+  {
+   "term": "profit",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 4,
+   "rejected": 10,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.11721187910109099,
+    0.5464954117248438
+   ],
+   "states": 23
+  },
+  {
+   "term": "request",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 8,
+   "rejected": 9,
+   "risk": 0.47058823529411764,
+   "ci": [
+    0.26164801196088106,
+    0.6903710268845051
+   ],
+   "states": 19
+  },
+  {
+   "term": "however",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 7,
+   "rejected": 9,
+   "risk": 0.4375,
+   "ci": [
+    0.2309836333518552,
+    0.6682180439322347
+   ],
+   "states": 17
+  },
+  {
+   "term": "solicit",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 3,
+   "rejected": 10,
+   "risk": 0.23076923076923078,
+   "ci": [
+    0.08179379092465713,
+    0.5025687399512693
+   ],
+   "states": 18
+  },
+  {
+   "term": "record",
+   "category": "property",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 10,
+   "rejected": 11,
+   "risk": 0.47619047619047616,
+   "ci": [
+    0.28343712296762946,
+    0.6763078209973324
+   ],
+   "states": 15
+  },
+  {
+   "term": "additional",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 31,
+   "found": 10,
+   "rejected": 11,
+   "risk": 0.47619047619047616,
+   "ci": [
+    0.28343712296762946,
+    0.6763078209973324
+   ],
+   "states": 17
+  },
+  {
+   "term": "notwithstanding",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 31,
+   "found": 5,
+   "rejected": 14,
+   "risk": 0.2631578947368421,
+   "ci": [
+    0.11806238339540162,
+    0.48791968441070643
+   ],
+   "states": 15
+  },
+  {
+   "term": "prior",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 8,
+   "rejected": 13,
+   "risk": 0.38095238095238093,
+   "ci": [
+    0.20750767797982506,
+    0.5912170418449848
+   ],
+   "states": 12
+  },
+  {
+   "term": "furnish",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 11,
+   "rejected": 11,
+   "risk": 0.5,
+   "ci": [
+    0.3072180469247956,
+    0.6927819530752044
+   ],
+   "states": 20
+  },
+  {
+   "term": "rate",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 9,
+   "rejected": 8,
+   "risk": 0.5294117647058824,
+   "ci": [
+    0.30962897311549487,
+    0.738351988039119
+   ],
+   "states": 13
+  },
+  {
+   "term": "total disability",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 30,
+   "found": 6,
+   "rejected": 10,
+   "risk": 0.375,
+   "ci": [
+    0.18480982554752806,
+    0.613593529020652
+   ],
+   "states": 21
+  },
+  {
+   "term": "received",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 16
+  },
+  {
+   "term": "real property",
+   "category": "property",
+   "source": "statute",
+   "exposure": 30,
+   "found": 2,
+   "rejected": 23,
+   "risk": 0.08,
+   "ci": [
+    0.02221993369109193,
+    0.24966512122957818
+   ],
+   "states": 18
+  },
+  {
+   "term": "immediate",
+   "category": "temporal",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 15
+  },
+  {
+   "term": "personal",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 16
+  },
+  {
+   "term": "health care provider",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 30,
+   "found": 8,
+   "rejected": 17,
+   "risk": 0.32,
+   "ci": [
+    0.17204987516891143,
+    0.5159008626542329
+   ],
+   "states": 13
+  },
+  {
+   "term": "primary",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 4,
+   "rejected": 17,
+   "risk": 0.19047619047619047,
+   "ci": [
+    0.07667440615177301,
+    0.40000986539273287
+   ],
+   "states": 22
+  },
+  {
+   "term": "one",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 7,
+   "rejected": 15,
+   "risk": 0.3181818181818182,
+   "ci": [
+    0.1636038735469248,
+    0.5268177721716065
+   ],
+   "states": 20
+  },
+  {
+   "term": "but",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 6,
+   "rejected": 9,
+   "risk": 0.4,
+   "ci": [
+    0.19824228082594664,
+    0.642535572434923
+   ],
+   "states": 20
+  },
+  {
+   "term": "gas",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 9,
+   "rejected": 15,
+   "risk": 0.375,
+   "ci": [
+    0.21159133433631458,
+    0.5729038096209293
+   ],
+   "states": 15
+  },
+  {
+   "term": "covered",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 30,
+   "found": 2,
+   "rejected": 17,
+   "risk": 0.10526315789473684,
+   "ci": [
+    0.029357941395096593,
+    0.313945504948417
+   ],
+   "states": 20
+  },
+  {
+   "term": "trustee",
+   "category": "uncategorised",
+   "source": "testamentary",
+   "exposure": 30,
+   "found": 6,
+   "rejected": 9,
+   "risk": 0.4,
+   "ci": [
+    0.19824228082594664,
+    0.642535572434923
+   ],
+   "states": 18
+  },
+  {
+   "term": "decision",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 30,
+   "found": 7,
+   "rejected": 12,
+   "risk": 0.3684210526315789,
+   "ci": [
+    0.19149272376273843,
+    0.5896084250184328
+   ],
+   "states": 20
+  },
+  {
+   "term": "commission",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 29,
+   "found": 4,
+   "rejected": 11,
+   "risk": 0.26666666666666666,
+   "ci": [
+    0.1089727610318281,
+    0.5195088965768675
+   ],
+   "states": 18
+  },
+  {
+   "term": "net proceeds",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 29,
+   "found": 5,
+   "rejected": 13,
+   "risk": 0.2777777777777778,
+   "ci": [
+    0.12499569146355474,
+    0.5087307754619452
+   ],
+   "states": 14
+  },
+  {
+   "term": "flood",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 29,
+   "found": 8,
+   "rejected": 12,
+   "risk": 0.4,
+   "ci": [
+    0.21880396741419272,
+    0.613422057684794
+   ],
+   "states": 16
+  },
+  {
+   "term": "and the",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 29,
+   "found": 2,
+   "rejected": 18,
+   "risk": 0.1,
+   "ci": [
+    0.027865893984153206,
+    0.30103820641179335
+   ],
+   "states": 15
+  },
+  {
+   "term": "beneficiary",
+   "category": "succession",
+   "source": "testamentary",
+   "exposure": 29,
+   "found": 9,
+   "rejected": 13,
+   "risk": 0.4090909090909091,
+   "ci": [
+    0.23255559668820378,
+    0.6126552261710619
+   ],
+   "states": 15
+  },
+  {
+   "term": "such as",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 4,
+   "rejected": 12,
+   "risk": 0.25,
+   "ci": [
+    0.10181901984237346,
+    0.49498768929398645
+   ],
+   "states": 16
+  },
+  {
+   "term": "means",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 29,
+   "found": 8,
+   "rejected": 12,
+   "risk": 0.4,
+   "ci": [
+    0.21880396741419272,
+    0.613422057684794
+   ],
+   "states": 12
+  },
+  {
+   "term": "claimant",
+   "category": "role",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 5,
+   "rejected": 14,
+   "risk": 0.2631578947368421,
+   "ci": [
+    0.11806238339540162,
+    0.48791968441070643
+   ],
+   "states": 17
+  },
+  {
+   "term": "care",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 7,
+   "rejected": 15,
+   "risk": 0.3181818181818182,
+   "ci": [
+    0.1636038735469248,
+    0.5268177721716065
+   ],
+   "states": 17
+  },
+  {
+   "term": "office",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 9,
+   "rejected": 14,
+   "risk": 0.391304347826087,
+   "ci": [
+    0.22157377982382145,
+    0.5921482039625402
+   ],
+   "states": 17
+  },
+  {
+   "term": "payments",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 6,
+   "rejected": 12,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1627855436366286,
+    0.5625093065574964
+   ],
+   "states": 17
+  },
+  {
+   "term": "month",
+   "category": "temporal",
+   "source": "statute",
+   "exposure": 29,
+   "found": 3,
+   "rejected": 10,
+   "risk": 0.23076923076923078,
+   "ci": [
+    0.08179379092465713,
+    0.5025687399512693
+   ],
+   "states": 18
+  },
+  {
+   "term": "jury",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 7,
+   "rejected": 14,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17194536432683688,
+    0.5462692434278971
+   ],
+   "states": 15
+  },
+  {
+   "term": "offer",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 6,
+   "rejected": 10,
+   "risk": 0.375,
+   "ci": [
+    0.18480982554752806,
+    0.613593529020652
+   ],
+   "states": 20
+  },
+  {
+   "term": "dependent",
+   "category": "role",
+   "source": "statute",
+   "exposure": 29,
+   "found": 8,
+   "rejected": 14,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.19732972772607899,
+    0.5704865065628195
+   ],
+   "states": 20
+  },
+  {
+   "term": "require",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 16
+  },
+  {
+   "term": "about",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 29,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 18
+  },
+  {
+   "term": "vacant",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 3,
+   "rejected": 14,
+   "risk": 0.17647058823529413,
+   "ci": [
+    0.0619101371254899,
+    0.41029929017375777
+   ],
+   "states": 18
+  },
+  {
+   "term": "warranty",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 11,
+   "rejected": 7,
+   "risk": 0.6111111111111112,
+   "ci": [
+    0.3861866858065617,
+    0.7969500807306884
+   ],
+   "states": 16
+  },
+  {
+   "term": "production",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 8,
+   "rejected": 8,
+   "risk": 0.5,
+   "ci": [
+    0.2799923761135083,
+    0.7200076238864916
+   ],
+   "states": 9
+  },
+  {
+   "term": "indian",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 0,
+   "rejected": 5,
+   "risk": 0.0,
+   "ci": [
+    0.0,
+    0.43449149475208104
+   ],
+   "states": 8
+  },
+  {
+   "term": "total",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 7,
+   "rejected": 14,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17194536432683688,
+    0.5462692434278971
+   ],
+   "states": 18
+  },
+  {
+   "term": "driver",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 28,
+   "found": 7,
+   "rejected": 13,
+   "risk": 0.35,
+   "ci": [
+    0.18118954786794464,
+    0.5671494897805354
+   ],
+   "states": 18
+  },
+  {
+   "term": "subcontractor",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 28,
+   "found": 4,
+   "rejected": 13,
+   "risk": 0.23529411764705882,
+   "ci": [
+    0.0955488907167594,
+    0.47262245889171595
+   ],
+   "states": 15
+  },
+  {
+   "term": "purpose",
+   "category": "mental",
+   "source": "statute",
+   "exposure": 28,
+   "found": 8,
+   "rejected": 9,
+   "risk": 0.47058823529411764,
+   "ci": [
+    0.26164801196088106,
+    0.6903710268845051
+   ],
+   "states": 20
+  },
+  {
+   "term": "premium",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 28,
+   "found": 7,
+   "rejected": 10,
+   "risk": 0.4117647058823529,
+   "ci": [
+    0.21610786039131383,
+    0.6399492561448447
+   ],
+   "states": 16
+  },
+  {
+   "term": "any firearm",
+   "category": "property",
+   "source": "statute",
+   "exposure": 28,
+   "found": 13,
+   "rejected": 5,
+   "risk": 0.7222222222222222,
+   "ci": [
+    0.49126922453805477,
+    0.8750043085364452
+   ],
+   "states": 13
+  },
+  {
+   "term": "day",
+   "category": "temporal",
+   "source": "statute",
+   "exposure": 28,
+   "found": 12,
+   "rejected": 5,
+   "risk": 0.7058823529411765,
+   "ci": [
+    0.468664666737861,
+    0.8672020613444361
+   ],
+   "states": 15
+  },
+  {
+   "term": "consecutive",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 8,
+   "rejected": 5,
+   "risk": 0.6153846153846154,
+   "ci": [
+    0.35522480972268555,
+    0.8229055341876319
+   ],
+   "states": 16
+  },
+  {
+   "term": "location",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 28,
+   "found": 8,
+   "rejected": 14,
+   "risk": 0.36363636363636365,
+   "ci": [
+    0.19732972772607899,
+    0.5704865065628195
+   ],
+   "states": 20
+  },
+  {
+   "term": "if any",
+   "category": "condition",
+   "source": "uncertain",
+   "exposure": 28,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 17
+  },
+  {
+   "term": "development",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 11,
+   "risk": 0.26666666666666666,
+   "ci": [
+    0.1089727610318281,
+    0.5195088965768675
+   ],
+   "states": 14
+  },
+  {
+   "term": "cohabitation",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 6,
+   "rejected": 12,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.1627855436366286,
+    0.5625093065574964
+   ],
+   "states": 15
+  },
+  {
+   "term": "public policy",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 27,
+   "found": 3,
+   "rejected": 17,
+   "risk": 0.15,
+   "ci": [
+    0.05236779195949584,
+    0.36042329588695743
+   ],
+   "states": 11
+  },
+  {
+   "term": "alleged",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 3,
+   "rejected": 3,
+   "risk": 0.5,
+   "ci": [
+    0.18761280689940868,
+    0.8123871931005913
+   ],
+   "states": 20
+  },
+  {
+   "term": "offender",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 10,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.11721187910109099,
+    0.5464954117248438
+   ],
+   "states": 17
+  },
+  {
+   "term": "covered person",
+   "category": "role",
+   "source": "insurance",
+   "exposure": 27,
+   "found": 7,
+   "rejected": 11,
+   "risk": 0.3888888888888889,
+   "ci": [
+    0.20304991926931162,
+    0.6138133141934384
+   ],
+   "states": 17
+  },
+  {
+   "term": "applicable",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 27,
+   "found": 7,
+   "rejected": 13,
+   "risk": 0.35,
+   "ci": [
+    0.18118954786794464,
+    0.5671494897805354
+   ],
+   "states": 19
+  },
+  {
+   "term": "insurer",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 27,
+   "found": 5,
+   "rejected": 13,
+   "risk": 0.2777777777777778,
+   "ci": [
+    0.12499569146355474,
+    0.5087307754619452
+   ],
+   "states": 15
+  },
+  {
+   "term": "tangible personal property",
+   "category": "property",
+   "source": "statute",
+   "exposure": 27,
+   "found": 10,
+   "rejected": 12,
+   "risk": 0.45454545454545453,
+   "ci": [
+    0.26920014432004846,
+    0.6534052671095845
+   ],
+   "states": 15
+  },
+  {
+   "term": "vote",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 9,
+   "rejected": 8,
+   "risk": 0.5294117647058824,
+   "ci": [
+    0.30962897311549487,
+    0.738351988039119
+   ],
+   "states": 13
+  },
+  {
+   "term": "is clear and explicit, it governs",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 27,
+   "found": 15,
+   "rejected": 3,
+   "risk": 0.8333333333333334,
+   "ci": [
+    0.6077750036164076,
+    0.9416352959953425
+   ],
+   "states": 1
+  },
+  {
+   "term": "gross",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 6,
+   "rejected": 13,
+   "risk": 0.3157894736842105,
+   "ci": [
+    0.15364171004428598,
+    0.5398998982493537
+   ],
+   "states": 19
+  },
+  {
+   "term": "guarantee",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 27,
+   "found": 10,
+   "rejected": 5,
+   "risk": 0.6666666666666666,
+   "ci": [
+    0.41713125151212976,
+    0.8482389930530876
+   ],
+   "states": 18
+  },
+  {
+   "term": "loan",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 27,
+   "found": 8,
+   "rejected": 16,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.17971978688379642,
+    0.5329404050591954
+   ],
+   "states": 19
+  },
+  {
+   "term": "proceedings",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 10,
+   "risk": 0.2857142857142857,
+   "ci": [
+    0.11721187910109099,
+    0.5464954117248438
+   ],
+   "states": 16
+  },
+  {
+   "term": "street",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 3,
+   "rejected": 10,
+   "risk": 0.23076923076923078,
+   "ci": [
+    0.08179379092465713,
+    0.5025687399512693
+   ],
+   "states": 18
+  },
+  {
+   "term": "subdivision",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 1,
+   "rejected": 11,
+   "risk": 0.08333333333333333,
+   "ci": [
+    0.014864709450773478,
+    0.35388592179859524
+   ],
+   "states": 18
+  },
+  {
+   "term": "stay",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 2,
+   "rejected": 1,
+   "risk": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "states": 5
+  },
+  {
+   "term": "provided",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 16
+  },
+  {
+   "term": "witness",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 8,
+   "rejected": 4,
+   "risk": 0.6666666666666666,
+   "ci": [
+    0.3906175873976139,
+    0.8618821601026385
+   ],
+   "states": 12
+  },
+  {
+   "term": "presumption",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 0,
+   "rejected": 5,
+   "risk": 0.0,
+   "ci": [
+    0.0,
+    0.43449149475208104
+   ],
+   "states": 19
+  },
+  {
+   "term": "thereafter",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 5,
+   "rejected": 9,
+   "risk": 0.35714285714285715,
+   "ci": [
+    0.16344490737202735,
+    0.6123599531785959
+   ],
+   "states": 19
+  },
+  {
+   "term": "maximum",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 11,
+   "risk": 0.26666666666666666,
+   "ci": [
+    0.1089727610318281,
+    0.5195088965768675
+   ],
+   "states": 20
+  },
+  {
+   "term": "voluntary",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 8,
+   "rejected": 9,
+   "risk": 0.47058823529411764,
+   "ci": [
+    0.26164801196088106,
+    0.6903710268845051
+   ],
+   "states": 14
+  },
+  {
+   "term": "amount",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 5,
+   "rejected": 11,
+   "risk": 0.3125,
+   "ci": [
+    0.14164435051961052,
+    0.5559606813326594
+   ],
+   "states": 19
+  },
+  {
+   "term": "retirement",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 8,
+   "rejected": 8,
+   "risk": 0.5,
+   "ci": [
+    0.2799923761135083,
+    0.7200076238864916
+   ],
+   "states": 20
+  },
+  {
+   "term": "regulation",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 27,
+   "found": 7,
+   "rejected": 7,
+   "risk": 0.5,
+   "ci": [
+    0.2679886791947528,
+    0.7320113208052472
+   ],
+   "states": 14
+  },
+  {
+   "term": "because of",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 10,
+   "rejected": 5,
+   "risk": 0.6666666666666666,
+   "ci": [
+    0.41713125151212976,
+    0.8482389930530876
+   ],
+   "states": 14
+  },
+  {
+   "term": "client",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 27,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 12
+  },
+  {
+   "term": "pay",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 27,
+   "found": 10,
+   "rejected": 11,
+   "risk": 0.47619047619047616,
+   "ci": [
+    0.28343712296762946,
+    0.6763078209973324
+   ],
+   "states": 17
+  },
+  {
+   "term": "plain",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 9,
+   "rejected": 10,
+   "risk": 0.47368421052631576,
+   "ci": [
+    0.27329505487448547,
+    0.6829251748817489
+   ],
+   "states": 14
+  },
+  {
+   "term": "occupy",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 13
+  },
+  {
+   "term": "penalty",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 9,
+   "risk": 0.4,
+   "ci": [
+    0.19824228082594664,
+    0.642535572434923
+   ],
+   "states": 18
+  },
+  {
+   "term": "neglect",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 3,
+   "rejected": 7,
+   "risk": 0.3,
+   "ci": [
+    0.10778928748621183,
+    0.6032267800204347
+   ],
+   "states": 13
+  },
+  {
+   "term": "credit",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 5,
+   "rejected": 11,
+   "risk": 0.3125,
+   "ci": [
+    0.14164435051961052,
+    0.5559606813326594
+   ],
+   "states": 12
+  },
+  {
+   "term": "generally provide[s] the most reliable indicator",
+   "category": "scope",
+   "source": "statute",
+   "exposure": 26,
+   "found": 0,
+   "rejected": 24,
+   "risk": 0.0,
+   "ci": [
+    0.0,
+    0.13798057582897535
+   ],
+   "states": 1
+  },
+  {
+   "term": "misconduct",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 3,
+   "rejected": 7,
+   "risk": 0.3,
+   "ci": [
+    0.10778928748621183,
+    0.6032267800204347
+   ],
+   "states": 15
+  },
+  {
+   "term": "consider",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 10,
+   "rejected": 7,
+   "risk": 0.5882352941176471,
+   "ci": [
+    0.36005074385515545,
+    0.7838921396086862
+   ],
+   "states": 13
+  },
+  {
+   "term": "demand",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 2,
+   "rejected": 10,
+   "risk": 0.16666666666666666,
+   "ci": [
+    0.04696414761482223,
+    0.44803635738467273
+   ],
+   "states": 17
+  },
+  {
+   "term": "sexual contact",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 4,
+   "rejected": 8,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.13811783989736134,
+    0.609382412602386
+   ],
+   "states": 17
+  },
+  {
+   "term": "instrument",
+   "category": "property",
+   "source": "statute",
+   "exposure": 26,
+   "found": 10,
+   "rejected": 9,
+   "risk": 0.5263157894736842,
+   "ci": [
+    0.31707482511825114,
+    0.7267049451255145
+   ],
+   "states": 12
+  },
+  {
+   "term": "taxes",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 10,
+   "risk": 0.375,
+   "ci": [
+    0.18480982554752806,
+    0.613593529020652
+   ],
+   "states": 18
+  },
+  {
+   "term": "probation",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 8,
+   "risk": 0.42857142857142855,
+   "ci": [
+    0.21380509930400526,
+    0.6740973309713064
+   ],
+   "states": 13
+  },
+  {
+   "term": "process",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 4,
+   "rejected": 13,
+   "risk": 0.23529411764705882,
+   "ci": [
+    0.0955488907167594,
+    0.47262245889171595
+   ],
+   "states": 18
+  },
+  {
+   "term": "trailer",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 26,
+   "found": 13,
+   "rejected": 6,
+   "risk": 0.6842105263157895,
+   "ci": [
+    0.4601001017506463,
+    0.846358289955714
+   ],
+   "states": 22
+  },
+  {
+   "term": "home",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 7,
+   "rejected": 7,
+   "risk": 0.5,
+   "ci": [
+    0.2679886791947528,
+    0.7320113208052472
+   ],
+   "states": 19
+  },
+  {
+   "term": "force",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 2,
+   "rejected": 11,
+   "risk": 0.15384615384615385,
+   "ci": [
+    0.04325726318273798,
+    0.4223517050863101
+   ],
+   "states": 13
+  },
+  {
+   "term": "unlawful",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 15
+  },
+  {
+   "term": "dollars",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 3,
+   "rejected": 7,
+   "risk": 0.3,
+   "ci": [
+    0.10778928748621183,
+    0.6032267800204347
+   ],
+   "states": 16
+  },
+  {
+   "term": "timber",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 9,
+   "rejected": 8,
+   "risk": 0.5294117647058824,
+   "ci": [
+    0.30962897311549487,
+    0.738351988039119
+   ],
+   "states": 12
+  },
+  {
+   "term": "w]e look first to the statute",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 26,
+   "found": 1,
+   "rejected": 21,
+   "risk": 0.045454545454545456,
+   "ci": [
+    0.008069219301147859,
+    0.21798489499518053
+   ],
+   "states": 1
+  },
+  {
+   "term": "transportation",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 6,
+   "rejected": 7,
+   "risk": 0.46153846153846156,
+   "ci": [
+    0.2320575430148814,
+    0.7085656756816796
+   ],
+   "states": 11
+  },
+  {
+   "term": "net income",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 1,
+   "rejected": 17,
+   "risk": 0.05555555555555555,
+   "ci": [
+    0.009874935830924525,
+    0.2575779980200754
+   ],
+   "states": 17
+  },
+  {
+   "term": "sex",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 7,
+   "rejected": 5,
+   "risk": 0.5833333333333334,
+   "ci": [
+    0.3195073356553728,
+    0.8067425380947535
+   ],
+   "states": 15
+  },
+  {
+   "term": "collision",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 26,
+   "found": 10,
+   "rejected": 9,
+   "risk": 0.5263157894736842,
+   "ci": [
+    0.31707482511825114,
+    0.7267049451255145
+   ],
+   "states": 13
+  },
+  {
+   "term": "employed",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 4,
+   "rejected": 12,
+   "risk": 0.25,
+   "ci": [
+    0.10181901984237346,
+    0.49498768929398645
+   ],
+   "states": 15
+  },
+  {
+   "term": "non-owned automobile",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 26,
+   "found": 8,
+   "rejected": 12,
+   "risk": 0.4,
+   "ci": [
+    0.21880396741419272,
+    0.613422057684794
+   ],
+   "states": 17
+  },
+  {
+   "term": "bonus",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 7,
+   "rejected": 11,
+   "risk": 0.3888888888888889,
+   "ci": [
+    0.20304991926931162,
+    0.6138133141934384
+   ],
+   "states": 11
+  },
+  {
+   "term": "primarily",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 9,
+   "rejected": 7,
+   "risk": 0.5625,
+   "ci": [
+    0.33178195606776517,
+    0.7690163666481448
+   ],
+   "states": 17
+  },
+  {
+   "term": "same",
+   "category": "scope",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 5,
+   "rejected": 11,
+   "risk": 0.3125,
+   "ci": [
+    0.14164435051961052,
+    0.5559606813326594
+   ],
+   "states": 12
+  },
+  {
+   "term": "separate",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 26,
+   "found": 10,
+   "rejected": 9,
+   "risk": 0.5263157894736842,
+   "ci": [
+    0.31707482511825114,
+    0.7267049451255145
+   ],
+   "states": 13
+  },
+  {
+   "term": "ultimate net loss",
+   "category": "event",
+   "source": "insurance",
+   "exposure": 26,
+   "found": 2,
+   "rejected": 14,
+   "risk": 0.125,
+   "ci": [
+    0.034976749337057134,
+    0.3602333143674828
+   ],
+   "states": 9
+  },
+  {
+   "term": "previously",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 8,
+   "rejected": 12,
+   "risk": 0.4,
+   "ci": [
+    0.21880396741419272,
+    0.613422057684794
+   ],
+   "states": 9
+  },
+  {
+   "term": "appropriate",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 2,
+   "rejected": 8,
+   "risk": 0.2,
+   "ci": [
+    0.056680947980693314,
+    0.5098431532792765
+   ],
+   "states": 16
+  },
+  {
+   "term": "intentional",
+   "category": "mental",
+   "source": "insurance",
+   "exposure": 25,
+   "found": 7,
+   "rejected": 10,
+   "risk": 0.4117647058823529,
+   "ci": [
+    0.21610786039131383,
+    0.6399492561448447
+   ],
+   "states": 16
+  },
+  {
+   "term": "charge",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 3,
+   "rejected": 6,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.12058159868274293,
+    0.6458026525009102
+   ],
+   "states": 19
+  },
+  {
+   "term": "responsible",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 25,
+   "found": 5,
+   "rejected": 9,
+   "risk": 0.35714285714285715,
+   "ci": [
+    0.16344490737202735,
+    0.6123599531785959
+   ],
+   "states": 18
+  },
+  {
+   "term": "professional",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 25,
+   "found": 8,
+   "rejected": 6,
+   "risk": 0.5714285714285714,
+   "ci": [
+    0.3259026690286936,
+    0.7861949006959948
+   ],
+   "states": 16
+  },
+  {
+   "term": "under",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 7,
+   "rejected": 11,
+   "risk": 0.3888888888888889,
+   "ci": [
+    0.20304991926931162,
+    0.6138133141934384
+   ],
+   "states": 15
+  },
+  {
+   "term": "including but not limited to",
+   "category": "scope",
+   "source": "statute",
+   "exposure": 25,
+   "found": 6,
+   "rejected": 10,
+   "risk": 0.375,
+   "ci": [
+    0.18480982554752806,
+    0.613593529020652
+   ],
+   "states": 16
+  },
+  {
+   "term": "annual",
+   "category": "temporal",
+   "source": "contract",
+   "exposure": 25,
+   "found": 3,
+   "rejected": 16,
+   "risk": 0.15789473684210525,
+   "ci": [
+    0.055203710399278266,
+    0.3756592764317668
+   ],
+   "states": 17
+  },
+  {
+   "term": "address",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 25,
+   "found": 6,
+   "rejected": 6,
+   "risk": 0.5,
+   "ci": [
+    0.2537781703934222,
+    0.7462218296065778
+   ],
+   "states": 14
+  },
+  {
+   "term": "eligible",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 25,
+   "found": 7,
+   "rejected": 8,
+   "risk": 0.4666666666666667,
+   "ci": [
+    0.24809225259746442,
+    0.6988336984894921
+   ],
+   "states": 16
+  },
+  {
+   "term": "members",
+   "category": "uncategorised",
+   "source": "contract",
+   "exposure": 25,
+   "found": 4,
+   "rejected": 8,
+   "risk": 0.3333333333333333,
+   "ci": [
+    0.13811783989736134,
+    0.609382412602386
+   ],
+   "states": 16
+  },
+  {
+   "term": "permission",
+   "category": "uncategorised",
+   "source": "insurance",
+   "exposure": 25,
+   "found": 2,
+   "rejected": 10,
+   "risk": 0.16666666666666666,
+   "ci": [
+    0.04696414761482223,
+    0.44803635738467273
+   ],
+   "states": 17
+  },
+  {
+   "term": "engaged",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 5,
+   "rejected": 8,
+   "risk": 0.38461538461538464,
+   "ci": [
+    0.17709446581236818,
+    0.6447751902773146
+   ],
+   "states": 16
+  },
+  {
+   "term": "district",
+   "category": "uncategorised",
+   "source": "statute",
+   "exposure": 25,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 16
+  },
+  {
+   "term": "criminal",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 7,
+   "rejected": 8,
+   "risk": 0.4666666666666667,
+   "ci": [
+    0.24809225259746442,
+    0.6988336984894921
+   ],
+   "states": 12
+  },
+  {
+   "term": "uninsured automobile",
+   "category": "property",
+   "source": "insurance",
+   "exposure": 25,
+   "found": 4,
+   "rejected": 9,
+   "risk": 0.3076923076923077,
+   "ci": [
+    0.12680497161618087,
+    0.5763111218666236
+   ],
+   "states": 19
+  },
+  {
+   "term": "exception",
+   "category": "uncategorised",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 4,
+   "rejected": 5,
+   "risk": 0.4444444444444444,
+   "ci": [
+    0.188775429471914,
+    0.7333526542559703
+   ],
+   "states": 12
+  },
+  {
+   "term": "significant",
+   "category": "degree",
+   "source": "uncertain",
+   "exposure": 25,
+   "found": 9,
+   "rejected": 5,
+   "risk": 0.6428571428571429,
+   "ci": [
+    0.3876400468214042,
+    0.8365550926279727
+   ],
+   "states": 14
+  }
+ ],
+ "sources": [
+  {
+   "source": "uncertain",
+   "exposure": 40654,
+   "found": 8718,
+   "rejected": 13553,
+   "risk": 0.3914507655695748
+  },
+  {
+   "source": "statute",
+   "exposure": 26543,
+   "found": 6058,
+   "rejected": 10031,
+   "risk": 0.3765305488221766
+  },
+  {
+   "source": "insurance",
+   "exposure": 17473,
+   "found": 4224,
+   "rejected": 6887,
+   "risk": 0.3801638016380164
+  },
+  {
+   "source": "contract",
+   "exposure": 13004,
+   "found": 2781,
+   "rejected": 5281,
+   "risk": 0.34495162490697096
+  },
+  {
+   "source": "testamentary",
+   "exposure": 6893,
+   "found": 1248,
+   "rejected": 2512,
+   "risk": 0.33191489361702126
+  },
+  {
+   "source": "deed",
+   "exposure": 3213,
+   "found": 652,
+   "rejected": 1272,
+   "risk": 0.3388773388773389
+  },
+  {
+   "source": "constitution",
+   "exposure": 1425,
+   "found": 208,
+   "rejected": 489,
+   "risk": 0.2984218077474892
+  }
+ ],
+ "appendix_rows": 100679
+}

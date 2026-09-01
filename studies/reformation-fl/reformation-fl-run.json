@@ -1,0 +1,22 @@
+{
+ "query": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
+ "scope": "fl state appellate (S+SA)",
+ "corpus": "CourtListener bulk snapshot 2026-06-30",
+ "funnel": {
+  "opinions_retrieved": 7254,
+  "dropped_not_state_appellate": 4484,
+  "dropped_administrative_order": 68,
+  "dropped_duplicate_cluster": 86,
+  "decisions_to_read": 2616,
+  "dropped_no_reformation_sentence": 1684,
+  "kept_insurance": 202,
+  "kept_contract": 376,
+  "kept_will": 42,
+  "kept_deed": 242,
+  "kept_trust": 66,
+  "kept_uncertain": 4,
+  "decisions_kept": 932
+ },
+ "kept": 932,
+ "runtime_minutes": 2.3
+}

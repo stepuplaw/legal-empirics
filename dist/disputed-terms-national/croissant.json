@@ -1,0 +1,238 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "column": "cr:column",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "references": "cr:references",
+    "repeated": "cr:repeated",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "conformsTo": "dct:conformsTo"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "disputed_terms_national",
+  "description": "One row per (term, decision) pair: a word or phrase a court quoted as the disputed language in a decision containing an ambiguity holding, across the state appellate courts of all 50 states and DC. Terms are extracted from the whole opinion by cue-anchored quotation ('the term \"X\"', '\"X\" as used in'), classified into functional drafting categories, and linked to the holding by three graded levels of evidence.",
+  "url": "https://stepuplaw.com/research/disputed-terms-national/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-09-01",
+  "keywords": [
+    "contract interpretation",
+    "ambiguity",
+    "corpus linguistics",
+    "legal drafting",
+    "empirical legal studies",
+    "state courts"
+  ],
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Kevin D. Klagge",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "disputed-terms-national.csv",
+      "name": "disputed-terms-national.csv",
+      "description": "The dataset as a single UTF-8 CSV with a header row.",
+      "contentUrl": "https://stepuplaw.com/research/disputed-terms-national/disputed-terms-national.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "41794102c0d5c052b40fda0c7779415be95d43a61d08bbbe5462fb66269b11bd"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rows",
+      "name": "rows",
+      "description": "Disputed Contract and Instrument Terms in US State Appellate Courts",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "rows/term",
+          "name": "term",
+          "description": "the disputed language, lowercased and normalised, as the court quoted it",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "term"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/category",
+          "name": "category",
+          "description": "functional drafting class: nexus, degree, temporal, scope, modal, role, succession, property, event, conduct, condition, mental, uncategorised",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "category"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/source",
+          "name": "source",
+          "description": "the instrument the words sit in: testamentary, deed, insurance, contract, statute, constitution, uncertain",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/posture",
+          "name": "posture",
+          "description": "found | rejected | alleged | uncertain -- whether the court held the language ambiguous",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "posture"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/link",
+          "name": "link",
+          "description": "direct | proximate | inferred -- strength of the link between this term and the holding; inferred rows must not be pooled with the other two",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "link"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/oid",
+          "name": "oid",
+          "description": "CourtListener opinion id",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "oid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cid",
+          "name": "cid",
+          "description": "CourtListener cluster id",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "cid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/court",
+          "name": "court",
+          "description": "CourtListener court id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "court"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/state",
+          "name": "state",
+          "description": "two-letter state postal code",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "state"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/year",
+          "name": "year",
+          "description": "year the decision was filed",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "year"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/statement",
+          "name": "statement",
+          "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "disputed-terms-national.csv"
+            },
+            "extract": {
+              "column": "statement"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+ "query": "(ambiguous OR ambiguity OR ambiguities)",
+ "scope": "national state appellate (S+SA)",
+ "corpus": "CourtListener bulk snapshot 2026-06-30",
+ "workers": 8,
+ "runtime_minutes": 119.7,
+ "funnel": {
+  "decisions_queued": 236561,
+  "noterm": 118750,
+  "ok": 117804,
+  "noamb": 7
+ },
+ "term_hits": 286846,
+ "distinct_terms": 100679
+}

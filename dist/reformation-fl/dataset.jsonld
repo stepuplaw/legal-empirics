@@ -1,0 +1,131 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Florida Reformation of Instruments, 1853-2026",
+  "description": "Every Florida state appellate decision litigating the reformation of a legal instrument -- will, trust, deed, contract or insurance policy -- with the instrument type, the kind of drafting error alleged, the outcome, and which statutory regime was in force. Florida authorised trust reformation in 2007 (s. 736.0415) and will reformation in 2011 (s. 732.615); before those dates the remedy rested on equity, and for wills was unavailable entirely. The dataset makes that break observable within one jurisdiction.",
+  "url": "https://stepuplaw.com/research/reformation-fl/",
+  "identifier": [],
+  "keywords": [
+    "reformation",
+    "scrivener's error",
+    "wills",
+    "trusts",
+    "deeds",
+    "legal drafting",
+    "empirical legal studies",
+    "Florida",
+    "preventive law"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "version": "2026-09-01",
+  "dateModified": "2026-09-01",
+  "creator": {
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Klagge Law PLLC",
+      "url": "https://stepuplaw.com"
+    },
+    "identifier": "https://orcid.org/0009-0002-1385-8498",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Klagge Law PLLC",
+    "url": "https://stepuplaw.com"
+  },
+  "sameAs": [
+    "https://github.com/stepuplaw/legal-empirics",
+    "https://huggingface.co/datasets/stepuplaw/reformation-fl"
+  ],
+  "citation": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
+  "measurementTechnique": "Full-text retrieval over a local CourtListener corpus, followed by deterministic sentence-level classification. Retrieval is wide and filtering is explicit; the exclusion funnel is reported with counts.",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://stepuplaw.com/research/reformation-fl/reformation-fl.csv",
+      "contentSize": "610206",
+      "sha256": "94410e32f9e6af8a12a9456ad953d273782939be1263ad1bd91939aa85419602"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://stepuplaw.com/research/reformation-fl/datapackage.json"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "oid",
+      "description": "CourtListener opinion id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cid",
+      "description": "CourtListener cluster id; one decision may hold several opinions"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "name",
+      "description": "case name as reported"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "court",
+      "description": "CourtListener court id (fla = Supreme Court of Florida, fladistctapp = District Courts of Appeal)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "year",
+      "description": "year the decision was filed"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cites",
+      "description": "times the decision has been cited, per CourtListener"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "instrument",
+      "description": "will | trust | deed | contract | insurance | uncertain"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "outcome",
+      "description": "granted | denied | sought | rule_stated | authority | uncertain -- see the codebook; only granted and denied are holdings"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "regime",
+      "description": "statutory | pre-statute | equitable | unknown -- which reformation regime governed that instrument on that date"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "errors",
+      "description": "comma-separated error types alleged; multi-label by design"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "n_reform_sents",
+      "description": "count of reformation sentences found in the opinion"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cites_statute",
+      "description": "1 where the opinion cites s. 732.615, s. 732.616 or s. 736.0415"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "key_sentence",
+      "description": "the sentence the outcome label was read from, verbatim"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "statement",
+      "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+    }
+  ]
+}

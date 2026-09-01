@@ -1,0 +1,148 @@
+{
+  "name": "statutory-staleness-fl",
+  "title": "Statutory Staleness in Florida Appellate Construction Holdings",
+  "description": "One row per (decision, statutory section) pair where a Florida appellate court construed the meaning of a Florida statute, with whether that section has been amended since the decision and, where two editions of the code are held, whether the operative text actually changed. A citator reports whether a case was overruled by another case; it is far weaker on the other way a holding dies, which is that the legislature amended the statute and no court has had occasion to say so. This dataset measures that gap directly.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "homepage": "https://stepuplaw.com/research/statutory-staleness-fl/",
+  "version": "2026-09-01",
+  "created": "2026-09-01",
+  "sources": [
+    {
+      "title": "CourtListener bulk export, topped up nightly from the courts",
+      "path": "https://www.courtlistener.com/help/api/bulk-data/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "statutory-staleness-fl",
+      "path": "statutory-staleness-fl.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 11855171,
+      "rows": 19085,
+      "hash": "sha256:a1a250ac2c4233750ff025b2586609bc5b54a26db2d251afe6efbcd6a4ef79b9",
+      "schema": {
+        "fields": [
+          {
+            "name": "oid",
+            "type": "integer",
+            "description": "CourtListener opinion id"
+          },
+          {
+            "name": "cid",
+            "type": "integer",
+            "description": "CourtListener cluster id"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "case name as reported"
+          },
+          {
+            "name": "court",
+            "type": "string",
+            "description": "CourtListener court id"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": "year the decision was filed"
+          },
+          {
+            "name": "cites",
+            "type": "integer",
+            "description": "times the decision has been cited, per CourtListener"
+          },
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Florida Statutes section construed, e.g. 732.615"
+          },
+          {
+            "name": "last_amended",
+            "type": "integer",
+            "description": "most recent amendment year in the section history trail"
+          },
+          {
+            "name": "amendments_since",
+            "type": "integer",
+            "description": "count of amendments after the decision"
+          },
+          {
+            "name": "gap_years",
+            "type": "integer",
+            "description": "years between the decision and the most recent later amendment"
+          },
+          {
+            "name": "exposed",
+            "type": "integer",
+            "description": "1 where the section was amended after the decision; an UPPER BOUND, not a finding of abrogation"
+          },
+          {
+            "name": "tier",
+            "type": "string",
+            "description": "amendment-screen | text-diff -- text-diff is only available where an edition at or before the decision year is held"
+          },
+          {
+            "name": "text_changed",
+            "type": "integer",
+            "description": "1 where the operative text differs between the edition in force at the decision and the current edition; null outside the text-diff tier"
+          },
+          {
+            "name": "similarity",
+            "type": "number",
+            "description": "SequenceMatcher ratio between the two editions operative text, history trail excluded"
+          },
+          {
+            "name": "edition_at_decision",
+            "type": "integer",
+            "description": "the statute edition used as the baseline for the diff"
+          },
+          {
+            "name": "sentence",
+            "type": "string",
+            "description": "the sentence in which the section was construed, verbatim"
+          },
+          {
+            "name": "statement",
+            "type": "string",
+            "description": "the row written as one self-contained English sentence"
+          }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "repository": "https://github.com/stepuplaw/legal-empirics",
+    "commit": "c420d8c4318c3173651d93d5bac0d4a7c5adf736",
+    "run": {
+      "query": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
+      "scope": "fl state appellate (S+SA)",
+      "corpus": "CourtListener bulk snapshot 2026-06-30",
+      "statute_editions": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "current_edition": 2026,
+      "funnel": {
+        "dropped_not_state_appellate": 49392,
+        "dropped_duplicate": 2243,
+        "decisions_to_read": 51115,
+        "dropped_no_construed_section": 38799,
+        "tier_amendment-screen": 18067,
+        "tier_text-diff": 1018,
+        "rows": 19085
+      },
+      "runtime_minutes": 24.1
+    }
+  }
+}

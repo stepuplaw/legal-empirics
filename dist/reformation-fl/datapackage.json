@@ -1,0 +1,132 @@
+{
+  "name": "reformation-fl",
+  "title": "Florida Reformation of Instruments, 1853-2026",
+  "description": "Every Florida state appellate decision litigating the reformation of a legal instrument -- will, trust, deed, contract or insurance policy -- with the instrument type, the kind of drafting error alleged, the outcome, and which statutory regime was in force. Florida authorised trust reformation in 2007 (s. 736.0415) and will reformation in 2011 (s. 732.615); before those dates the remedy rested on equity, and for wills was unavailable entirely. The dataset makes that break observable within one jurisdiction.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "homepage": "https://stepuplaw.com/research/reformation-fl/",
+  "version": "2026-09-01",
+  "created": "2026-09-01",
+  "sources": [
+    {
+      "title": "CourtListener bulk export, topped up nightly from the courts",
+      "path": "https://www.courtlistener.com/help/api/bulk-data/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "reformation-fl",
+      "path": "reformation-fl.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 610206,
+      "rows": 932,
+      "hash": "sha256:94410e32f9e6af8a12a9456ad953d273782939be1263ad1bd91939aa85419602",
+      "schema": {
+        "fields": [
+          {
+            "name": "oid",
+            "type": "integer",
+            "description": "CourtListener opinion id"
+          },
+          {
+            "name": "cid",
+            "type": "integer",
+            "description": "CourtListener cluster id; one decision may hold several opinions"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "case name as reported"
+          },
+          {
+            "name": "court",
+            "type": "string",
+            "description": "CourtListener court id (fla = Supreme Court of Florida, fladistctapp = District Courts of Appeal)"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": "year the decision was filed"
+          },
+          {
+            "name": "cites",
+            "type": "integer",
+            "description": "times the decision has been cited, per CourtListener"
+          },
+          {
+            "name": "instrument",
+            "type": "string",
+            "description": "will | trust | deed | contract | insurance | uncertain"
+          },
+          {
+            "name": "outcome",
+            "type": "string",
+            "description": "granted | denied | sought | rule_stated | authority | uncertain -- see the codebook; only granted and denied are holdings"
+          },
+          {
+            "name": "regime",
+            "type": "string",
+            "description": "statutory | pre-statute | equitable | unknown -- which reformation regime governed that instrument on that date"
+          },
+          {
+            "name": "errors",
+            "type": "string",
+            "description": "comma-separated error types alleged; multi-label by design"
+          },
+          {
+            "name": "n_reform_sents",
+            "type": "integer",
+            "description": "count of reformation sentences found in the opinion"
+          },
+          {
+            "name": "cites_statute",
+            "type": "integer",
+            "description": "1 where the opinion cites s. 732.615, s. 732.616 or s. 736.0415"
+          },
+          {
+            "name": "key_sentence",
+            "type": "string",
+            "description": "the sentence the outcome label was read from, verbatim"
+          },
+          {
+            "name": "statement",
+            "type": "string",
+            "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+          }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "repository": "https://github.com/stepuplaw/legal-empirics",
+    "commit": "c420d8c4318c3173651d93d5bac0d4a7c5adf736",
+    "run": {
+      "query": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
+      "scope": "fl state appellate (S+SA)",
+      "corpus": "CourtListener bulk snapshot 2026-06-30",
+      "funnel": {
+        "opinions_retrieved": 7254,
+        "dropped_not_state_appellate": 4484,
+        "dropped_administrative_order": 68,
+        "dropped_duplicate_cluster": 86,
+        "decisions_to_read": 2616,
+        "dropped_no_reformation_sentence": 1684,
+        "kept_insurance": 202,
+        "kept_contract": 376,
+        "kept_will": 42,
+        "kept_deed": 242,
+        "kept_trust": 66,
+        "kept_uncertain": 4,
+        "decisions_kept": 932
+      },
+      "kept": 932,
+      "runtime_minutes": 2.3
+    }
+  }
+}

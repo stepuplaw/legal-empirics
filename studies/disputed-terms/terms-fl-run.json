@@ -1,0 +1,14 @@
+{
+ "query": "(ambiguous OR ambiguity OR ambiguities)",
+ "scope": "fl",
+ "corpus": "CourtListener bulk snapshot 2026-06-30",
+ "workers": 6,
+ "runtime_minutes": 0.0,
+ "funnel": {
+  "decisions_queued": 300,
+  "ok": 111,
+  "noterm": 189
+ },
+ "term_hits": 269,
+ "distinct_terms": 256
+}

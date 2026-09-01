@@ -1,0 +1,286 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "column": "cr:column",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "references": "cr:references",
+    "repeated": "cr:repeated",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "conformsTo": "dct:conformsTo"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "reformation_fl",
+  "description": "Every Florida state appellate decision litigating the reformation of a legal instrument -- will, trust, deed, contract or insurance policy -- with the instrument type, the kind of drafting error alleged, the outcome, and which statutory regime was in force. Florida authorised trust reformation in 2007 (s. 736.0415) and will reformation in 2011 (s. 732.615); before those dates the remedy rested on equity, and for wills was unavailable entirely. The dataset makes that break observable within one jurisdiction.",
+  "url": "https://stepuplaw.com/research/reformation-fl/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-09-01",
+  "keywords": [
+    "reformation",
+    "scrivener's error",
+    "wills",
+    "trusts",
+    "deeds",
+    "legal drafting",
+    "empirical legal studies",
+    "Florida",
+    "preventive law"
+  ],
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Kevin D. Klagge",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "reformation-fl.csv",
+      "name": "reformation-fl.csv",
+      "description": "The dataset as a single UTF-8 CSV with a header row.",
+      "contentUrl": "https://stepuplaw.com/research/reformation-fl/reformation-fl.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "94410e32f9e6af8a12a9456ad953d273782939be1263ad1bd91939aa85419602"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rows",
+      "name": "rows",
+      "description": "Florida Reformation of Instruments, 1853-2026",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "rows/oid",
+          "name": "oid",
+          "description": "CourtListener opinion id",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "oid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cid",
+          "name": "cid",
+          "description": "CourtListener cluster id; one decision may hold several opinions",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "cid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/name",
+          "name": "name",
+          "description": "case name as reported",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/court",
+          "name": "court",
+          "description": "CourtListener court id (fla = Supreme Court of Florida, fladistctapp = District Courts of Appeal)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "court"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/year",
+          "name": "year",
+          "description": "year the decision was filed",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "year"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cites",
+          "name": "cites",
+          "description": "times the decision has been cited, per CourtListener",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "cites"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/instrument",
+          "name": "instrument",
+          "description": "will | trust | deed | contract | insurance | uncertain",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "instrument"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/outcome",
+          "name": "outcome",
+          "description": "granted | denied | sought | rule_stated | authority | uncertain -- see the codebook; only granted and denied are holdings",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "outcome"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/regime",
+          "name": "regime",
+          "description": "statutory | pre-statute | equitable | unknown -- which reformation regime governed that instrument on that date",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "regime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/errors",
+          "name": "errors",
+          "description": "comma-separated error types alleged; multi-label by design",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "errors"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/n_reform_sents",
+          "name": "n_reform_sents",
+          "description": "count of reformation sentences found in the opinion",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "n_reform_sents"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cites_statute",
+          "name": "cites_statute",
+          "description": "1 where the opinion cites s. 732.615, s. 732.616 or s. 736.0415",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "cites_statute"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/key_sentence",
+          "name": "key_sentence",
+          "description": "the sentence the outcome label was read from, verbatim",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "key_sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/statement",
+          "name": "statement",
+          "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "reformation-fl.csv"
+            },
+            "extract": {
+              "column": "statement"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

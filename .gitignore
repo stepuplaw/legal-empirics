@@ -1,3 +1,32 @@
 __pycache__/
 .DS_Store
 *.pyc
+
+# ---------------------------------------------------------------------------
+# Data does not live in git.
+#
+# The working SQLite databases and the exported CSVs are DERIVED: every one is
+# rebuilt by a script in this repository from the CourtListener corpus and the
+# Florida Statutes. Git is for the code that makes them and the metadata that
+# describes them; the data itself is published as a citable dataset with its own
+# DOI, which is also the form anybody should be citing.
+#
+# There is a practical reason too. The exported term table alone is 77 MB, and
+# GitHub warns above 50 MB per file. Committing it would also bloat the Zenodo
+# software record with data that belongs in its own dataset record.
+*.db
+*.db-wal
+*.db-shm
+dist/**/*.csv
+
+# 6.6 MB of Markdown that GitHub will not render usefully. The same content is
+# the published CSV, which is the form to cite.
+studies/disputed-terms/APPENDIX-TERMS.md
+
+# Kept in git deliberately, listed here so the choice is visible rather than
+# accidental:
+#   dist/**/*.json           datapackage, Croissant and schema.org metadata
+#   *-run.json               the run manifest: query, funnel counts, commit
+#   *.jsonl                  the FL-Stale benchmark, which has to be easy to grab
+#   notebooks/*.ipynb        executed, with outputs, because the outputs are the
+#                            evidence that the analysis actually ran

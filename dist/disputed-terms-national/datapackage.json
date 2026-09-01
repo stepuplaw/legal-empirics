@@ -1,0 +1,110 @@
+{
+  "name": "disputed-terms-national",
+  "title": "Disputed Contract and Instrument Terms in US State Appellate Courts",
+  "description": "One row per (term, decision) pair: a word or phrase a court quoted as the disputed language in a decision containing an ambiguity holding, across the state appellate courts of all 50 states and DC. Terms are extracted from the whole opinion by cue-anchored quotation ('the term \"X\"', '\"X\" as used in'), classified into functional drafting categories, and linked to the holding by three graded levels of evidence.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "homepage": "https://stepuplaw.com/research/disputed-terms-national/",
+  "version": "2026-09-01",
+  "created": "2026-09-01",
+  "sources": [
+    {
+      "title": "CourtListener bulk export, topped up nightly from the courts",
+      "path": "https://www.courtlistener.com/help/api/bulk-data/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "disputed-terms-national",
+      "path": "disputed-terms-national.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 80549261,
+      "rows": 286846,
+      "hash": "sha256:41794102c0d5c052b40fda0c7779415be95d43a61d08bbbe5462fb66269b11bd",
+      "schema": {
+        "fields": [
+          {
+            "name": "term",
+            "type": "string",
+            "description": "the disputed language, lowercased and normalised, as the court quoted it"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "functional drafting class: nexus, degree, temporal, scope, modal, role, succession, property, event, conduct, condition, mental, uncategorised"
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "the instrument the words sit in: testamentary, deed, insurance, contract, statute, constitution, uncertain"
+          },
+          {
+            "name": "posture",
+            "type": "string",
+            "description": "found | rejected | alleged | uncertain -- whether the court held the language ambiguous"
+          },
+          {
+            "name": "link",
+            "type": "string",
+            "description": "direct | proximate | inferred -- strength of the link between this term and the holding; inferred rows must not be pooled with the other two"
+          },
+          {
+            "name": "oid",
+            "type": "integer",
+            "description": "CourtListener opinion id"
+          },
+          {
+            "name": "cid",
+            "type": "integer",
+            "description": "CourtListener cluster id"
+          },
+          {
+            "name": "court",
+            "type": "string",
+            "description": "CourtListener court id"
+          },
+          {
+            "name": "state",
+            "type": "string",
+            "description": "two-letter state postal code"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": "year the decision was filed"
+          },
+          {
+            "name": "statement",
+            "type": "string",
+            "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+          }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "repository": "https://github.com/stepuplaw/legal-empirics",
+    "commit": "c420d8c4318c3173651d93d5bac0d4a7c5adf736",
+    "run": {
+      "query": "(ambiguous OR ambiguity OR ambiguities)",
+      "scope": "national state appellate (S+SA)",
+      "corpus": "CourtListener bulk snapshot 2026-06-30",
+      "workers": 8,
+      "runtime_minutes": 119.7,
+      "funnel": {
+        "decisions_queued": 236561,
+        "noterm": 118750,
+        "ok": 117804,
+        "noamb": 7
+      },
+      "term_hits": 286846,
+      "distinct_terms": 100679
+    }
+  }
+}

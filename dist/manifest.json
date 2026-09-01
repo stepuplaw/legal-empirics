@@ -1,0 +1,24 @@
+{
+  "generated": "2026-09-01",
+  "commit": "c420d8c4318c3173651d93d5bac0d4a7c5adf736",
+  "datasets": [
+    {
+      "name": "reformation-fl",
+      "rows": 932,
+      "bytes": 610206,
+      "sha256": "94410e32f9e6af8a12a9456ad953d273782939be1263ad1bd91939aa85419602"
+    },
+    {
+      "name": "statutory-staleness-fl",
+      "rows": 19085,
+      "bytes": 11855171,
+      "sha256": "a1a250ac2c4233750ff025b2586609bc5b54a26db2d251afe6efbcd6a4ef79b9"
+    },
+    {
+      "name": "disputed-terms-national",
+      "rows": 286846,
+      "bytes": 80549261,
+      "sha256": "41794102c0d5c052b40fda0c7779415be95d43a61d08bbbe5462fb66269b11bd"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "FL-Stale",
+  "version": "1.0",
+  "editions_held": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "current_edition": 2026,
+  "seed": 20260901,
+  "items": 1500,
+  "tasks": {
+    "amended_since": 500,
+    "last_amended": 500,
+    "text_changed": 500
+  },
+  "baselines": {
+    "amended_since": {
+      "majority_answer": "yes",
+      "constant_baseline": 0.5,
+      "n": 500
+    },
+    "last_amended": {
+      "majority_answer": "2025",
+      "constant_baseline": 0.064,
+      "n": 500
+    },
+    "text_changed": {
+      "majority_answer": "no",
+      "constant_baseline": 0.5,
+      "n": 500
+    }
+  },
+  "sections_repealed_or_renumbered_since_oldest_edition": 159,
+  "license": "CC BY 4.0"
+}

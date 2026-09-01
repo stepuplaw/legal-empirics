@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "legal-empirics: measuring which drafting language gets litigated"
+message: "If you use this software or its datasets, please cite it."
+type: software
+authors:
+  - family-names: Klagge
+    given-names: Kevin D.
+    orcid: "https://orcid.org/0009-0002-1385-8498"
+    affiliation: "Klagge Law PLLC"
+repository-code: "https://github.com/stepuplaw/legal-empirics"
+url: "https://stepuplaw.com/research/"
+license: CC-BY-4.0
+keywords:
+  - empirical legal studies
+  - preventive law
+  - legal drafting
+  - corpus linguistics
+  - statutory abrogation
+  - Florida law
+abstract: >-
+  Empirical preventive law: measuring which drafting formulations draw
+  litigation and which survive it, over a local corpus of 10.8M US judicial
+  opinions joined to versioned state statutes. Classifiers are deterministic
+  where possible and ship with measured precision and recall; every study
+  reports its exclusion funnel with counts.
+
+# GitHub reads this file to render a "Cite this repository" button, and Zenodo
+# reads .zenodo.json at release time. Both must name the same ORCID, because the
+# point of the identifier is that independent systems assert the same link
+# rather than the author asserting it in one place.
+#
+# `doi:` is deliberately absent until Zenodo mints one. A placeholder DOI in a
+# published citation file is worse than no DOI: it resolves to nothing and gets
+# copied into other people's bibliographies.

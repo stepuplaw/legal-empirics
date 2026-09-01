@@ -1,0 +1,23 @@
+{
+  "query": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
+  "scope": "fl state appellate (S+SA)",
+  "corpus": "CourtListener bulk snapshot 2026-06-30",
+  "statute_editions": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "current_edition": 2026,
+  "funnel": {
+    "dropped_not_state_appellate": 49392,
+    "dropped_duplicate": 2243,
+    "decisions_to_read": 51115,
+    "dropped_no_construed_section": 38799,
+    "tier_amendment-screen": 18067,
+    "tier_text-diff": 1018,
+    "rows": 19085
+  },
+  "runtime_minutes": 24.1
+}

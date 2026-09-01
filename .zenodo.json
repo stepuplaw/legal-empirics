@@ -1,0 +1,40 @@
+{
+  "title": "legal-empirics: measuring which drafting language gets litigated",
+  "description": "<p>Empirical preventive law: measuring which drafting formulations draw litigation and which survive it, over a local corpus of 10.8M US judicial opinions joined to versioned state statutes.</p><p>This record archives the code, methodology and classifiers. The datasets they produce are deposited separately and linked by related identifier, because a dataset that is cited as a dataset needs its own DOI.</p><p>Methodology is deterministic where it can be and validated where it cannot: classifiers ship with measured precision and recall, every study reports its exclusion funnel with counts, and findings are reported as three numbers (exposure, risk, vindication) rather than one.</p>",
+  "upload_type": "software",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Klagge, Kevin D.",
+      "affiliation": "Klagge Law PLLC",
+      "orcid": "0009-0002-1385-8498"
+    }
+  ],
+  "keywords": [
+    "empirical legal studies",
+    "preventive law",
+    "legal drafting",
+    "corpus linguistics",
+    "contract interpretation",
+    "wills and trusts",
+    "statutory abrogation",
+    "Florida law",
+    "CourtListener"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/stepuplaw/legal-empirics",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://stepuplaw.com/research/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-webpage",
+      "scheme": "url"
+    }
+  ],
+  "language": "eng"
+}

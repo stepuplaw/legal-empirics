@@ -1,0 +1,145 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Statutory Staleness in Florida Appellate Construction Holdings",
+  "description": "One row per (decision, statutory section) pair where a Florida appellate court construed the meaning of a Florida statute, with whether that section has been amended since the decision and, where two editions of the code are held, whether the operative text actually changed. A citator reports whether a case was overruled by another case; it is far weaker on the other way a holding dies, which is that the legislature amended the statute and no court has had occasion to say so. This dataset measures that gap directly.",
+  "url": "https://stepuplaw.com/research/statutory-staleness-fl/",
+  "identifier": [],
+  "keywords": [
+    "statutory interpretation",
+    "abrogation",
+    "citator",
+    "legal research",
+    "empirical legal studies",
+    "Florida",
+    "statutory currency",
+    "legal AI evaluation"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "version": "2026-09-01",
+  "dateModified": "2026-09-01",
+  "creator": {
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Klagge Law PLLC",
+      "url": "https://stepuplaw.com"
+    },
+    "identifier": "https://orcid.org/0009-0002-1385-8498",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Klagge Law PLLC",
+    "url": "https://stepuplaw.com"
+  },
+  "sameAs": [
+    "https://github.com/stepuplaw/legal-empirics",
+    "https://huggingface.co/datasets/stepuplaw/statutory-staleness-fl"
+  ],
+  "citation": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
+  "measurementTechnique": "Full-text retrieval over a local CourtListener corpus, followed by deterministic sentence-level classification. Retrieval is wide and filtering is explicit; the exclusion funnel is reported with counts.",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://stepuplaw.com/research/statutory-staleness-fl/statutory-staleness-fl.csv",
+      "contentSize": "11855171",
+      "sha256": "a1a250ac2c4233750ff025b2586609bc5b54a26db2d251afe6efbcd6a4ef79b9"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://stepuplaw.com/research/statutory-staleness-fl/datapackage.json"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "oid",
+      "description": "CourtListener opinion id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cid",
+      "description": "CourtListener cluster id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "name",
+      "description": "case name as reported"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "court",
+      "description": "CourtListener court id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "year",
+      "description": "year the decision was filed"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cites",
+      "description": "times the decision has been cited, per CourtListener"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "section",
+      "description": "Florida Statutes section construed, e.g. 732.615"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "last_amended",
+      "description": "most recent amendment year in the section history trail"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "amendments_since",
+      "description": "count of amendments after the decision"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "gap_years",
+      "description": "years between the decision and the most recent later amendment"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "exposed",
+      "description": "1 where the section was amended after the decision; an UPPER BOUND, not a finding of abrogation"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tier",
+      "description": "amendment-screen | text-diff -- text-diff is only available where an edition at or before the decision year is held"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "text_changed",
+      "description": "1 where the operative text differs between the edition in force at the decision and the current edition; null outside the text-diff tier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "similarity",
+      "description": "SequenceMatcher ratio between the two editions operative text, history trail excluded"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "edition_at_decision",
+      "description": "the statute edition used as the baseline for the diff"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "sentence",
+      "description": "the sentence in which the section was construed, verbatim"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "statement",
+      "description": "the row written as one self-contained English sentence"
+    }
+  ]
+}

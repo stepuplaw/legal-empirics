@@ -1,0 +1,330 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "column": "cr:column",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "references": "cr:references",
+    "repeated": "cr:repeated",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "conformsTo": "dct:conformsTo"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "statutory_staleness_fl",
+  "description": "One row per (decision, statutory section) pair where a Florida appellate court construed the meaning of a Florida statute, with whether that section has been amended since the decision and, where two editions of the code are held, whether the operative text actually changed. A citator reports whether a case was overruled by another case; it is far weaker on the other way a holding dies, which is that the legislature amended the statute and no court has had occasion to say so. This dataset measures that gap directly.",
+  "url": "https://stepuplaw.com/research/statutory-staleness-fl/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-09-01",
+  "keywords": [
+    "statutory interpretation",
+    "abrogation",
+    "citator",
+    "legal research",
+    "empirical legal studies",
+    "Florida",
+    "statutory currency",
+    "legal AI evaluation"
+  ],
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Kevin D. Klagge",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "statutory-staleness-fl.csv",
+      "name": "statutory-staleness-fl.csv",
+      "description": "The dataset as a single UTF-8 CSV with a header row.",
+      "contentUrl": "https://stepuplaw.com/research/statutory-staleness-fl/statutory-staleness-fl.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a1a250ac2c4233750ff025b2586609bc5b54a26db2d251afe6efbcd6a4ef79b9"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rows",
+      "name": "rows",
+      "description": "Statutory Staleness in Florida Appellate Construction Holdings",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "rows/oid",
+          "name": "oid",
+          "description": "CourtListener opinion id",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "oid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cid",
+          "name": "cid",
+          "description": "CourtListener cluster id",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "cid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/name",
+          "name": "name",
+          "description": "case name as reported",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/court",
+          "name": "court",
+          "description": "CourtListener court id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "court"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/year",
+          "name": "year",
+          "description": "year the decision was filed",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "year"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/cites",
+          "name": "cites",
+          "description": "times the decision has been cited, per CourtListener",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "cites"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/section",
+          "name": "section",
+          "description": "Florida Statutes section construed, e.g. 732.615",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/last_amended",
+          "name": "last_amended",
+          "description": "most recent amendment year in the section history trail",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "last_amended"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/amendments_since",
+          "name": "amendments_since",
+          "description": "count of amendments after the decision",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "amendments_since"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/gap_years",
+          "name": "gap_years",
+          "description": "years between the decision and the most recent later amendment",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "gap_years"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/exposed",
+          "name": "exposed",
+          "description": "1 where the section was amended after the decision; an UPPER BOUND, not a finding of abrogation",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "exposed"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/tier",
+          "name": "tier",
+          "description": "amendment-screen | text-diff -- text-diff is only available where an edition at or before the decision year is held",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "tier"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/text_changed",
+          "name": "text_changed",
+          "description": "1 where the operative text differs between the edition in force at the decision and the current edition; null outside the text-diff tier",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "text_changed"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/similarity",
+          "name": "similarity",
+          "description": "SequenceMatcher ratio between the two editions operative text, history trail excluded",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "similarity"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/edition_at_decision",
+          "name": "edition_at_decision",
+          "description": "the statute edition used as the baseline for the diff",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "edition_at_decision"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/sentence",
+          "name": "sentence",
+          "description": "the sentence in which the section was construed, verbatim",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "sentence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/statement",
+          "name": "statement",
+          "description": "the row written as one self-contained English sentence",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "statutory-staleness-fl.csv"
+            },
+            "extract": {
+              "column": "statement"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
