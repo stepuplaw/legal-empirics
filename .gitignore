@@ -30,3 +30,7 @@ studies/disputed-terms/APPENDIX-TERMS.md
 #   *.jsonl                  the FL-Stale benchmark, which has to be easy to grab
 #   notebooks/*.ipynb        executed, with outputs, because the outputs are the
 #                            evidence that the analysis actually ran
+
+# Run logs. A concurrent session with a broad `git add` swept one of these
+# into a commit about Parquet; they are scratch, not provenance.
+*.out

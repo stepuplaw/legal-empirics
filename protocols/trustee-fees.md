@@ -85,11 +85,33 @@ right.
  OR "trustee commissions"
 ```
 
-Sized on the Florida slice 2026-09-02: `trustee's fee(s)` **145**, `reasonable
-compensation` ∧ trustee **220**, `trustee's compensation` **34**, `fee schedule`
-∧ trustee **55**, `trustee's commission(s)` **15**, `published fee schedule`
-**5**, `termination fee` **4**. National figures replace these before the
-analysis runs; `studies/trustee-fees/size_lanes.py` reproduces both.
+Sized 2026-09-02 by `studies/trustee-fees/size_lanes.py`. Opinions, not
+decisions — this is lane triage, not the funnel.
+
+| Lane | National | Florida |
+|---|---:|---:|
+| `trustee's fee(s)` | **3,999** | 145 |
+| `trustee's commission(s)` | **1,429** | **15** |
+| `trustee's compensation` | 1,377 | 34 |
+| `reasonable compensation` ∧ trustee | 8,438 | 220 |
+| `excessive fees/compensation` ∧ trustee | 1,956 | 90 |
+| `fee schedule` ∧ trustee | 1,232 | 55 |
+| `extraordinary services` ∧ trustee | 671 | 20 |
+| `double compensation` ∧ trustee | 404 | 6 |
+| `termination fee` ∧ trustee | 313 | 4 |
+| `published fee schedule` | 50 | 5 |
+
+**The regional split is confirmed and it is large.** Florida holds 3.6% of the
+national `trustee's fee(s)` pool but only **1.0%** of the `trustee's
+commission(s)` pool — under-represented in the commissions vocabulary by roughly
+three and a half times. A study built on either word alone would have measured a
+region. Both go in, and the per-state ratio is reported as a finding.
+
+⚠ **One lane was not sized nationally.** `attorney's fees` ∧ trustee was still
+running after eighteen minutes and was killed because it was blocking the study
+itself. The Florida ratio stands as the evidence for exclusion 2 — **2,849
+against 145, roughly twenty to one** — and the national figure is outstanding.
+Recorded rather than quietly omitted.
 
 ## 4. Exclusions
 

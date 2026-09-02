@@ -7,7 +7,8 @@ Run by **Kevin D. Klagge, Esq.** · [stepuplaw.com](https://stepuplaw.com) ·
 [ORCID 0009-0002-1385-8498](https://orcid.org/0009-0002-1385-8498) ·
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22247377.svg)](https://doi.org/10.5281/zenodo.22247377)
 
-**Start with [STATE.md](STATE.md)** for where the project stands, what has been
+**Start with [HANDOFF.md](HANDOFF.md)** if you are picking this up cold, then
+[STATE.md](STATE.md) for where the project stands, what has been
 run, and what is next.
 
 **Read [METHODOLOGY.md](METHODOLOGY.md) before starting a study**, and

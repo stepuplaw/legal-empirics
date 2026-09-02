@@ -38,7 +38,15 @@ QUERY = ('"trustee\'s compensation" OR "trustees\' compensation" OR "trustee com
          'OR "trustee\'s commission" OR "trustee\'s commissions" '
          'OR "trustees\' commissions" OR "trustee commissions"')
 
-FEE_RX = re.compile(r"trustee'?s?'? (?:compensation|fee|fees|commission|commissions)", re.I)
+# ★ Apostrophes are CURLY in this corpus and whitespace is not always one space.
+# A straight-quote regex with a literal space silently dropped 9 of 25 Florida
+# decisions that the FTS query had matched -- the same failure the statutory
+# definitions extraction hit, recorded in METHODOLOGY.md section 9. The FTS index
+# normalises punctuation; the raw text does not.
+APOS = r"['’ʼ]"
+FEE_RX = re.compile(
+    rf"trustee(?:{APOS}s|s{APOS}|s)?\s+(?:compensation|fee|fees|commission|commissions)",
+    re.I)
 
 # ---------------------------------------------------------------------------
 # Stage 4. Exclusions, IN ORDER. Each is a rule with a count.
@@ -68,10 +76,10 @@ EXCLUSIONS = [
 ]
 # Exclusion 2 only fires when the trustee's OWN compensation is not also at issue.
 OWN_COMP = re.compile(
-    r"trustee'?s?'? (?:compensation|commission|commissions)"
+    rf"trustee(?:{APOS}s|s{APOS}|s)?\s+(?:compensation|commission|commissions)"
     r"|compensation (?:of|to|for) the trustee"
     r"|fee(?:s)? (?:of|to|for|paid to|charged by) the trustee"
-    r"|trustee'?s?'? fee(?:s)? (?:was|were|is|are|of|in)", re.I)
+    rf"|trustee(?:{APOS}s|s{APOS}|s)?\s+fee(?:s)? (?:was|were|is|are|of|in)", re.I)
 
 # Adjudicated, rather than recited in the procedural history.
 ADJUDICATED = re.compile(
@@ -84,8 +92,10 @@ BASIS = {
  "published_schedule": re.compile(r"published fee schedule|fee schedule|standard schedule|rate schedule", re.I),
  "percentage":         re.compile(r"per ?cent\w*|percentage of (?:the )?(?:corpus|principal|trust|income|estate)|%", re.I),
  "hourly":             re.compile(r"hourly rate|per hour|hours (?:billed|expended|spent)|time records", re.I),
- "instrument":         re.compile(r"terms of the trust (?:provide|specif)|trust instrument (?:provide|specif)"
-                                  r"|as provided in the (?:trust|will)|the trust specifically provides", re.I),
+ "instrument":         re.compile(r"terms of the trust (?:provide|specif)|trust (?:instrument|deed|agreement) (?:provide|specif)"
+                                  r"|as provided in the (?:trust|will)|the trust specifically provides"
+                                  r"|(?:will|trust|deed) (?:provided|provides) that.{0,120}compensation"
+                                  r"|pay to themselves such compensation", re.I|re.S),
  "statutory":          re.compile(r"statutory (?:fee|commission|rate)|by statute|section \d+\.\d+", re.I),
 }
 SIGNALS = {
@@ -235,7 +245,13 @@ def jobs_for(national, limit):
         key = ("c", cid) if cid is not None else ("o", oid)
         if key in seen:
             continue
-        seen.add(key)
+        # ★ The same decision can appear under two cluster ids with different
+        # capitalisation of the caption -- Horgan v. Cosden did, and counting it
+        # twice inflates every rate. Collapse on court + date + normalised name.
+        nkey = (court, d or "", re.sub(r"[^a-z0-9]", "", (nm or "").lower())[:60])
+        if nkey[2] and nkey in seen:
+            continue
+        seen.add(key); seen.add(nkey)
         out.append((oid, cid, block_id, idx, court, state, d, nm))
     for oid, (c, d, nm, b, i) in inc.items():
         if b is None:
