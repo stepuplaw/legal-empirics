@@ -271,6 +271,23 @@ def export(name, spec, outroot):
     digest = sha256(csv_path)
     size = os.path.getsize(csv_path)
 
+    # ★ PARQUET ALONGSIDE CSV, not instead of it. CSV is what a law reviewer
+    # opens; Parquet is what anything loading the data at scale wants, and it
+    # carries column types so a year does not arrive as a string. It is also
+    # roughly five times smaller, which matters because the term table is 80 MB
+    # as CSV and that is past the point where a browser download is pleasant.
+    try:
+        import pandas as pd
+        pq_path = os.path.join(outdir, f"{name}.parquet")
+        pd.read_csv(csv_path, low_memory=False).to_parquet(pq_path, index=False)
+        pq_bytes, pq_sha = os.path.getsize(pq_path), sha256(pq_path)
+        print(f"    parquet {pq_bytes/1e6:.1f} MB "
+              f"({100*pq_bytes/max(size,1):.0f}% of the CSV)")
+    except Exception as e:
+        pq_path = pq_bytes = pq_sha = None
+        print(f"    parquet skipped: {type(e).__name__} {str(e)[:60]}", file=sys.stderr)
+
+
     datapackage = {
         "name": name,
         "title": spec["title"],
@@ -283,7 +300,7 @@ def export(name, spec, outroot):
             "title": "CourtListener bulk export, topped up nightly from the courts",
             "path": "https://www.courtlistener.com/help/api/bulk-data/",
         }],
-        "resources": [{
+        "resources": ([{
             "name": name,
             "path": f"{name}.csv",
             "format": "csv",
@@ -297,7 +314,10 @@ def export(name, spec, outroot):
                  "type": SQL_TO_FRICTIONLESS.get((t or "TEXT").upper(), "string"),
                  "description": spec["fields"][c]}
                 for c, t in cols]},
-        }],
+        }] + ([{"name": f"{name}-parquet", "path": f"{name}.parquet",
+                "format": "parquet", "mediatype": "application/vnd.apache.parquet",
+                "bytes": pq_bytes, "rows": n, "hash": f"sha256:{pq_sha}"}]
+              if pq_bytes else [])),
         "provenance": {"repository": REPO, "commit": git_commit(),
                        "run": run_meta},
     }
@@ -338,7 +358,11 @@ def export(name, spec, outroot):
              "contentSize": str(size), "sha256": digest},
             {"@type": "DataDownload", "encodingFormat": "application/json",
              "contentUrl": f"{SITE}/research/{name}/datapackage.json"},
-        ],
+        ] + ([{"@type": "DataDownload",
+               "encodingFormat": "application/vnd.apache.parquet",
+               "contentUrl": f"{SITE}/research/{name}/{name}.parquet",
+               "contentSize": str(pq_bytes), "sha256": pq_sha}]
+             if pq_bytes else []),
         "variableMeasured": [
             {"@type": "PropertyValue", "name": c, "description": spec["fields"][c]}
             for c, _ in cols],

@@ -86,11 +86,20 @@
           }
         ]
       }
+    },
+    {
+      "name": "disputed-terms-national-parquet",
+      "path": "disputed-terms-national.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet",
+      "bytes": 13491680,
+      "rows": 286846,
+      "hash": "sha256:6413e4a714109851594077589eef1ef9d0aac5367dab90dd3fa236b83cd65d7c"
     }
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "a8774f7d8d99fd5c49e459ba6e55e12dee7971f1",
+    "commit": "1524ffac73d194b895be2eaac16430be96d97299",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities)",
       "scope": "national state appellate (S+SA)",

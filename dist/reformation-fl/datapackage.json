@@ -101,11 +101,20 @@
           }
         ]
       }
+    },
+    {
+      "name": "reformation-fl-parquet",
+      "path": "reformation-fl.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet",
+      "bytes": 246773,
+      "rows": 932,
+      "hash": "sha256:0d13497995e6d676667d1f079ecbfbd49dd1b32d24defbb9810283920b8c7d2b"
     }
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "a8774f7d8d99fd5c49e459ba6e55e12dee7971f1",
+    "commit": "caa225026dfe39102d0ee1d4c72568b64f588955",
     "run": {
       "query": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
       "scope": "fl state appellate (S+SA)",

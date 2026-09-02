@@ -116,11 +116,20 @@
           }
         ]
       }
+    },
+    {
+      "name": "statutory-staleness-fl-parquet",
+      "path": "statutory-staleness-fl.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet",
+      "bytes": 4408320,
+      "rows": 19085,
+      "hash": "sha256:2a44674d7b31f6002b5c0d16b5329b82403846cf6983aabdc283cd292e87e2ff"
     }
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "a8774f7d8d99fd5c49e459ba6e55e12dee7971f1",
+    "commit": "caa225026dfe39102d0ee1d4c72568b64f588955",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
       "scope": "fl state appellate (S+SA)",

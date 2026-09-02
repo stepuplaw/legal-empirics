@@ -56,6 +56,13 @@
       "@type": "DataDownload",
       "encodingFormat": "application/json",
       "contentUrl": "https://stepuplaw.com/research/statutory-staleness-fl/datapackage.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://stepuplaw.com/research/statutory-staleness-fl/statutory-staleness-fl.parquet",
+      "contentSize": "4408320",
+      "sha256": "2a44674d7b31f6002b5c0d16b5329b82403846cf6983aabdc283cd292e87e2ff"
     }
   ],
   "variableMeasured": [

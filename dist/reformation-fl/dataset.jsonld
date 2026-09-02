@@ -57,6 +57,13 @@
       "@type": "DataDownload",
       "encodingFormat": "application/json",
       "contentUrl": "https://stepuplaw.com/research/reformation-fl/datapackage.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://stepuplaw.com/research/reformation-fl/reformation-fl.parquet",
+      "contentSize": "246773",
+      "sha256": "0d13497995e6d676667d1f079ecbfbd49dd1b32d24defbb9810283920b8c7d2b"
     }
   ],
   "variableMeasured": [

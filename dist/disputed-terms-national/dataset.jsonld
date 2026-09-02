@@ -54,6 +54,13 @@
       "@type": "DataDownload",
       "encodingFormat": "application/json",
       "contentUrl": "https://stepuplaw.com/research/disputed-terms-national/datapackage.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://stepuplaw.com/research/disputed-terms-national/disputed-terms-national.parquet",
+      "contentSize": "13491680",
+      "sha256": "6413e4a714109851594077589eef1ef9d0aac5367dab90dd3fa236b83cd65d7c"
     }
   ],
   "variableMeasured": [
