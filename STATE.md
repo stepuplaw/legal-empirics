@@ -1,6 +1,7 @@
 # Where this project stands
 
-_Last updated 2026-09-02. Read this first after a context reset._
+_Last updated 2026-09-02. Read this first after a context reset, then
+`NEXT-PROJECTS.md` for what to do next._
 
 Everything below is committed. Nothing here is a plan; it is what exists.
 
@@ -121,7 +122,7 @@ makes the text-diff tier possible at all.
 - **2010–2026** via the chapter view. `build-flstat.py` was parsing only the
   2013+ markup; the 2010–2012 editions use divs where later ones use spans, and
   every pre-2013 section was silently dropped with an empty number.
-- **1997–2009** via per-section URLs. The chapter view is empty for those years,
+- **1997–2009** via per-section URLs. **Done: 30 editions, 1997 to 2026.** The chapter view is empty for those years,
   which produced a wrong conclusion that the site did not hold them. It holds
   them. `build-flstat-sections.py` is targeted rather than wholesale — 25,000
   requests per edition is not a crawl anyone should run.
