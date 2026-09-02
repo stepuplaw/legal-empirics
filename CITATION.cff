@@ -9,6 +9,7 @@ authors:
 repository-code: "https://github.com/stepuplaw/legal-empirics"
 url: "https://stepuplaw.com/research/"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.22247377"
 version: v0.1.1
 date-released: "2026-09-01"
 keywords:
@@ -30,6 +31,6 @@ abstract: >-
 # point of the identifier is that independent systems assert the same link
 # rather than the author asserting it in one place.
 #
-# `doi:` is deliberately absent until Zenodo mints one. A placeholder DOI in a
-# published citation file is worse than no DOI: it resolves to nothing and gets
-# copied into other people's bibliographies.
+# The CONCEPT doi is used here on purpose. 10.5281/zenodo.22247377 always resolves to the
+# newest version; the version doi for this release is 10.5281/zenodo.22247378. Cite the
+# concept doi in prose and the version doi when pinning a specific number.

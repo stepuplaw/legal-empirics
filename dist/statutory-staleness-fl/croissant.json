@@ -31,6 +31,7 @@
   },
   "@type": "sc:Dataset",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Klagge, Kevin D. legal-empirics. https://doi.org/10.5281/zenodo.22247377",
   "name": "statutory_staleness_fl",
   "description": "One row per (decision, statutory section) pair where a Florida appellate court construed the meaning of a Florida statute, with whether that section has been amended since the decision and, where two editions of the code are held, whether the operative text actually changed. A citator reports whether a case was overruled by another case; it is far weaker on the other way a holding dies, which is that the legislature amended the statute and no court has had occasion to say so. This dataset measures that gap directly.",
   "url": "https://stepuplaw.com/research/statutory-staleness-fl/",

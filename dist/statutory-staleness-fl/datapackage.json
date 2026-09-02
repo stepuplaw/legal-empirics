@@ -120,7 +120,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "f791cc4468f232f631a5200b2b61b1d9aa88c743",
+    "commit": "a8774f7d8d99fd5c49e459ba6e55e12dee7971f1",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
       "scope": "fl state appellate (S+SA)",

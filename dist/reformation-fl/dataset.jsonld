@@ -35,8 +35,14 @@
   },
   "sameAs": [
     "https://github.com/stepuplaw/legal-empirics",
-    "https://huggingface.co/datasets/stepuplaw/reformation-fl"
+    "https://huggingface.co/datasets/stepuplaw/reformation-fl",
+    "https://doi.org/10.5281/zenodo.22247377"
   ],
+  "isBasedOn": {
+    "@type": "SoftwareSourceCode",
+    "identifier": "https://doi.org/10.5281/zenodo.22247377",
+    "codeRepository": "https://github.com/stepuplaw/legal-empirics"
+  },
   "citation": "(reformation OR reformed OR reforming OR reform OR scrivener OR \"mutual mistake\" OR \"unilateral mistake\" OR \"drafting error\" OR \"732.615\" OR \"736.0415\" OR \"732.616\") AND (will OR trust OR deed OR codicil OR testament OR contract OR policy OR beneficiary OR settlor OR grantor OR conveyance)",
   "measurementTechnique": "Full-text retrieval over a local CourtListener corpus, followed by deterministic sentence-level classification. Retrieval is wide and filtering is explicit; the exclusion funnel is reported with counts.",
   "distribution": [

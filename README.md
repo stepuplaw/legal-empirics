@@ -4,7 +4,8 @@ Empirical studies of published judicial opinions, mostly Florida, mostly estate
 and trust law.
 
 Run by **Kevin D. Klagge, Esq.** · [stepuplaw.com](https://stepuplaw.com) ·
-[ORCID 0009-0002-1385-8498](https://orcid.org/0009-0002-1385-8498)
+[ORCID 0009-0002-1385-8498](https://orcid.org/0009-0002-1385-8498) ·
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22247377.svg)](https://doi.org/10.5281/zenodo.22247377)
 
 **Start with [STATE.md](STATE.md)** for where the project stands, what has been
 run, and what is next.
@@ -90,8 +91,17 @@ limitations section, and it makes a claim rather than publishing a table.
 ## Citing this
 
 [CITATION.cff](CITATION.cff) carries the machine-readable form and GitHub renders
-it as a "Cite this repository" button. A DOI will be added once the first
-archived release exists.
+it as a "Cite this repository" button.
+
+> Klagge, Kevin D. *legal-empirics: measuring which drafting language gets
+> litigated.* https://doi.org/10.5281/zenodo.22247377
+
+That is the **concept DOI** and always resolves to the newest version. Cite it
+in prose. Use the version DOI printed on a specific Zenodo record when pinning a
+number to the exact release it came from.
+
+The datasets are cited separately and will carry their own DOIs. The DOI above
+identifies the code and the methodology, which is a different object.
 
 ## Licence
 

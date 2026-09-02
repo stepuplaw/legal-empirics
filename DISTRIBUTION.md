@@ -20,7 +20,7 @@ identity. Everything else is a copy that names it.
 | 1 | ORCID | **done** 2026-09-01 | person identity from an independent registry |
 | 2 | GitHub | **done** | code, notebooks, version history |
 | 3 | stepuplaw.com/research/ | **done** 2026-09-02 | canonical human page, schema.org Dataset markup |
-| 4 | Zenodo | **toggle on, release pending** | the DOI. Feeds DataCite, which auto-populates ORCID |
+| 4 | Zenodo | **done** 2026-09-02, concept `10.5281/zenodo.22247377` | the DOI. Feeds DataCite, which auto-populates ORCID |
 | 5 | Hugging Face | **account ready** (`stepuplaw`, write token saved) | reaches ML and AI people; Croissant makes data loadable, not just downloadable |
 | 6 | Google Dataset Search | **automatic** | harvests the schema.org markup already on /research/ |
 | 7 | DataCite / OpenAIRE / OpenAlex | **automatic once the DOI exists** | three more independent systems, no extra work |

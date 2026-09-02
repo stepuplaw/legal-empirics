@@ -31,6 +31,7 @@
   },
   "@type": "sc:Dataset",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Klagge, Kevin D. legal-empirics. https://doi.org/10.5281/zenodo.22247377",
   "name": "disputed_terms_national",
   "description": "One row per (term, decision) pair: a word or phrase a court quoted as the disputed language in a decision containing an ambiguity holding, across the state appellate courts of all 50 states and DC. Terms are extracted from the whole opinion by cue-anchored quotation ('the term \"X\"', '\"X\" as used in'), classified into functional drafting categories, and linked to the holding by three graded levels of evidence.",
   "url": "https://stepuplaw.com/research/disputed-terms-national/",

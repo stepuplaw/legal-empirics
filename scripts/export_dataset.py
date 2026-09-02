@@ -34,6 +34,10 @@ HF_ORG = "https://huggingface.co/datasets/stepuplaw"
 # independent registry, which is the whole reason it carries more weight than
 # the same name asserted on our own pages.
 ORCID = "https://orcid.org/0009-0002-1385-8498"
+# The archived CODE, not the data. Each dataset gets its own DOI; until then
+# `identifier` stays empty rather than borrowing the software DOI, which would
+# tell a harvester the dataset and the code are the same object.
+SOFTWARE_DOI = "10.5281/zenodo.22247377"
 LICENSE = {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"}
 
 # One entry per publishable dataset. `fields` is the column dictionary: a
@@ -319,7 +323,10 @@ def export(name, spec, outroot):
                     "url": SITE, "identifier": ORCID, "sameAs": ORCID},
         "publisher": {"@type": "Person", "name": "Kevin D. Klagge",
                       "url": SITE, "sameAs": ORCID},
-        "sameAs": [REPO, f"{HF_ORG}/{name}"],
+        "sameAs": [REPO, f"{HF_ORG}/{name}", f"https://doi.org/{SOFTWARE_DOI}"],
+        "isBasedOn": {"@type": "SoftwareSourceCode",
+                      "identifier": f"https://doi.org/{SOFTWARE_DOI}",
+                      "codeRepository": REPO},
         "citation": run_meta.get("query"),
         "measurementTechnique":
             "Full-text retrieval over a local CourtListener corpus, followed by "
@@ -363,6 +370,7 @@ def export(name, spec, outroot):
         },
         "@type": "sc:Dataset",
         "conformsTo": "http://mlcommons.org/croissant/1.0",
+        "citeAs": f"Klagge, Kevin D. legal-empirics. https://doi.org/{SOFTWARE_DOI}",
         "name": name.replace("-", "_"),
         "description": spec["description"],
         "url": f"{SITE}/research/{name}/",

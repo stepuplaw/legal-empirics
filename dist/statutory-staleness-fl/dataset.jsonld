@@ -34,8 +34,14 @@
   },
   "sameAs": [
     "https://github.com/stepuplaw/legal-empirics",
-    "https://huggingface.co/datasets/stepuplaw/statutory-staleness-fl"
+    "https://huggingface.co/datasets/stepuplaw/statutory-staleness-fl",
+    "https://doi.org/10.5281/zenodo.22247377"
   ],
+  "isBasedOn": {
+    "@type": "SoftwareSourceCode",
+    "identifier": "https://doi.org/10.5281/zenodo.22247377",
+    "codeRepository": "https://github.com/stepuplaw/legal-empirics"
+  },
   "citation": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
   "measurementTechnique": "Full-text retrieval over a local CourtListener corpus, followed by deterministic sentence-level classification. Retrieval is wide and filtering is explicit; the exclusion funnel is reported with counts.",
   "distribution": [
