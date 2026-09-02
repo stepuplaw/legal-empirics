@@ -9,6 +9,8 @@ authors:
 repository-code: "https://github.com/stepuplaw/legal-empirics"
 url: "https://stepuplaw.com/research/"
 license: CC-BY-4.0
+version: v0.1.1
+date-released: "2026-09-01"
 keywords:
   - empirical legal studies
   - preventive law
