@@ -160,7 +160,11 @@ with the largest effect, and nothing built since has substituted for it.
    largest effect on what any of this can claim.
 3. **Subsection-level alignment**, to turn exposure into abrogation.
 4. **Report disputed terms per clause type**, not only per category.
-5. See `NEXT-PROJECTS.md` for the scoped candidates beyond that.
+5. **Trustee identity** is scoped and ready to pre-register:
+   `protocols/trustee-litigation.md`. The question moved from *do professional
+   trustees reduce litigation* — unanswerable, no denominator — to *do courts
+   invoke an expertise-keyed standard*, which is a fact about published text.
+6. See `NEXT-PROJECTS.md` for the scoped candidates beyond that.
 
 **Done since this list was written:** the research pages are live at
 stepuplaw.com/research/, and Zenodo minted concept DOI 10.5281/zenodo.22247377

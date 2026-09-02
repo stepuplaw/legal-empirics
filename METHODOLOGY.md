@@ -393,3 +393,137 @@ brittle and a full-opinion review is unaffordable, **the ambiguity sentence
 itself is the right unit**: short enough to code in bulk, long enough to carry
 both domain and posture. Design the unit of coding to be the smallest text that
 answers the question.
+
+### Conditioning on litigation relocates the selection effect, it does not remove it
+*Trustee scoping, 2026-09-02.* The trustee question "do professional trustees
+reduce litigation" needs a denominator the courts do not hold, so the design
+moved to comparing **outcomes among cases already sued**, on the reasoning that
+both arms are inside the courthouse and no population denominator is needed.
+
+The denominator problem does go away. **The selection problem gets worse**, and
+the move hides it. Priest & Klein applies to *which disputes reach a published
+appellate opinion*, and the two arms reach it by different routes. A corporate
+trustee is a repeat player: insured, with in-house counsel, a reputational stake
+across every other account it holds, and a budget to settle the cases it would
+lose. An individual trustee is a one-shot player, often a family member paying
+counsel personally and frequently unable to fund an appeal at all.
+
+So an outcome difference between arms is equally consistent with better conduct,
+with differential settlement, with differential ability to appeal, and with
+differential instrument drafting. **Whenever an arm of a comparison is defined by
+a party characteristic that also predicts settling and appealing, conditioning on
+litigation is not a fix.** Report the appellant composition by arm, report
+affirmance separately from first-instance outcome, and state every reading.
+
+### Two labels that sound like one axis are usually two axes
+*Trustee scoping, 2026-09-02.* The plan was one classifier separating
+"professional" from "individual" trustees, validated against the 135 decisions
+saying "professional trustee" and the 462 saying "individual trustee".
+
+Those are not two ends of one variable. **A professional trustee can be a natural
+person** — a paid lawyer, an accountant, a licensed private fiduciary — and a
+corporate trustee is an entity. A name-based classifier reads **form**, entity
+versus natural person. The statutory standard that matters, UTC s.806, keys off
+**capacity**, held-out expertise. Validating a form classifier against capacity
+labels scores every paid individual fiduciary as a false negative when it is not
+an error at all.
+
+Code them as separate variables and report the agreement between them. How often
+entity form predicts professional capacity is itself a finding, and a cheap one.
+
+### A one-state intuition about noise does not survive going national
+*Trustee scoping, 2026-09-02.* The Florida sizing correctly identified the
+mortgage-backed-securities trap: banks appear as trustee for securitisation
+pools, not for families. That is the Florida-shaped contaminant, because Florida
+forecloses judicially on a mortgage.
+
+In **deed-of-trust** states — California, Texas, Virginia and Colorado among
+them — a non-judicial foreclosure has a statutory "trustee", a title company
+holding a security interest and a fiduciary of nobody. The Florida pass could
+not see that pool at all, because Florida does not have the office. Whether it
+is larger than the securitisation pool is a question for the sizing script, not
+an assertion.
+
+**When a study goes national, re-derive the exclusion list, do not port it.**
+Contamination follows state procedure, so it changes shape at the state line.
+
+### Sizing answers whether it can be measured; the literature answers whether it is worth measuring
+*Trustee scoping, 2026-09-02.* The pool sizing was careful and it killed the
+original design in a day, which is the system working. It was done without
+reading a single prior study, so it could rule designs out and could not rule one
+in — it produced "the label-based study is not viable" and stopped at the nearest
+answerable substitute.
+
+Reading four papers moved the question again, to whether courts invoke an
+expertise-keyed standard, which is a live argument in the literature (Leslie, 27
+Cardozo L. Rev. 2713), is measurable from published text, and is immune to the
+selection problem that the substitute design was not. It also surfaced the
+omitted variable: exculpatory clauses appear in 71.1% of professionally serviced
+trusts (Hofri-Winogradow, 68 Hastings L.J. 931), so any outcome gap between arms
+has a drafting explanation before it has a conduct explanation.
+
+**Size the pools and read the field in the same pass.** Sizing alone converges on
+the nearest question the corpus can answer, which is rarely the best one.
+
+### A table without its committed query is provisional
+*Trustee scoping, 2026-09-02.* Two pool tables were committed as markdown by a
+session whose queries lived only in its own scrollback. The numbers are probably
+right and cannot be checked, which under this repository's own reporting rule —
+*query, verbatim and runnable* — makes them provisional rather than findings.
+
+The fix costs one file. Commit the sizing script with the sizing, always, even
+when the sizing is exploratory and especially when it is about to be quoted in a
+protocol.
+
+### Courts state a rule in the treatise's words, not the statute's
+*Trustee vocabulary sizing, 2026-09-02.* The heightened standard for a trustee
+holding out expertise has four citeable forms, and UTC §806's own comment says
+they are equivalent: UTC §806, UPC §7-302, Restatement (2d) of Trusts §174
+(1959), UPIA §2(f).
+
+Counted nationally across every court, the exact phrase the two uniform acts use
+— *"special skills or expertise"* — appears in **88** opinions. Relaxed to
+*"special skills"* and crossed with `trustee` it is **366**; the Restatement's
+older wording adds *"greater skill"* **132** and *"special facilities"* **100**.
+All four forms unioned and crossed with `trustee`: **1,748**.
+
+A lane built on the enacted phrasing would have returned almost nothing and read
+as evidence that courts do not apply the standard, when it is evidence about how
+they phrase it. **Before building a retrieval lane on a statutory phrase, find
+the provision's ancestry and count every form.** A uniform act's comment names
+its own sources, so the ancestry is free.
+
+**And count each candidate crossed with the thing being studied, never on its
+own.** Counted alone, *"special facilities"* (786) and *"greater skill"* (668)
+looked like they dominated the statutory phrasing nine to one. Crossed with
+`trustee` they fall to 100 and 132, because most opinions using those words are
+about something else entirely, and the relaxed statutory form turns out to be the
+workhorse after all. A bare phrase count ranks vocabulary by how common the words
+are in English, not by how much of it is yours.
+
+Corollary, learned the same afternoon: **never put a bare section number in an
+FTS query.** `7-302` matched 3,898 opinions — docket numbers, dates, and every
+other code that happens to contain the string. Reach a provision through its
+words.
+
+### The marked category is the one courts name, and it is only ever one arm
+*Trustee vocabulary sizing, 2026-09-02.* Corporate-side vocabulary nationally:
+`corporate trustee` 2,572, `corporate fiduciary` 1,710, `professional fiduciary`
+394, `professional trustee` 192, `institutional trustee` 134. Individual side:
+`individual trustee` 994, `family trustee` 55, `lay trustee` 19,
+`nonprofessional trustee` 16, `amateur trustee` **0**.
+
+Roughly four to one. Courts **mark** the institution and leave the natural person
+unmarked, because an unmodified "trustee" is presumed to be a person. So a design
+that filters on labels builds one arm from what courts name and the other from
+what they decline to name, and the asymmetry is a fact about usage rather than
+about trustees.
+
+**Whenever one arm of a comparison is a marked category and the other is the
+default, label-based retrieval cannot supply both arms.** Identify the entity in
+the role instead. The tell is cheap to check: count the vocabulary for each arm
+before designing, and be suspicious of any ratio far from one.
+
+Note also that the vocabulary the drafters use need not exist in the reports at
+all. `amateur trustee` is the UPIA comment's own term for the low end and returns
+zero. Use it to name the axis; never to query it.

@@ -23,7 +23,36 @@ strongest result already published.
 
 ---
 
-## 1. Trustee litigation. The question has to change before it can be answered.
+## 1. Trustee litigation. Scoped out, and the question changed twice.
+
+> **Superseded by `protocols/trustee-litigation.md`, 2026-09-02.** Everything
+> below stands as the record of how the design got here, and the pool tables are
+> still the best numbers we have. But they were produced by ad-hoc queries that
+> were never committed, so they are **provisional** until
+> `studies/trustee-litigation/size_pools.py` reproduces them.
+>
+> Three things this pass got wrong, all fixed in the protocol:
+>
+> 1. **It never read the literature**, and the literature moves the question.
+>    Leslie (27 Cardozo L. Rev. 2713) argues trust statutes *should* differentiate
+>    professional from non-professional trustees; UTC s.806 partially already does.
+>    Whether courts differentiate anyway is measurable, novel, and it is the
+>    headline. Outcomes become the secondary result.
+> 2. **Conditioning on litigation does not remove the selection effect.** It
+>    removes the denominator problem and makes the selection problem worse, because
+>    corporate trustees are repeat players who settle and appeal differently from
+>    one-shot individual trustees. See the protocol, section 9.
+> 3. **"Professional" and "corporate" are not the same axis**, and the classifier
+>    plan below conflates them. A paid lawyer-trustee is a professional and a
+>    natural person. A name-based classifier reads *form*, not *capacity*, so
+>    validating it against the courts' "professional trustee" labels validates it
+>    against the wrong variable.
+>
+> Since revised again, 2026-09-02, after sampling: **national from the start, no
+> pilot state**; proximity does not identify the trustee and the measurement is in
+> `studies/trustee-litigation/CLASSIFIER-NOTES.md`; the vocabulary question is
+> answered from the uniform acts rather than from opinions, and the drafters' own
+> pair is **professional / amateur**.
 
 **The original framing:** does having a professional trustee reduce litigation?
 Query sketched as `breach /s fiduciary /s duty` crossed with
@@ -141,22 +170,38 @@ inside the courthouse. It answers a real question a client asks, which is what
 happens **when** a trust goes wrong, and it does not overclaim.
 
 If the incidence question is wanted later, the denominator has to come from
-outside the corpus. FDIC and OCC collect fiduciary-activity reports from banks
-with trust powers, and IRS Statistics of Income covers fiduciary returns. Both
-are aggregate rather than case-linkable, so they support a crude rate and
-nothing finer. Decide whether that is worth it before building for it.
+outside the corpus, and **one arm of it is better than this paragraph originally
+allowed.** Federal bank Call Report **Schedule RC-T, item 4** reports the *number
+of accounts* and market value of personal trust and agency accounts — testamentary
+trusts, revocable and irrevocable living trusts — per institution, per quarter.
+Sitkoff & Schanzenbach built a state-year panel from exactly that source for 115
+Yale L.J. 356. So a corporate-arm rate, suits per thousand bank-held personal
+trust accounts by state-year, is computable and is not crude.
+
+There is no register of individual trustees, so the individual arm has no
+denominator and never will. Report the corporate rate alone, labelled as one arm,
+and never divide the two. IRS Statistics of Income fiduciary returns count trusts
+and estates together and do not separate trustee type, so they bound the total
+rather than supplying the missing arm.
 
 ### Plan before implementing
 
-1. Draft `protocols/trustee-litigation.md` from `protocols/TEMPLATE.md`, stages 1
-   to 5, and **register it on OSF before running anything**. This one is worth
-   preregistering precisely because the outcome variable is contestable.
-2. Build the trustee-type classifier and validate it on a hand-coded sample of
-   100 captions. Report precision and recall. It is the whole study.
-3. Write the securitisation exclusion and report what it removes.
-4. Only then compute outcomes.
+Written out in full at **`protocols/trustee-litigation.md`**, stages 1 to 5, with
+the literature, the two-variable codebook, the eight-step exclusion funnel and
+the selection-effect limitation. Register it on OSF before running anything.
 
----
+Two additions that came out of writing it:
+
+- **National from the start, and there is no pilot state.** The question is
+  whether courts differentiate, and courts differ by state, so one state cannot
+  answer it — it returns one of fifty-one values. Florida least of all: three
+  decisions here cross breach of fiduciary duty with "corporate trustee" and zero
+  contain "professional trustee". Extraction is *tuned* on the Florida SSD slice
+  because it is fast; every reported number is national.
+- **The deed-of-trust foreclosure trustee is a bigger contaminant than the MBS
+  trustee**, and this pass missed it because Florida does not have one. In the
+  thirty-odd states that foreclose by deed of trust, every non-judicial
+  foreclosure has a statutory "trustee". Size that exclusion per state.
 
 ## 2. Treatment latency
 
