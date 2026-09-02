@@ -26,7 +26,11 @@ kind of work.
 | [`ambiguity-pools`](studies/ambiguity-pools/) | decision | 6,523 | the feasibility study that produced the method, including the extraction that failed and why |
 
 [`notebooks/`](notebooks/) holds the executed analyses, outputs included, so the
-result is visible without running anything.
+result is visible without running anything. They also **run anywhere**: where the
+local build is absent, the loader falls back to the published dataset, so the
+Colab button is not a link to a stack trace.
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/stepuplaw/legal-empirics/blob/main/notebooks/statutory-staleness.ipynb)
 
 ## Layout
 
