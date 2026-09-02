@@ -24,6 +24,8 @@ nine times, which is the point.
 | `METHODOLOGY.md` | How studies are designed and reported, plus **the lessons log** — read that section |
 | `CORPUS-LINGUISTICS.md` | What the method is, its techniques, its critics, and where the open ground is |
 | `PUBLISHING.md` | Where the datasets live and how the records reference one another |
+| `DISTRIBUTION.md` | Which platforms are done and which are pending |
+| `NEXT-PROJECTS.md` | The scoped candidates, and why the trustee question had to change |
 
 ## What changed on 2026-09-01
 
@@ -152,15 +154,18 @@ with the largest effect, and nothing built since has substituted for it.
 
 ## Next, in order
 
-1. **Kevin re-codes 50 sentences.** Kappa. Still first.
-2. **Re-run statutory-staleness** when the edition backfill finishes. The
-   text-diff tier goes from 5.3% of pairs to roughly 58%, and the 69.5% discount
-   gets measured across three decades instead of four years.
+1. **Re-run statutory-staleness.** The backfill is finished and this is one
+   command. Text-diff coverage goes from 5.3% of pairs to roughly 58%.
+2. **Kevin re-codes 50 sentences.** Kappa. Still the cheapest step with the
+   largest effect on what any of this can claim.
 3. **Subsection-level alignment**, to turn exposure into abrogation.
-4. **The research pages on stepuplaw.com**, which do not exist yet — every
-   metadata file names `/research/` and it currently 404s.
-5. **Zenodo release and DOIs**, then fill `identifier` in the metadata.
-6. **Report disputed terms per clause type**, not only per category.
+4. **Report disputed terms per clause type**, not only per category.
+5. See `NEXT-PROJECTS.md` for the scoped candidates beyond that.
+
+**Done since this list was written:** the research pages are live at
+stepuplaw.com/research/, and Zenodo minted concept DOI 10.5281/zenodo.22247377
+with the work now on the ORCID record. All three datasets are published on
+Hugging Face and Kaggle.
 
 ## Standing rules
 
