@@ -25,13 +25,11 @@
     {
       "identifier": "https://github.com/stepuplaw/legal-empirics",
       "relation": "isSupplementTo",
-      "resource_type": "software",
       "scheme": "url"
     },
     {
       "identifier": "https://stepuplaw.com/research/",
       "relation": "isDocumentedBy",
-      "resource_type": "publication-webpage",
       "scheme": "url"
     }
   ],
