@@ -47,6 +47,55 @@ I sized it. The framing does not survive contact with the corpus.
 | BFD **and** "corporate trustee" | 3 |
 | "bank" or "trust company" as trustee | 2,024 |
 
+### What the corpus holds NATIONALLY, which is the scope that matters
+
+State appellate, all 51 jurisdictions. Sized 2026-09-02.
+
+| Pool | Decisions | States |
+|---|---:|---:|
+| "breach of fiduciary duty" | 31,681 | 51 |
+| BFD **and** trustee | **7,061** | 51 |
+| "corporate trustee" | 1,142 | 51 |
+| "individual trustee" | 462 | 48 |
+| "independent trustee" | 261 | 44 |
+| "professional trustee" | 135 | 33 |
+| "institutional trustee" | 78 | 25 |
+| BFD **and** "corporate trustee" | 122 | 37 |
+| BFD **and** "professional trustee" | **37** | 15 |
+
+**National changes the picture, and not in the way you would hope.** In Florida
+the phrase "professional trustee" appears in zero appellate decisions. Nationally
+it appears in 135, and crossed with breach of fiduciary duty it appears in 37.
+So the arms exist, but 37 decisions cannot be compared against a 7,061-decision
+population. A label-based study is still not viable.
+
+**What the labelled subset IS good for is validation.** Those 135 professional
+and 462 individual decisions are hand-labelled by the courts themselves, for
+free. Use them as the ground-truth set for a name-based classifier, then apply
+the classifier to all 7,061. That converts the label problem from a dead end
+into a training set, and it means the classifier ships with measured precision
+and recall like every other one in this repository.
+
+### The vocabulary question, answered empirically
+
+Trustee type is not stated as a term of art. Over 272 Florida trust-fiduciary
+decisions, the modifiers courts actually put in front of "trustee" are:
+
+    sole 16 · testamentary 7 · corporate 5 · co- 5 · prudent 4 · appointed 4
+    special 3 · constructive 3 · individual 2 · nonresident 2
+
+`corporate` appears in five documents and `individual` in two. There is no
+descriptive vocabulary to filter on, which is the same answer the phrase counts
+gave by a different route.
+
+**The identity is in the name.** The same pass pulled the entities acting as
+trustee, and they separate cleanly without any label: J.P. Morgan Chase Bank
+N.A., J.P. Morgan Trust Company N.A. on one side, and Jerome Adams, Eleanor M.
+Rich, Milton Wallace on the other. A corporate trustee announces itself through
+`Bank`, `N.A.`, `Trust Company`, `Corp`, `LLC`, `Association`; an individual
+carries a personal name. **Building and validating that classifier is the
+study**, not a preprocessing step before it.
+
 ### Three findings, in increasing order of how much they matter
 
 **1. The labels do not exist in the text.** Not one Florida appellate decision
