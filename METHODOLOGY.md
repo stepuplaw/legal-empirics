@@ -527,3 +527,29 @@ before designing, and be suspicious of any ratio far from one.
 Note also that the vocabulary the drafters use need not exist in the reports at
 all. `amateur trustee` is the UPIA comment's own term for the low end and returns
 zero. Use it to name the axis; never to query it.
+
+### When one arm is richer, the arm is not the cause
+*Trustee scoping, 2026-09-02.* The trustee study compares corporate against
+individual trustees. A corporate trustee will not accept a small trust — fee
+schedules and account minima see to that — so the corporate arm is drawn from the
+top of the wealth distribution by construction and the individual arm from
+everywhere.
+
+Wealth is then a **common cause** of both the exposure and the outcome: it
+predicts hiring a professional, and it predicts having enough at stake to sue
+over. Any raw difference between the arms is a difference in trust size before it
+is a difference in trustee behaviour.
+
+Two mechanisms compound it, neither involving misconduct. **Deep pockets**:
+beneficiaries sue defendants who can pay, and a bank is solvent, insured and
+reachable where an individual trustee may be judgment-proof. **Category
+composition**: a trustee who charges a fee generates fee litigation, and an
+unpaid family trustee generates none, so part of any excess is a category that
+does not exist in the other arm.
+
+**Whenever the two arms of a comparison are separated by a price, code the price
+and compare within bands.** And write down in advance what a null result would
+mean, because here it is the likely one and it is more useful than the finding
+originally sought: *trust size predicts litigation, trustee type does not* tells a
+client that a corporate trustee does not buy them a lawsuit, which is the
+question they were actually asking.

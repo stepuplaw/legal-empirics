@@ -49,6 +49,14 @@ corporate trustees win more often, the first explanation is that their
 instruments exculpate them. Any outcome comparison that does not code the
 exculpatory clause is measuring drafting and calling it conduct.
 
+**And the causal story is probably about money, not trustees.** A corporate
+trustee will not take a small trust, so the corporate arm is drawn from the top
+of the wealth distribution by construction. Wealth is a common cause of both
+hiring a professional and having enough at stake to sue over. `corpus_value` is
+therefore a coded variable and not a footnote, and every comparison runs within
+value bands. §9 has the full argument and the two further mechanisms — deep
+pockets and fee-dispute composition — that point the same way.
+
 ### Prior empirical work, and where the gap is
 
 | Work | What it measured | What it did not |
@@ -257,6 +265,8 @@ every paid individual fiduciary becomes a false negative that is not an error.
 | `configuration` | entity \| amateur_person \| professional_person \| mixed_cotrustee \| delegated \| family_trust_co | the six ways form and capacity combine. `mixed_cotrustee` is not an edge case: UTC §703 cmt calls an institution-plus-family-member pairing the standard reason to appoint cotrustees. `delegated` is an amateur trustee who hired a professional under §807 |
 | `standard_invoked` | special_skills \| ordinary_prudence \| both \| none | `special_skills` where the opinion cites UTC §806 or its state enactment, or states a higher duty owed by reason of expertise, professional status, or compensation. This is the primary outcome |
 | `exculpatory_clause` | present_enforced \| present_rejected \| present_unresolved \| absent \| unstated | from the opinion's own account of the instrument. `unstated` is the modal value and must be reported, not dropped |
+| `corpus_value` | dollar figure \| band \| unstated | the amount the opinion says is in the trust or in dispute. **The confounder that matters most** — see §9. Bands, because opinions state values inconsistently: <$500k, $500k–2M, $2M–10M, >$10M |
+| `trustee_compensated` | yes \| no \| unstated | a fee-charging trustee generates fee litigation an unpaid family trustee never does |
 | `remedy_sought` | surcharge \| removal \| fees \| accounting \| other, multi-select | **exposure**. Coded whether or not granted |
 | `remedy_granted` | granted \| denied \| partial \| remanded | **risk**, conditional on sought |
 | `appellate_posture` | affirmed \| reversed \| mixed | who appealed, and what happened to them |
@@ -347,6 +357,49 @@ To be completed.
 To be completed. Findings and hypotheses stay visibly separate.
 
 ## 9. Limitations
+
+### Trustee type is a proxy for money, and money is the likelier cause
+
+The framing this study inherited — professional trustees change litigation risk —
+assumes the trustee is doing the causing. **Wealth is a common cause of both**,
+and it explains the same association without any claim about trustee conduct:
+
+    settlor wealth ──→ hires a professional trustee
+           │
+           └────────→ larger corpus ──→ more worth fighting over ──→ litigation
+
+A corporate trustee does not take a $180,000 trust; published fee schedules and
+account minima see to that. So the corporate arm is drawn from the top of the
+wealth distribution by construction, and the individual arm from everywhere. Any
+raw difference between the arms is a difference in trust size before it is
+anything else.
+
+Two further mechanisms push the same way, and neither involves misconduct:
+
+**Deep pockets.** Beneficiaries sue defendants who can pay. A bank is solvent,
+insured and reachable; an individual trustee who is also a beneficiary may be
+judgment-proof, and suing them may cost more than it returns. Corporate trustees
+attract suits *because they are collectible*.
+
+**Category composition.** A trustee who charges a fee generates fee litigation.
+An unpaid family trustee generates none. Some portion of any excess in the
+corporate arm is a category that simply does not exist in the other arm —
+nationally, `fee schedule` crossed with `trustee` is 1,232 opinions and
+`termination fee` 1,435.
+
+**What to do about it.** Code `corpus_value` and compare **within value bands**.
+Where the opinion gives no figure, say so and report the unstated share on the
+face of every table rather than dropping those decisions. Report the remedy mix
+by arm before reporting any rate, so a composition difference is visible as a
+composition difference.
+
+**And say plainly what a null result would mean, because it is the likely one and
+it is useful.** If the trustee-type difference disappears inside value bands, the
+finding is *"trust size predicts litigation; trustee type does not"* — which
+answers the client's real question better than the original framing did. It says
+choosing a corporate trustee does not buy you a lawsuit, and having a large trust
+does. That is a publishable result and a saleable one, and the design has to be
+able to reach it.
 
 ### Conditioning on litigation relocates the selection effect; it does not remove it
 
