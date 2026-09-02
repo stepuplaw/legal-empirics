@@ -164,10 +164,20 @@ def _one(job):
             continue          # a passing mention deep in the opinion is not the case
         return (tag, None)
 
-    sents = [s for s in SENT.split(text) if FEE_RX.search(s)]
-    if not sents:
+    all_sents = SENT.split(text)
+    hit = [i for i, x in enumerate(all_sents) if FEE_RX.search(x)]
+    if not hit:
         return ("no_fee_sentence", None)
-    if not any(ADJUDICATED.search(s) for s in sents):
+    sents = [all_sents[i] for i in hit]
+    # ★ How a fee was SET is stated beside the fee sentence, not inside it.
+    # Kay v. Bostwick (1922) quotes the trust deed authorising the trustees to
+    # "pay to themselves such compensation ... as they may deem reasonable" in a
+    # sentence that never contains the words "trustee's fee", so a basis test
+    # scoped to fee sentences alone scored it unstated. Same two-sentence window
+    # the disputed-terms study calls `proximate`.
+    win = sorted({j for i in hit for j in range(max(0, i-2), min(len(all_sents), i+3))})
+    near = " ".join(all_sents[j] for j in win)
+    if not any(ADJUDICATED.search(x) for x in sents):
         return ("not_adjudicated", None)
 
     fillers = []
@@ -194,7 +204,10 @@ def _one(job):
                      else "fee_or_compensation"),
     }
     for k, rx in BASIS.items():
-        row[f"basis_{k}"] = 1 if any(rx.search(s) for s in sents) else 0
+        # 2 = stated in the fee sentence itself, 1 = within two sentences, 0 = absent.
+        # Tiers are kept apart rather than pooled, as everywhere else here.
+        row[f"basis_{k}"] = (2 if any(rx.search(x) for x in sents)
+                             else 1 if rx.search(near) else 0)
     for k, rx in SIGNALS.items():
         row[f"sig_{k}"] = 1 if rx.search(text) else 0
     return ("kept", row)
