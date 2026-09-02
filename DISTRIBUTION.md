@@ -21,13 +21,13 @@ identity. Everything else is a copy that names it.
 | 2 | GitHub | **done** | code, notebooks, version history |
 | 3 | stepuplaw.com/research/ | **done** 2026-09-02 | canonical human page, schema.org Dataset markup |
 | 4 | Zenodo | **done** 2026-09-02, concept `10.5281/zenodo.22247377` | the DOI. Feeds DataCite, which auto-populates ORCID |
-| 5 | Hugging Face | **account ready** (`stepuplaw`, write token saved) | reaches ML and AI people; Croissant makes data loadable, not just downloadable |
+| 5 | Hugging Face | **done** 2026-09-02, all three datasets live | reaches ML and AI people; Croissant makes data loadable, not just downloadable |
 | 6 | Google Dataset Search | **automatic** | harvests the schema.org markup already on /research/ |
 | 7 | DataCite / OpenAIRE / OpenAlex | **automatic once the DOI exists** | three more independent systems, no extra work |
-| 8 | Kaggle | **metadata built**, needs `~/.kaggle/kaggle.json` | large data-science audience, Croissant support, Google-owned so it indexes well |
+| 8 | Kaggle | **metadata built, token saved**, client needs reinstalling for py3.11 | large data-science audience, Croissant support, Google-owned so it indexes well |
 | 9 | OSF | **protocol drafted** for the next study, needs an OSF token | **preregistration**, which `protocols/` already assumes |
 | 10 | SSRN | not started | where legal academics and practitioners actually look |
-| 11 | Wikidata | not started | knowledge-graph node. Do it for a DATASET, after the DOI |
+| 11 | Wikidata | **QuickStatements prepared**, see `wikidata/` | knowledge-graph node. Do it for a DATASET, after the DOI |
 | 12 | Google Scholar profile | not started | links publications to the ORCID |
 | 13 | llms.txt + Markdown twins | not started | cheap, unproven, do last |
 | 14 | ISNI | deprioritised | usually assigned via a registration agency, duplicates ORCID |
