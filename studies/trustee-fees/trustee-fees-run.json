@@ -1,0 +1,21 @@
+{
+  "query": "\"trustee's compensation\" OR \"trustees' compensation\" OR \"trustee compensation\" OR \"trustee's fee\" OR \"trustee's fees\" OR \"trustees' fees\" OR \"trustee fees\" OR \"trustee's commission\" OR \"trustee's commissions\" OR \"trustees' commissions\" OR \"trustee commissions\"",
+  "national": true,
+  "raw_opinion_hits": 5977,
+  "state_appellate_decisions": 1928,
+  "funnel": {
+    "kept": 498,
+    "not_adjudicated": 919,
+    "no_fee_sentence": 19,
+    "attorney_fees_only": 373,
+    "sale_commission": 18,
+    "governing_board": 9,
+    "erisa_pension_bk": 21,
+    "eminent_domain": 9,
+    "surplus_trustee": 15,
+    "indenture_bond": 46,
+    "notext": 1
+  },
+  "kept": 498,
+  "built": "2026-09-02T14:45:34"
+}

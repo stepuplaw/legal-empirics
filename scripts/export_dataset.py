@@ -117,6 +117,109 @@ DATASETS = {
             "statement": "the row written as one self-contained English sentence",
         },
     },
+    "fl-local-codes": {
+        "kaggle_title": "Florida Local Codes of Ordinances, 2026",
+        "kaggle_subtitle": "Where all 478 Florida counties and cities publish their ordinances",
+        "db": "studies/fl-local-codes/fl-local-codes.db",
+        "table": "jurisdictions",
+        "title": "Florida Local Codes of Ordinances: Publication and Currency, 2026",
+        "homepage": f"{SITE}/data/florida-local-codes/",
+        "download_base":
+            "https://raw.githubusercontent.com/stepuplaw/fl-local-codes/main/data",
+        "repo": "https://github.com/stepuplaw/fl-local-codes",
+        "same_as": ["https://github.com/stepuplaw/fl-local-codes"],
+        "spatial": "Florida, United States",
+        "temporal": "2026",
+        "sources": [
+            {"title": "US Census Bureau subcounty population estimates, vintage 2024",
+             "path": "https://www2.census.gov/programs-surveys/popest/datasets/"
+                     "2020-2024/cities/totals/sub-est2024_12.csv"},
+            {"title": "Municode public client and content API",
+             "path": "https://api.municode.com"},
+            {"title": "American Legal Publishing Florida code library",
+             "path": "https://codelibrary.amlegal.com/regions/fl"},
+        ],
+        "measurement_technique":
+            "Census enumeration of Florida counties and incorporated places, "
+            "joined by normalised name to the public metadata APIs of the "
+            "commercial codifiers, with every resulting URL verified against "
+            "the publisher's own resolver rather than an HTTP status. "
+            "Jurisdictions no codifier carries were resolved by hand in a "
+            "browser and recorded separately. Metadata only; no ordinance "
+            "text is retrieved or republished.",
+        "description":
+            "Where each of Florida's 478 local governments publishes its code "
+            "of ordinances, who publishes it, and how current that code is. "
+            "One row per county and per incorporated municipality, covering "
+            "all 67 counties and all 411 cities, towns and villages. "
+            "Municipal law is the hardest layer of American law to locate: "
+            "there is no master index, and each commercial codifier lists "
+            "only its own clients, so a reader who does not already know who "
+            "publishes a town's code has nowhere to start. This dataset is "
+            "that missing index for one state, and it records the jurisdictions "
+            "no codifier carries, which is the part no vendor list can show. "
+            "Currency is measured from the codifier's own stated codification "
+            "date, so a code that has not been supplemented in years is "
+            "visible as such.",
+        "card_source":
+            "US Census Bureau subcounty population estimates (vintage 2024) "
+            "for the jurisdiction frame, joined to the public metadata APIs of "
+            "the commercial code publishers. No court opinions are involved.",
+        "card_built":
+            "The jurisdiction list is the Census Bureau subcounty population "
+            "file, which is independent of every codifier and yields exactly 67 "
+            "counties and 411 municipalities, matching the Florida League of "
+            "Cities directory. Each publisher's public metadata was joined onto "
+            "that list by normalised name, and every jurisdiction no publisher "
+            "carried was opened by hand in a browser. Two traps had to be "
+            "handled: the largest publisher's classification field does not "
+            "encode jurisdiction type, so type comes from the Census, and its "
+            "library returns HTTP 200 with an empty JavaScript shell for "
+            "addresses that do not exist, so every URL is verified against the "
+            "resolver the library's own page calls rather than against a status "
+            "code. Metadata only. No ordinance text is retrieved or "
+            "republished, and the dataset must not be described as ordinance "
+            "text.",
+        "card_limits":
+            "**This is a point in time.** Codifier contracts move. Every row "
+            "carries the date it was checked, and that date is part of the "
+            "claim rather than a footnote to it.\n\n"
+            "**Currency is the publisher's word.** `codified_through` reports "
+            "when the code was last compiled, not that the compilation is "
+            "correct or complete.\n\n"
+            "**Official status is usually unstated.** Most Florida codes do "
+            "not say on the page whether the online version is the official "
+            "one, and the column records what the page says rather than "
+            "inferring it.\n\n"
+            "**This says where the law is, never what it says.** There is no "
+            "ordinance text here, by design.",
+        "keywords": ["municipal law", "ordinances", "local government",
+                     "legal research", "Florida", "code of ordinances",
+                     "zoning", "code enforcement", "open government data",
+                     "legal information retrieval"],
+        "fields": {
+            "geoid": "Census GEOID: 12 followed by the county FIPS code, or 12 followed by the place FIPS code",
+            "name": "jurisdiction name without its type suffix",
+            "type": "county | city | town | village, taken from the Census, never from the codifier",
+            "county": "the county the jurisdiction sits in; for a county row, itself",
+            "counties": "every county the place falls in, pipe separated, largest population share first",
+            "population": "Census population estimate, vintage 2024",
+            "code_status": "online-html | online-pdf-only | no-online-code | unknown",
+            "publisher": "municode | american-legal | general-code | code-publishing | self-hosted | none | unknown",
+            "code_url": "the verified URL of the code of ordinances; empty where no code is online",
+            "publisher_client_id": "the codifier's own identifier for this jurisdiction, where it has one",
+            "code_product_id": "Municode product id for the code of ordinances; the key to its table of contents",
+            "codified_through": "date of the most recent ordinance included in the code, as the publisher states it",
+            "code_last_updated": "date the publisher last posted an update online",
+            "pdf_available": "1 where the publisher offers the code as a downloadable PDF",
+            "pending_ordinances_count": "adopted ordinances awaiting codification, per the publisher; null outside Municode",
+            "official_status": "official | unofficial | unstated -- recorded only where the page says so, never inferred",
+            "source": "municode-api | browser | manual -- how this row was resolved",
+            "source_checked_date": "the date this row was checked; codifier contracts move, so the date is part of the claim",
+            "notes": "free text, used mainly for jurisdictions no codifier carries",
+            "statement": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+        },
+    },
     "disputed-terms-national": {
         "kaggle_title": "Disputed Contract Terms, 51 US Jurisdictions",
         "kaggle_subtitle": "Words courts were asked to call ambiguous, and whether the challenge won",
@@ -288,18 +391,33 @@ def export(name, spec, outroot):
         print(f"    parquet skipped: {type(e).__name__} {str(e)[:60]}", file=sys.stderr)
 
 
+    # Three things used to be hardcoded here and were true only of the
+    # CourtListener studies: the homepage, the source, and the download base.
+    # A dataset built from a different source was being described as though it
+    # came from the opinion corpus, and its `distribution` pointed at a path
+    # that has never existed for any dataset. A contentUrl that 404s tells a
+    # harvester the record is a page ABOUT data rather than data, which is the
+    # one outcome DISTRIBUTION.md is written to prevent.
+    homepage = spec.get("homepage", f"{SITE}/research/{name}/")
+    dl = spec.get("download_base", f"{SITE}/research/{name}")
+    sources = spec.get("sources", [{
+        "title": "CourtListener bulk export, topped up nightly from the courts",
+        "path": "https://www.courtlistener.com/help/api/bulk-data/",
+    }])
+    technique = spec.get("measurement_technique",
+        "Full-text retrieval over a local CourtListener corpus, followed by "
+        "deterministic sentence-level classification. Retrieval is wide and "
+        "filtering is explicit; the exclusion funnel is reported with counts.")
+
     datapackage = {
         "name": name,
         "title": spec["title"],
         "description": spec["description"],
         "licenses": [LICENSE],
-        "homepage": f"{SITE}/research/{name}/",
+        "homepage": homepage,
         "version": today,
         "created": today,
-        "sources": [{
-            "title": "CourtListener bulk export, topped up nightly from the courts",
-            "path": "https://www.courtlistener.com/help/api/bulk-data/",
-        }],
+        "sources": sources,
         "resources": ([{
             "name": name,
             "path": f"{name}.csv",
@@ -332,8 +450,8 @@ def export(name, spec, outroot):
         "@type": "Dataset",
         "name": spec["title"],
         "description": spec["description"],
-        "url": f"{SITE}/research/{name}/",
-        "identifier": [],                      # filled with the Zenodo DOI on release
+        "url": homepage,
+        "identifier": ([f"https://doi.org/{spec['doi']}"] if spec.get("doi") else []),
         "keywords": spec["keywords"],
         "license": LICENSE["url"],
         "isAccessibleForFree": True,
@@ -343,30 +461,32 @@ def export(name, spec, outroot):
                     "url": SITE, "identifier": ORCID, "sameAs": ORCID},
         "publisher": {"@type": "Person", "name": "Kevin D. Klagge",
                       "url": SITE, "sameAs": ORCID},
-        "sameAs": [REPO, f"{HF_ORG}/{name}", f"https://doi.org/{SOFTWARE_DOI}"],
+        "sameAs": (spec.get("same_as", []) +
+                   [REPO, f"{HF_ORG}/{name}", f"https://doi.org/{SOFTWARE_DOI}"]),
         "isBasedOn": {"@type": "SoftwareSourceCode",
                       "identifier": f"https://doi.org/{SOFTWARE_DOI}",
                       "codeRepository": REPO},
         "citation": run_meta.get("query"),
-        "measurementTechnique":
-            "Full-text retrieval over a local CourtListener corpus, followed by "
-            "deterministic sentence-level classification. Retrieval is wide and "
-            "filtering is explicit; the exclusion funnel is reported with counts.",
+        "measurementTechnique": technique,
         "distribution": [
             {"@type": "DataDownload", "encodingFormat": "text/csv",
-             "contentUrl": f"{SITE}/research/{name}/{name}.csv",
+             "contentUrl": f"{dl}/{name}.csv",
              "contentSize": str(size), "sha256": digest},
             {"@type": "DataDownload", "encodingFormat": "application/json",
-             "contentUrl": f"{SITE}/research/{name}/datapackage.json"},
+             "contentUrl": f"{dl}/datapackage.json"},
         ] + ([{"@type": "DataDownload",
                "encodingFormat": "application/vnd.apache.parquet",
-               "contentUrl": f"{SITE}/research/{name}/{name}.parquet",
+               "contentUrl": f"{dl}/{name}.parquet",
                "contentSize": str(pq_bytes), "sha256": pq_sha}]
              if pq_bytes else []),
         "variableMeasured": [
             {"@type": "PropertyValue", "name": c, "description": spec["fields"][c]}
             for c, _ in cols],
     }
+    if spec.get("spatial"):
+        jsonld["spatialCoverage"] = {"@type": "Place", "name": spec["spatial"]}
+    if spec.get("temporal"):
+        jsonld["temporalCoverage"] = spec["temporal"]
     with open(os.path.join(outdir, "dataset.jsonld"), "w") as fh:
         json.dump(jsonld, fh, indent=2)
 
@@ -397,7 +517,7 @@ def export(name, spec, outroot):
         "citeAs": f"Klagge, Kevin D. legal-empirics. https://doi.org/{SOFTWARE_DOI}",
         "name": name.replace("-", "_"),
         "description": spec["description"],
-        "url": f"{SITE}/research/{name}/",
+        "url": homepage,
         "license": LICENSE["url"],
         "version": today,
         "keywords": spec["keywords"],
@@ -408,7 +528,7 @@ def export(name, spec, outroot):
             "@id": file_id,
             "name": file_id,
             "description": "The dataset as a single UTF-8 CSV with a header row.",
-            "contentUrl": f"{SITE}/research/{name}/{file_id}",
+            "contentUrl": f"{dl}/{file_id}",
             "encodingFormat": "text/csv",
             "sha256": digest,
         }],
@@ -443,7 +563,7 @@ def export(name, spec, outroot):
         "keywords": spec["keywords"],
         "description": (
             spec["description"]
-            + "\n\nCanonical record and methodology: " + REPO
+            + "\n\nCanonical record and methodology: " + spec.get("repo", REPO)
             + "\nResearch page: " + f"{SITE}/research/"
             + "\nAuthor: Kevin D. Klagge, ORCID " + ORCID
             + "\n\nEvery row carries a `statement` column, which is the row written "

@@ -1,0 +1,24 @@
+{
+  "state": "FL",
+  "sources": {
+    "spine": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/cities/totals/sub-est2024_12.csv",
+    "municode_api": "https://api.municode.com",
+    "manual": "manual.tsv, read in a browser"
+  },
+  "funnel": {
+    "census_rows": 478,
+    "municode_clients": 416,
+    "municode_matched": 408,
+    "municode_unmatched_clients": 8,
+    "manual_rows": 35,
+    "municode_with_code": 399,
+    "unresolved": 44,
+    "suspect_codified_date": 15,
+    "municode_hidden": 1,
+    "rows": 478,
+    "online_html": 414,
+    "online_pdf": 9,
+    "no_online_code": 2
+  },
+  "runtime_minutes": 5.8
+}

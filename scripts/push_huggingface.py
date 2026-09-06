@@ -44,6 +44,30 @@ def size_category(n):
     return "1M<n<10M"
 
 
+DEFAULT_BUILT = (
+    "Retrieval and extraction are deterministic code over a local corpus of "
+    "10.8M US judicial opinions. Classification uses rules written against a "
+    "hand-coded sample that ship with their measured accuracy, so the error "
+    "rate is reported rather than assumed. Every study states its exclusion "
+    "funnel with counts, because silent filtering is the commonest defect in "
+    "research on opinions and it is invisible in the result.")
+
+# ★ A CARD THAT INHERITS THE WRONG LIMITS IS WORSE THAN ONE WITH NONE. These
+# three paragraphs are true of the opinion studies and false of anything built
+# from another source: a dataset with no coded sample is not "exploratory" for
+# want of inter-annotator reliability, and a census of published codes has no
+# appellate selection effect. A spec that does not override them is asserting
+# them.
+DEFAULT_LIMITS = """**This is exploratory.** The coded samples behind it were coded once, so it
+supports a described pattern rather than a measurement. Inter-annotator
+reliability has not been established.
+
+**Published appellate opinions are not disputes.** Most disputes settle, most
+settlements are unpublished, and appellate coverage varies by court and decade.
+Any rate here is a rate among decisions that reached an appellate court and were
+published, which is not the same population a drafter cares about."""
+
+
 def card(name, spec, dp):
     res = dp["resources"][0]
     rows, fields = res["rows"], res["schema"]["fields"]
@@ -80,7 +104,7 @@ def card(name, spec, dp):
 | Code and methodology | {REPO} |
 | Research page | {SITE}/research/ |
 | Author | Kevin D. Klagge, [ORCID 0009-0002-1385-8498]({ORCID}) |
-| Source corpus | CourtListener bulk export, snapshot 2026-06-30 |
+| Source | {spec.get("card_source", "CourtListener bulk export, snapshot 2026-06-30")} |
 
 The DOI above identifies the **code**, which is a different object from this
 dataset. Cite the code when you are describing the method and cite this dataset
@@ -98,26 +122,14 @@ retrieved or quoted, and the sentence is what makes each row usable on its own.
 
 ## How it was built
 
-Retrieval and extraction are deterministic code over a local corpus of 10.8M US
-judicial opinions. Classification uses rules written against a hand-coded sample
-that ship with their measured accuracy, so the error rate is reported rather
-than assumed. Every study states its exclusion funnel with counts, because
-silent filtering is the commonest defect in research on opinions and it is
-invisible in the result.
+{spec.get("card_built", DEFAULT_BUILT)}
 
 `datapackage.json` carries the Frictionless schema, `croissant.json` the
 MLCommons Croissant description, and `dataset.jsonld` the schema.org form.
 
 ## Limits
 
-**This is exploratory.** The coded samples behind it were coded once, so it
-supports a described pattern rather than a measurement. Inter-annotator
-reliability has not been established.
-
-**Published appellate opinions are not disputes.** Most disputes settle, most
-settlements are unpublished, and appellate coverage varies by court and decade.
-Any rate here is a rate among decisions that reached an appellate court and were
-published, which is not the same population a drafter cares about.
+{spec.get("card_limits", DEFAULT_LIMITS)}
 
 **Read the study's own limitations section** in the repository before quoting a
 number. Each one names the specific threats to its own validity, including the

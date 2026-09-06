@@ -9,8 +9,8 @@
     }
   ],
   "homepage": "https://stepuplaw.com/research/statutory-staleness-fl/",
-  "version": "2026-09-02",
-  "created": "2026-09-02",
+  "version": "2026-09-04",
+  "created": "2026-09-04",
   "sources": [
     {
       "title": "CourtListener bulk export, topped up nightly from the courts",
@@ -129,7 +129,7 @@
   ],
   "provenance": {
     "repository": "https://github.com/stepuplaw/legal-empirics",
-    "commit": "caa225026dfe39102d0ee1d4c72568b64f588955",
+    "commit": "3c44331f8538073d66f4c3c38a87062bd5a7daf4",
     "run": {
       "query": "(ambiguous OR ambiguity OR ambiguities OR construe OR construed OR construction OR interpret OR interpreted OR interpretation OR \"plain meaning\" OR \"legislative intent\" OR \"rules of statutory construction\")",
       "scope": "fl state appellate (S+SA)",

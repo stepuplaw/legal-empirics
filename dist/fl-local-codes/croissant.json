@@ -1,0 +1,378 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "column": "cr:column",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "references": "cr:references",
+    "repeated": "cr:repeated",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "conformsTo": "dct:conformsTo"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Klagge, Kevin D. legal-empirics. https://doi.org/10.5281/zenodo.22247377",
+  "name": "fl_local_codes",
+  "description": "Where each of Florida's 478 local governments publishes its code of ordinances, who publishes it, and how current that code is. One row per county and per incorporated municipality, covering all 67 counties and all 411 cities, towns and villages. Municipal law is the hardest layer of American law to locate: there is no master index, and each commercial codifier lists only its own clients, so a reader who does not already know who publishes a town's code has nowhere to start. This dataset is that missing index for one state, and it records the jurisdictions no codifier carries, which is the part no vendor list can show. Currency is measured from the codifier's own stated codification date, so a code that has not been supplemented in years is visible as such.",
+  "url": "https://stepuplaw.com/data/florida-local-codes/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-09-04",
+  "keywords": [
+    "municipal law",
+    "ordinances",
+    "local government",
+    "legal research",
+    "Florida",
+    "code of ordinances",
+    "zoning",
+    "code enforcement",
+    "open government data",
+    "legal information retrieval"
+  ],
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Kevin D. Klagge",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "fl-local-codes.csv",
+      "name": "fl-local-codes.csv",
+      "description": "The dataset as a single UTF-8 CSV with a header row.",
+      "contentUrl": "https://raw.githubusercontent.com/stepuplaw/fl-local-codes/main/data/fl-local-codes.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "82a672265f9c6efc2ef99ad3c2141e973b152b85ea3d0154d7ecb73fcfeb6857"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rows",
+      "name": "rows",
+      "description": "Florida Local Codes of Ordinances: Publication and Currency, 2026",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "rows/geoid",
+          "name": "geoid",
+          "description": "Census GEOID: 12 followed by the county FIPS code, or 12 followed by the place FIPS code",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "geoid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/name",
+          "name": "name",
+          "description": "jurisdiction name without its type suffix",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/type",
+          "name": "type",
+          "description": "county | city | town | village, taken from the Census, never from the codifier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/county",
+          "name": "county",
+          "description": "the county the jurisdiction sits in; for a county row, itself",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "county"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/counties",
+          "name": "counties",
+          "description": "every county the place falls in, pipe separated, largest population share first",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "counties"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/population",
+          "name": "population",
+          "description": "Census population estimate, vintage 2024",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "population"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/code_status",
+          "name": "code_status",
+          "description": "online-html | online-pdf-only | no-online-code | unknown",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "code_status"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/publisher",
+          "name": "publisher",
+          "description": "municode | american-legal | general-code | code-publishing | self-hosted | none | unknown",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "publisher"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/code_url",
+          "name": "code_url",
+          "description": "the verified URL of the code of ordinances; empty where no code is online",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "code_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/publisher_client_id",
+          "name": "publisher_client_id",
+          "description": "the codifier's own identifier for this jurisdiction, where it has one",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "publisher_client_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/code_product_id",
+          "name": "code_product_id",
+          "description": "Municode product id for the code of ordinances; the key to its table of contents",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "code_product_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/codified_through",
+          "name": "codified_through",
+          "description": "date of the most recent ordinance included in the code, as the publisher states it",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "codified_through"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/code_last_updated",
+          "name": "code_last_updated",
+          "description": "date the publisher last posted an update online",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "code_last_updated"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/pdf_available",
+          "name": "pdf_available",
+          "description": "1 where the publisher offers the code as a downloadable PDF",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "pdf_available"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/pending_ordinances_count",
+          "name": "pending_ordinances_count",
+          "description": "adopted ordinances awaiting codification, per the publisher; null outside Municode",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "pending_ordinances_count"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/official_status",
+          "name": "official_status",
+          "description": "official | unofficial | unstated -- recorded only where the page says so, never inferred",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "official_status"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/source",
+          "name": "source",
+          "description": "municode-api | browser | manual -- how this row was resolved",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/source_checked_date",
+          "name": "source_checked_date",
+          "description": "the date this row was checked; codifier contracts move, so the date is part of the claim",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "source_checked_date"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/notes",
+          "name": "notes",
+          "description": "free text, used mainly for jurisdictions no codifier carries",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "notes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rows/statement",
+          "name": "statement",
+          "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl-local-codes.csv"
+            },
+            "extract": {
+              "column": "statement"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Jurisdictions no codifier API resolves, researched by hand and recorded here.
+# This file is the part of the dataset no API produces, so it is committed.
+# Manual rows override the API for every column they fill.
+#
+# THREE SOURCES ARE REPRESENTED. American Legal Publishing and General Code
+# refuse scripted requests and were read in a browser. MunicipalCodeOnline was
+# found only because three Municode client records pointed nowhere; it serves
+# every subdomain a shell, so each was confirmed by the Florida address printed
+# on the tenant's own page. A same-named Greenwood resolved to Wisconsin and was
+# rejected on that test. Everything else was read from the jurisdiction's own
+# website on the date in source_checked_date.
+geoid	name	code_status	publisher	code_url	codified_through	official_status	source	source_checked_date	notes
+1208575	Briny Breezes	online-html	american-legal	https://codelibrary.amlegal.com/codes/brinybreezesfl/latest/overview	2024-12-12	unstated	browser	2026-09-03	
+1232000	Hollywood	online-html	american-legal	https://codelibrary.amlegal.com/codes/hollywood/latest/overview	2025-07-02	unstated	browser	2026-09-03	Zoning carried as a separate supplement
+1238425	Lake Mary	online-html	american-legal	https://codelibrary.amlegal.com/codes/lakemary/latest/overview	2024-06-20	unstated	browser	2026-09-03	
+1244000	Melbourne Beach	online-html	american-legal	https://codelibrary.amlegal.com/codes/melbournebeach/latest/overview	2026-01-21	unstated	browser	2026-09-03	
+1244300	Mexico Beach	online-html	american-legal	https://codelibrary.amlegal.com/codes/mexicobeach/latest/overview		unstated	browser	2026-09-03	Publisher states no adoption date for Ordinance 878; land development code amended January 2026
+1254000	Palm Bay	online-html	american-legal	https://codelibrary.amlegal.com/codes/palmbay/latest/overview	2026-05-21	unstated	browser	2026-09-03	
+1254425	Palm Shores	online-html	american-legal	https://codelibrary.amlegal.com/codes/palmshores/latest/overview	2025-03-25	unstated	browser	2026-09-03	
+1255775	Pembroke Pines	online-html	american-legal	https://codelibrary.amlegal.com/codes/pembrokepines/latest/overview	2025-12-11	unstated	browser	2026-09-03	
+1258050	Pompano Beach	online-html	american-legal	https://codelibrary.amlegal.com/codes/pompanobeach/latest/overview	2026-07-29	unstated	browser	2026-09-03	
+1276582	Weston	online-html	american-legal	https://codelibrary.amlegal.com/codes/weston/latest/overview	2026-03-16	unstated	browser	2026-09-03	
+12031	Duval	online-html	municode	https://library.municode.com/fl/jacksonville/codes/code_of_ordinances		unstated	manual	2026-09-04	consolidated government; the Jacksonville Code of Ordinances is the county code, and the beach cities and Baldwin keep their own
+1267675	South Pasadena	online-html	general-code	https://ecode360.com/SO1390		unstated	browser	2026-09-04	eCode360
+1274925	Waldo	online-html	municipal-code-online	https://waldo.municipalcodeonline.com/book?type=ordinances		unstated	browser	2026-09-04	moved off Municode; the Municode library slug no longer resolves
+1275750	Welaka	online-html	municipal-code-online	https://welaka.municipalcodeonline.com/book?type=ordinances		unstated	browser	2026-09-04	moved off Municode; the Municode client record carries no published code
+1235425	Jay	online-html	municipal-code-online	https://jay.municipalcodeonline.com/book?type=ordinances		unstated	browser	2026-09-04	moved off Municode; the Municode library slug no longer resolves
+12109	St. Johns	online-pdf-only	self-hosted	https://www.sjcfl.us/		unstated	browser	2026-09-04	land development code published as PDFs by the county and ordinances as PDFs by the clerk; the Municode client record carries no published code
+1259200	Punta Gorda	online-pdf-only	self-hosted	https://www.ci.punta-gorda.fl.us/government/city-clerk/code-of-ordinances		unstated	browser	2026-09-04	full code by chapter as PDFs on the city site; the Municode library slug does not resolve
+1240450	Lighthouse Point	online-pdf-only	self-hosted	https://www.lighthousepointfl.gov/211/Code-of-Ordinances		unstated	browser	2026-09-04	city rewrote the code in two parts and hosts it; Municode carries a hidden copy last updated 2018
+1272350	Trenton	online-pdf-only	self-hosted	https://www.trentonflorida.org/ordinances/	2022-04-01	unstated	browser	2026-09-04	Municode-produced code published as a single PDF, Supplement 1
+1244075	Melbourne Village	online-pdf-only	self-hosted	https://melbournevillage.org/202/Town-Code		unstated	browser	2026-09-04	town code by chapter as PDFs; the official code is kept in the town office
+1262800	St. Lucie Village	online-pdf-only	self-hosted	https://stlucievillagefl.gov/ordinances/		unstated	browser	2026-09-04	land development code and a codified 1995 zoning ordinance as PDFs, with an index of all ordinances
+1208600	Bristol	online-pdf-only	self-hosted	https://cityofbristolfl.gov/documents		unstated	browser	2026-09-04	land development code as a PDF alongside individual ordinances
+1209700	Callahan	online-pdf-only	self-hosted	https://www.townofcallahan-fl.gov/code/		unstated	browser	2026-09-04	town code book published as a set of PDFs
+1248900	Noma	online-pdf-only	self-hosted	https://www.nomafl.com/charter-and-ordinances	2026-05-04	official	browser	2026-09-04	code adopted by Ordinance 2026-02 on May 4 2026 and published as a single PDF
+12059	Holmes	ordinances-only	self-hosted	https://holmesclerk.com/other-services/ordinances/		unstated	browser	2026-09-04	clerk publishes individual ordinance PDFs described as archived; no codified compilation
+12079	Madison	ordinances-only	self-hosted	https://library.municode.com/fl/madison_county/munidocs/munidocs		unstated	browser	2026-09-04	Municode hosts county documents under MuniDocs; the client record carries no published code product
+12013	Calhoun	ordinances-only	self-hosted	https://www.calhouncountyfl.gov/		unstated	browser	2026-09-04	county publishes an index of ordinances back to 1975 as a PDF; no codified compilation
+1227256	Grant-Valkaria	ordinances-only	self-hosted	https://www.grantvalkaria.org/ordinances		unstated	browser	2026-09-04	ordinances and resolutions listed individually
+1207450	Bonifay	ordinances-only	self-hosted	https://www.cityofbonifay.com/ordinances		unstated	browser	2026-09-04	individual ordinances organised by topic
+1277100	Wewahitchka	ordinances-only	self-hosted	https://www.cityofwewahitchka.com/ordinances.cfm		unstated	browser	2026-09-04	individual ordinance PDFs
+1229150	Havana	ordinances-only	self-hosted	https://townofhavana.com/ordinances		unstated	browser	2026-09-04	individual ordinance PDFs including a performance zoning ordinance
+1233900	Interlachen	ordinances-only	self-hosted	https://www.interlachen-fl.gov/		unstated	browser	2026-09-04	individual ordinances on the town site
+1277400	White Springs	ordinances-only	self-hosted	https://www.whitesprings.org/documents		unstated	browser	2026-09-04	individual ordinances and town documents
+1200625	Alford	no-online-code	none			unstated	browser	2026-09-04	official town site confirmed and read; it carries public notices and utility billing and no ordinances or code section
+1208725	Brooker	no-online-code	none			unstated	browser	2026-09-04	the town site has a Town Codes page that publishes no documents

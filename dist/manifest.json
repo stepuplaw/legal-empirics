@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-02",
-  "commit": "1524ffac73d194b895be2eaac16430be96d97299",
+  "generated": "2026-09-04",
+  "commit": "3c44331f8538073d66f4c3c38a87062bd5a7daf4",
   "datasets": [
     {
       "name": "reformation-fl",
@@ -13,6 +13,12 @@
       "rows": 19085,
       "bytes": 11855171,
       "sha256": "a1a250ac2c4233750ff025b2586609bc5b54a26db2d251afe6efbcd6a4ef79b9"
+    },
+    {
+      "name": "fl-local-codes",
+      "rows": 478,
+      "bytes": 201771,
+      "sha256": "82a672265f9c6efc2ef99ad3c2141e973b152b85ea3d0154d7ecb73fcfeb6857"
     },
     {
       "name": "disputed-terms-national",

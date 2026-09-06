@@ -1,0 +1,178 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Florida Local Codes of Ordinances: Publication and Currency, 2026",
+  "description": "Where each of Florida's 478 local governments publishes its code of ordinances, who publishes it, and how current that code is. One row per county and per incorporated municipality, covering all 67 counties and all 411 cities, towns and villages. Municipal law is the hardest layer of American law to locate: there is no master index, and each commercial codifier lists only its own clients, so a reader who does not already know who publishes a town's code has nowhere to start. This dataset is that missing index for one state, and it records the jurisdictions no codifier carries, which is the part no vendor list can show. Currency is measured from the codifier's own stated codification date, so a code that has not been supplemented in years is visible as such.",
+  "url": "https://stepuplaw.com/data/florida-local-codes/",
+  "identifier": [],
+  "keywords": [
+    "municipal law",
+    "ordinances",
+    "local government",
+    "legal research",
+    "Florida",
+    "code of ordinances",
+    "zoning",
+    "code enforcement",
+    "open government data",
+    "legal information retrieval"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "version": "2026-09-04",
+  "dateModified": "2026-09-04",
+  "creator": {
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "url": "https://stepuplaw.com",
+    "identifier": "https://orcid.org/0009-0002-1385-8498",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kevin D. Klagge",
+    "url": "https://stepuplaw.com",
+    "sameAs": "https://orcid.org/0009-0002-1385-8498"
+  },
+  "sameAs": [
+    "https://github.com/stepuplaw/fl-local-codes",
+    "https://github.com/stepuplaw/legal-empirics",
+    "https://huggingface.co/datasets/stepuplaw/fl-local-codes",
+    "https://doi.org/10.5281/zenodo.22247377"
+  ],
+  "isBasedOn": {
+    "@type": "SoftwareSourceCode",
+    "identifier": "https://doi.org/10.5281/zenodo.22247377",
+    "codeRepository": "https://github.com/stepuplaw/legal-empirics"
+  },
+  "citation": null,
+  "measurementTechnique": "Census enumeration of Florida counties and incorporated places, joined by normalised name to the public metadata APIs of the commercial codifiers, with every resulting URL verified against the publisher's own resolver rather than an HTTP status. Jurisdictions no codifier carries were resolved by hand in a browser and recorded separately. Metadata only; no ordinance text is retrieved or republished.",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://raw.githubusercontent.com/stepuplaw/fl-local-codes/main/data/fl-local-codes.csv",
+      "contentSize": "201771",
+      "sha256": "82a672265f9c6efc2ef99ad3c2141e973b152b85ea3d0154d7ecb73fcfeb6857"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://raw.githubusercontent.com/stepuplaw/fl-local-codes/main/data/datapackage.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/vnd.apache.parquet",
+      "contentUrl": "https://raw.githubusercontent.com/stepuplaw/fl-local-codes/main/data/fl-local-codes.parquet",
+      "contentSize": "59530",
+      "sha256": "2eed32f5ff94c0a77f16b7b3d0f5cf80334ffe67eddcd3e3acf0d62cc01997d2"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "geoid",
+      "description": "Census GEOID: 12 followed by the county FIPS code, or 12 followed by the place FIPS code"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "name",
+      "description": "jurisdiction name without its type suffix"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "type",
+      "description": "county | city | town | village, taken from the Census, never from the codifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "county",
+      "description": "the county the jurisdiction sits in; for a county row, itself"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "counties",
+      "description": "every county the place falls in, pipe separated, largest population share first"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "population",
+      "description": "Census population estimate, vintage 2024"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "code_status",
+      "description": "online-html | online-pdf-only | no-online-code | unknown"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "publisher",
+      "description": "municode | american-legal | general-code | code-publishing | self-hosted | none | unknown"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "code_url",
+      "description": "the verified URL of the code of ordinances; empty where no code is online"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "publisher_client_id",
+      "description": "the codifier's own identifier for this jurisdiction, where it has one"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "code_product_id",
+      "description": "Municode product id for the code of ordinances; the key to its table of contents"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "codified_through",
+      "description": "date of the most recent ordinance included in the code, as the publisher states it"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "code_last_updated",
+      "description": "date the publisher last posted an update online"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pdf_available",
+      "description": "1 where the publisher offers the code as a downloadable PDF"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pending_ordinances_count",
+      "description": "adopted ordinances awaiting codification, per the publisher; null outside Municode"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "official_status",
+      "description": "official | unofficial | unstated -- recorded only where the page says so, never inferred"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "source",
+      "description": "municode-api | browser | manual -- how this row was resolved"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "source_checked_date",
+      "description": "the date this row was checked; codifier contracts move, so the date is part of the claim"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "notes",
+      "description": "free text, used mainly for jurisdictions no codifier carries"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "statement",
+      "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+    }
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Florida, United States"
+  },
+  "temporalCoverage": "2026"
+}

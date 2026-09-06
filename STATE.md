@@ -1,6 +1,6 @@
 # Where this project stands
 
-_Last updated 2026-09-02. Read this first after a context reset, then
+_Last updated 2026-09-04. Read this first after a context reset, then
 `NEXT-PROJECTS.md` for what to do next._
 
 Everything below is committed. Nothing here is a plan; it is what exists.
@@ -26,6 +26,29 @@ nine times, which is the point.
 | `PUBLISHING.md` | Where the datasets live and how the records reference one another |
 | `DISTRIBUTION.md` | Which platforms are done and which are pending |
 | `NEXT-PROJECTS.md` | The scoped candidates, and why the trustee question had to change |
+
+## What changed on 2026-09-04
+
+A fourth dataset, and the first that does not come from the opinion corpus.
+**`fl-local-codes`**: where each of Florida's 478 local governments publishes
+its code of ordinances, who publishes it, and how current it is. 478 rows, one
+per county and per incorporated municipality. Built in
+`studies/fl-local-codes/`, protocol in `protocols/fl-local-codes.md`, described
+at `stepuplaw.com/data/florida-local-codes/`.
+
+423 publish a codified code online, 9 publish ordinances they have never
+codified, 2 publish nothing, and 44 could not be confirmed and say so. Municode
+carries 400 of them.
+
+It forced three fixes to shared code that the opinion studies had been getting
+away with. `scripts/export_dataset.py` hardcoded CourtListener as the source of
+every dataset and pointed `distribution` at a path that has never existed for
+any dataset, which is the 404-in-distribution `DISTRIBUTION.md` exists to
+prevent; both are now per-dataset with the old values as defaults.
+`scripts/push_huggingface.py` asserted CourtListener provenance and called every
+dataset exploratory for want of inter-annotator reliability, neither of which is
+true of a census. And the publish step now writes the metadata files where the
+metadata says they are.
 
 ## What changed on 2026-09-01
 

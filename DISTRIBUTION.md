@@ -34,6 +34,28 @@ identity. Everything else is a copy that names it.
 
 ---
 
+## fl-local-codes, added 2026-09-04
+
+The first dataset not built from the opinion corpus, and the first with its own
+data repository rather than a folder in `dist/`.
+
+| Step | State |
+|---|---|
+| Built and checked | **done**, 478 rows, `studies/fl-local-codes/` |
+| Exported | **done**, CSV, Parquet, datapackage, JSON-LD, Croissant |
+| Data repo `~/fl-local-codes` | **done locally**, README generated from the data |
+| Describing page | **done**, `stepuplaw.com/data/florida-local-codes/`, builds clean |
+| GitHub `stepuplaw/fl-local-codes` | not created |
+| Zenodo | not released. Connect the webhook **before** the first tag |
+| Hugging Face, Kaggle | metadata built, not pushed |
+| Outreach | not started, list in the plan |
+
+Its DOI should be a **new dataset record**, related to the software DOI by
+`isSupplementTo`, not a version of `10.5281/zenodo.22247377`. The code DOI
+identifies the code; this is a different object.
+
+---
+
 ## Blocking, in order
 
 1. **Cut the GitHub release** (`v0.1.0`). Everything below waits on the DOI.

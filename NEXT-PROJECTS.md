@@ -251,6 +251,31 @@ Good SEO, moderate novelty, and it sits squarely inside the practice.
 
 ---
 
+## 6. Florida local codes, phase 2 and 3
+
+Phase 1 shipped on 2026-09-04. Two follow-ons are scoped and cheap.
+
+**Phase 2, the chapter index.** One row per top-level chapter of each Municode
+code: jurisdiction, chapter label, heading, node id, URL. Roughly 16,000 rows
+from about 310 requests, using `codesToc?productId=&jobId=&nodeId=<productId>`,
+which is already proven. It answers "does my town have a short-term rental
+chapter" without opening the code, and it gives the 20 county property owner
+guides retrievable facts rather than a link.
+
+**Phase 3, national coverage.** 51 state calls plus roughly 4,200
+`ClientContent` calls, joined to Census counts per state. No hand resolution, so
+it measures Municode coverage rather than code availability, which is a
+different and weaker claim. Do not build per-jurisdiction pages for it; that
+breaches the 20,000-file Cloudflare Pages cap.
+
+**Finish phase 1 first.** 44 Florida rows are recorded as unconfirmed. Each says
+what was checked. Resolving them needs a browser with permission for the long
+tail of town domains, which is roughly two hours of clicking, and it converts
+the headline from "44 unconfirmed" into a real absence count. That is the single
+highest-value hour left in this dataset.
+
+---
+
 ## What to hand the next session
 
 Read in this order:

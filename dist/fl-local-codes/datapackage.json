@@ -1,0 +1,181 @@
+{
+  "name": "fl-local-codes",
+  "title": "Florida Local Codes of Ordinances: Publication and Currency, 2026",
+  "description": "Where each of Florida's 478 local governments publishes its code of ordinances, who publishes it, and how current that code is. One row per county and per incorporated municipality, covering all 67 counties and all 411 cities, towns and villages. Municipal law is the hardest layer of American law to locate: there is no master index, and each commercial codifier lists only its own clients, so a reader who does not already know who publishes a town's code has nowhere to start. This dataset is that missing index for one state, and it records the jurisdictions no codifier carries, which is the part no vendor list can show. Currency is measured from the codifier's own stated codification date, so a code that has not been supplemented in years is visible as such.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "homepage": "https://stepuplaw.com/data/florida-local-codes/",
+  "version": "2026-09-04",
+  "created": "2026-09-04",
+  "sources": [
+    {
+      "title": "US Census Bureau subcounty population estimates, vintage 2024",
+      "path": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/cities/totals/sub-est2024_12.csv"
+    },
+    {
+      "title": "Municode public client and content API",
+      "path": "https://api.municode.com"
+    },
+    {
+      "title": "American Legal Publishing Florida code library",
+      "path": "https://codelibrary.amlegal.com/regions/fl"
+    }
+  ],
+  "resources": [
+    {
+      "name": "fl-local-codes",
+      "path": "fl-local-codes.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 201771,
+      "rows": 478,
+      "hash": "sha256:82a672265f9c6efc2ef99ad3c2141e973b152b85ea3d0154d7ecb73fcfeb6857",
+      "schema": {
+        "fields": [
+          {
+            "name": "geoid",
+            "type": "string",
+            "description": "Census GEOID: 12 followed by the county FIPS code, or 12 followed by the place FIPS code"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "jurisdiction name without its type suffix"
+          },
+          {
+            "name": "type",
+            "type": "string",
+            "description": "county | city | town | village, taken from the Census, never from the codifier"
+          },
+          {
+            "name": "county",
+            "type": "string",
+            "description": "the county the jurisdiction sits in; for a county row, itself"
+          },
+          {
+            "name": "counties",
+            "type": "string",
+            "description": "every county the place falls in, pipe separated, largest population share first"
+          },
+          {
+            "name": "population",
+            "type": "integer",
+            "description": "Census population estimate, vintage 2024"
+          },
+          {
+            "name": "code_status",
+            "type": "string",
+            "description": "online-html | online-pdf-only | no-online-code | unknown"
+          },
+          {
+            "name": "publisher",
+            "type": "string",
+            "description": "municode | american-legal | general-code | code-publishing | self-hosted | none | unknown"
+          },
+          {
+            "name": "code_url",
+            "type": "string",
+            "description": "the verified URL of the code of ordinances; empty where no code is online"
+          },
+          {
+            "name": "publisher_client_id",
+            "type": "string",
+            "description": "the codifier's own identifier for this jurisdiction, where it has one"
+          },
+          {
+            "name": "code_product_id",
+            "type": "string",
+            "description": "Municode product id for the code of ordinances; the key to its table of contents"
+          },
+          {
+            "name": "codified_through",
+            "type": "string",
+            "description": "date of the most recent ordinance included in the code, as the publisher states it"
+          },
+          {
+            "name": "code_last_updated",
+            "type": "string",
+            "description": "date the publisher last posted an update online"
+          },
+          {
+            "name": "pdf_available",
+            "type": "integer",
+            "description": "1 where the publisher offers the code as a downloadable PDF"
+          },
+          {
+            "name": "pending_ordinances_count",
+            "type": "integer",
+            "description": "adopted ordinances awaiting codification, per the publisher; null outside Municode"
+          },
+          {
+            "name": "official_status",
+            "type": "string",
+            "description": "official | unofficial | unstated -- recorded only where the page says so, never inferred"
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "municode-api | browser | manual -- how this row was resolved"
+          },
+          {
+            "name": "source_checked_date",
+            "type": "string",
+            "description": "the date this row was checked; codifier contracts move, so the date is part of the claim"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "free text, used mainly for jurisdictions no codifier carries"
+          },
+          {
+            "name": "statement",
+            "type": "string",
+            "description": "the row written as one self-contained English sentence, so it can be retrieved, quoted and checked on its own"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fl-local-codes-parquet",
+      "path": "fl-local-codes.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet",
+      "bytes": 59530,
+      "rows": 478,
+      "hash": "sha256:2eed32f5ff94c0a77f16b7b3d0f5cf80334ffe67eddcd3e3acf0d62cc01997d2"
+    }
+  ],
+  "provenance": {
+    "repository": "https://github.com/stepuplaw/legal-empirics",
+    "commit": "3c44331f8538073d66f4c3c38a87062bd5a7daf4",
+    "run": {
+      "state": "FL",
+      "sources": {
+        "spine": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/cities/totals/sub-est2024_12.csv",
+        "municode_api": "https://api.municode.com",
+        "manual": "manual.tsv, read in a browser"
+      },
+      "funnel": {
+        "census_rows": 478,
+        "municode_clients": 416,
+        "municode_matched": 408,
+        "municode_unmatched_clients": 8,
+        "manual_rows": 35,
+        "municode_with_code": 399,
+        "unresolved": 44,
+        "suspect_codified_date": 15,
+        "municode_hidden": 1,
+        "rows": 478,
+        "online_html": 414,
+        "online_pdf": 9,
+        "no_online_code": 2
+      },
+      "runtime_minutes": 5.8
+    }
+  }
+}
