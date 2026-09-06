@@ -349,6 +349,29 @@ def municode_job(con, product_id, refetch=False):
     return job_id, codified, suspect
 
 
+def hint_alive(url):
+    """Does the website Municode holds for this client actually resolve?
+
+    * THE HINT IS MUNICODE'S CLAIM, NOT THIS SURVEY'S FINDING. Hamilton County
+    is carried as client 11540 with Website www.hamiltoncountyflorida.com,
+    which refuses connections; the county's live site is hamiltoncountyfl.com.
+    A bare URL in the worklist reads as a checked address, so a researcher who
+    follows it concludes the county has no web presence when it has one.
+    Recording whether it answers costs one HEAD and keeps the column honest.
+    """
+    if not url:
+        return ""
+    u = url if url.startswith("http") else "https://" + url
+    req = urllib.request.Request(u, method="HEAD", headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return "live" if r.status < 400 else "http-%d" % r.status
+    except urllib.error.HTTPError as e:
+        return "live" if e.code in (403, 405, 406) else "http-%d" % e.code
+    except Exception as e:
+        return "unreachable (%s)" % type(e).__name__
+
+
 def resolve_by_slug(con, name, kind, refetch=False):
     """Ask the library directly whether a slug exists, ignoring the client list.
 
@@ -643,12 +666,13 @@ def build(args):
     with open(WORKLIST, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t")
         w.writerow(["geoid", "name", "type", "county", "population",
-                    "municode_client", "hint", "notes"])
+                    "municode_client", "hint", "hint_status", "notes"])
         for r in sorted(worklist, key=lambda x: -x["population"]):
             c = matched.get(r["geoid"])
+            hint = (c or {}).get("Website", "")
             w.writerow([r["geoid"], r["name"], r["type"], r["county"],
                         r["population"], c["ClientID"] if c else "",
-                        (c or {}).get("Website", ""), r["notes"]])
+                        hint, hint_alive(hint), r["notes"]])
 
     meta = {"state": STATE,
             "sources": {"spine": CENSUS_CSV, "municode_api": API,
